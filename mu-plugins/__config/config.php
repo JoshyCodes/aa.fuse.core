@@ -5,9 +5,9 @@ return array(
 
 	'project'	=> array(
 
-		'name'					=> '',
+		'name'					=> 'creativefuse',
 		'version' 				=> '0.0.1',
-		'text_domain'			=> '',
+		'text_domain'			=> 'cf',
 		'timezone'				=> 'America/New_York',
 
 	),
@@ -32,9 +32,9 @@ return array(
 
 	'modules'	=> array(
 
-		'admin'
-		'analytics'
-		'team'
+		'admin',
+		'analytics',
+		'creatives'
 
 	)
 

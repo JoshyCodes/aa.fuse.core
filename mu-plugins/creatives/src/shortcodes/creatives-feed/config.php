@@ -13,17 +13,17 @@ use CreativeFuse\Creatives;;
 
 return array(
 
-	'shortcode_name'              => 'creatives_feed',
+	'shortcode_name'              	=> 'creatives_feed',
 
-	'do_shortcode_within_content' => true,
+	'do_shortcode_within_content' 	=> true,
 
-	'processing_function'         => __NAMESPACE__ . '\process_shortcode',
+	'processing_function'         	=> __NAMESPACE__ . '\process_shortcode',
 
-	'view'				=> Stories\module()->config( 'views' ) . 'creatives-feed.php',
+	'view'							=> module()->config( 'views' ) . 'creatives-feed.php',
 
-	'defaults'                    => array(
+	'defaults'                    	=> array(
 		
-		'count'			=> 1,
+		'count'				=> 1,
 		'interests'			=> '',
 
 	),

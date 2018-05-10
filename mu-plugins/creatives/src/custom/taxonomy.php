@@ -26,6 +26,4 @@ $interests = new Taxonomy(
 
 // Register Taxonomies
 $interests->register();
-$location->register();
-
 

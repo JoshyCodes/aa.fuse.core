@@ -17,7 +17,7 @@ namespace Reactor;
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
-	die( 'You cannot access this file!' );
+    die( 'You cannot access this file!' );
 }
 
 class Reactor{
@@ -112,6 +112,11 @@ class Reactor{
      */
     private function init(){
 
+        /**
+         * Fire up autoloader and load our dependencies
+         */
+        require_once( __DIR__ . '/assets/vendor/autoload.php' );
+            
         /**
          * Begin loading additional modules if our module framework exists
          */

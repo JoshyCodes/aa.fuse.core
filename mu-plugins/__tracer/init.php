@@ -47,7 +47,7 @@ final class Tracer{
 		$this->config = include( __DIR__ . '/config/config.php' );
 
 		// Fire up autoloader and load our dependencies
-		require_once( dirname(__FILE__, 2 ) . '/__vendor/autoload.php' );
+		require_once( dirname(__FILE__) . '/assets/vendor/autoload.php' );
 
 	}
 
