@@ -27,7 +27,7 @@ $creatives->register();
 /**
  * Give Post Type Our Taxonomies
  */
-$creatives->taxonomy( $taxonomy_settings['insterest']['names']['name'] );
+$creatives->taxonomy( $taxonomy_settings['interests']['names']['name'] );
 
 /**
  * Set Up Filters for our post type
@@ -39,4 +39,4 @@ $creatives->filters( $post_type_settings['filters'] );
  * Set Post Type Icon
  */
 
-$creatives->icon('dashicons-id-alt');
+$creatives->icon('dashicons-admin-customizer');

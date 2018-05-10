@@ -35,15 +35,22 @@ final class Fuse{
 	 */
 	public $config = [];
 
+    /**
+     * Main Theme Folder
+     */
+
+    public $theme_root;
+
+
 	 /**
      * Instantiation can be done only inside the class itself
      */
 	protected function __construct() {
 
+		$this->set_theme_root();
+
         // Must load config in before theme root defined
         $this->config = include_once dirname(__FILE__, 2) .'/_config/config.php';
-
-		$this->set_theme_root();
 
 		$this->load_dependencies();
 
@@ -86,6 +93,24 @@ final class Fuse{
 
 
     /**
+     * Tell WP to look in this directory for anything theme related, but look in the root of our project
+     * otherwise.
+     * @param [type] $path [description]
+     */
+    private function set_theme_root(){
+
+        $this->theme_root = dirname( __FILE__ );
+
+        array_map(
+            'add_filter',
+            ['theme_file_path', 'theme_file_uri', 'parent_theme_file_path', 'parent_theme_file_uri'],
+            array_fill(0, 4, 'dirname')
+        );
+
+    }
+
+
+    /**
      * Get the config file or a value from the config
      */
     public function config( $key = null, $value = null ){
@@ -108,22 +133,17 @@ final class Fuse{
         return $this->config;
 
     }
+        
 
     /**
-     * Tell WP to look in this directory for anything theme related, but look in the root of our project
-     * otherwise.
-     * @param [type] $path [description]
+     * Get the theme root
      */
-    private function set_theme_root(){
+    public function get_theme_root(){
 
-        array_map(
-            'add_filter',
-            ['theme_file_path', 'theme_file_uri', 'parent_theme_file_path', 'parent_theme_file_uri'],
-            array_fill(0, 4, 'dirname')
-        );
+
+        return $this->theme_root;
 
     }
-    
 
     private function load_dependencies(){
 

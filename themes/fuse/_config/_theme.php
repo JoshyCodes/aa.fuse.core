@@ -22,9 +22,8 @@ return [
     // Here you may specify an array of paths that should be checked for your views.
     'paths' => [
 
-        'wrapper_root'  => get_theme_file_path() . '/resources/views/wrappers',
-        'template_root' => get_theme_file_path() . '/resources/views/templates',
-        'partials_root' => get_theme_file_path() . '/resources/views/partials',
+        'template_root' => get_theme_file_path() . '/resources/views/templates/',
+        'partials_root' => get_theme_file_path() . '/resources/views/partials/',
 
     ]
    

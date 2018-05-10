@@ -12,9 +12,9 @@ return [
         'filters',
 
         // Controllers
-        //'controllers/wrappers',
+        'controllers/wrappers',
         //'controllers/templates',
-        //'controllers/partials',
+       // 'controllers/partials',
 
         // Enqueues
         //'enqueue/styles',
