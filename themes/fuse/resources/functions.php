@@ -1,24 +1,16 @@
 <?php
 namespace Fuse;
 
-//http://scribu.net/wordpress/theme-wrappers.html
-	
 /**
- * Here's what's happening with these hooks:
- * 1. WordPress initially detects theme in themes/sage/resources
- * 2. Upon activation, we tell WordPress that the theme is actually in themes/sage/resources/views
- * 3. When we call get_template_directory() or get_template_directory_uri(), we point it back to themes/sage/resources
+ * This is the main class for our theme. It's purposes
+ * is to load and make globally available our theme config
+ * and include dependencies. That is it. This class serves
+ * no other purposes and all custom functionality
+ * will be built elsewhere.
  *
- * We do this so that the Template Hierarchy will look in themes/sage/resources/views for core WordPress themes
- * But functions.php, style.css, and index.php are all still located in themes/sage/resources
- *
- * This is not compatible with the WordPress Customizer theme preview prior to theme activation
- *
- * get_template_directory()   -> /srv/www/example.com/current/web/app/themes/sage/resources
- * get_stylesheet_directory() -> /srv/www/example.com/current/web/app/themes/sage/resources
- * locate_template()
- * ├── STYLESHEETPATH         -> /srv/www/example.com/current/web/app/themes/sage/resources/views
- * └── TEMPLATEPATH           -> /srv/www/example.com/current/web/app/themes/sage/resources
+ * @since  1.0.0
+ * @package  Fuse;
+ * @author  CreativeFuse
  */
 
 final class Fuse{
@@ -67,6 +59,11 @@ final class Fuse{
 
     }
 
+    /**
+     * Waking Up singleton is not possible.
+     *
+     * @throws Exception
+     */
     protected function __wakeup() {
 
     	throw new Exception('You cannot wakeup singleton object');
@@ -75,9 +72,10 @@ final class Fuse{
 
 
     /**
-     * 
+     * Return the one true instance of our class if already exists,
+     * otherwise, we will instantiate the class here.
      *
-     * 
+     * @since  1.0.0
      */
     public static function get_instance(){
 
@@ -111,7 +109,13 @@ final class Fuse{
 
 
     /**
-     * Get the config file or a value from the config
+     * Get the config object or a value from the config
+     *
+     * @since  1.0.0
+     * 
+     * @param string $key The first level key to return values for
+     * @param string $value The specific value to retrieve
+     *
      */
     public function config( $key = null, $value = null ){
 
@@ -137,6 +141,8 @@ final class Fuse{
 
     /**
      * Get the theme root
+     *
+     * @since  1.0.0
      */
     public function get_theme_root(){
 
@@ -145,6 +151,11 @@ final class Fuse{
 
     }
 
+    /**
+     * Load all dependencies as defined in our config file.
+     *
+     * @since  1.0.0
+     */
     private function load_dependencies(){
 
         $dependencies = $this->config( 'files' );
@@ -173,4 +184,5 @@ function fuse(){
 
 }
 
+// Obfuscate our class and make it available globally!
 fuse();

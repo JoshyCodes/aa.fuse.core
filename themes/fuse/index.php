@@ -1,2 +1,2 @@
 <?php
-// Silence is Golden
+// Be still and listen

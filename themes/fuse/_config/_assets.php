@@ -10,6 +10,12 @@ return [
 
     ],
 
+    'jquery' => [
+
+        'version'   => '1.12.4'
+
+    ],
+
     'fonts' => [
 
     	'google_fonts' => [

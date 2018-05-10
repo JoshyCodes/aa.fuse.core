@@ -23,7 +23,7 @@ return [
     'paths' => [
 
         'template_root' => get_theme_file_path() . '/resources/views/templates/',
-        'partials_root' => get_theme_file_path() . '/resources/views/partials/',
+        'fragment_root' => get_theme_file_path() . '/resources/views/partials/',
 
     ]
    

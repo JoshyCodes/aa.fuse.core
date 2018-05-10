@@ -13,12 +13,12 @@ return [
 
         // Controllers
         'controllers/wrappers',
-        //'controllers/templates',
-       // 'controllers/partials',
+        'controllers/templates',
+        'controllers/fragments',
 
         // Enqueues
-        //'enqueue/styles',
-        //'enqueue/scripts'
+        'enqueue/styles',
+        'enqueue/scripts'
 
    ]
 

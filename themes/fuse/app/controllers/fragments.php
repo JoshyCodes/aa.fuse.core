@@ -16,14 +16,13 @@ namespace Fuse\Controllers;
 * @since  1.0.0
 */
 
-function render( $path, $args = [], $echo = true ) {
-
+function render_fragment( $path, $args = [], $echo = true ) {
 
 	// Set the partial root
-	$_partial_root	= Config\config()->get_config( 'theme', 'partials_root' );
+	$fragment_root	= Config\config()->get_config( 'theme', 'fragment_root' );
 
 	// Build the full path to the file we are requesting
-	$_path		 	= $_partial_root . $path;
+	$_path		 	= $fragment_root . $path;
 
 	// Define the extension as .php for the partial file
 	$partial_file	= $_path . '.php';
@@ -48,7 +47,7 @@ function render( $path, $args = [], $echo = true ) {
     // Return the partial
     ob_start();
 
-    include( locate_template( $partial_file ) );
+        include( locate_template( $partial_file ) );
 
     // Return & clean the output buffer
     return ob_get_clean();

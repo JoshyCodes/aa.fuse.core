@@ -1,5 +1,6 @@
 <?php
-namespace Fuse;
-// index.php contains nothing on purpose - required for WP theme to work properly.
-
-echo 'hello from main index';
+/**
+ * This file is blank intentionally. Nothing here will ever be rendered.
+ * It is used only for the initial WP template request life cycle in order to return
+ * the proper template path.
+ */
