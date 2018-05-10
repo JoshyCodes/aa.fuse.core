@@ -1,0 +1,51 @@
+{
+    "key": "group_5ae8a988b0382",
+    "title": "Sponsor Settings",
+    "fields": [
+        {
+            "key": "field_5ae8a98f5569b",
+            "label": "Sponsor Link",
+            "name": "sponsor_link",
+            "type": "url",
+            "instructions": "Where should clicking on this sponsor link to?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "sponsors"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "custom_fields",
+        "discussion",
+        "comments",
+        "revisions",
+        "author",
+        "format",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1525211671
+}

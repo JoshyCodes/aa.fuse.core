@@ -1,0 +1,49 @@
+//https://novelist.xyz/tech/progressive-background-image-loading/
+
+/**
+ * Progressive Image Animation Setup
+ */
+.m-progressive-bg-image__thumb,
+.m-progressive-bg-image__full{
+	
+	/**
+	 * Scale up the images to prevent border oddities
+	 * when we apply our blur and then make it 3d to improve
+	 * performance.
+	 */
+
+	transform: scale(1.04) translate3d(0, 0, 0);
+
+}
+
+// Blur our thumb Image
+.m-progressive-bg-image__thumb{
+
+	filter: blur(20px);
+
+}
+
+.m-progressive-bg-image__full{
+	
+
+	// Hide when initially rendered
+	@include opacity(0);
+	
+
+	&.--loaded {
+		
+		// Fade in when loaded
+		transition: 1s all ease-in .2s;
+ 		@include opacity(1);
+	}
+
+}
+
+.m-progressive-bg-image__thumb,
+.m-progressive-bg-image__full--loaded,
+.m-progressive-bg-image__full{
+	
+	background-repeat: no-repeat;
+	background-size: cover;	
+
+}

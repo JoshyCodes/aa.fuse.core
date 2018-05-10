@@ -1,0 +1,35 @@
+{
+    "name" 			: "creativefuse/__tracer",
+    "description" 	: "A Suite of Developer Tools for WordPress development.",
+    "type"          : "wordpress-muplugin",
+    "keywords" 		: ["wordpress", "wp", "plugin"],
+    "homepage" 		: "https://github.com/CreativeFuse/cf.mu.tracer",
+    "license" 		: "GPL-3.0+",
+    "authors": [
+        {
+            "name": "CreativeFuse",
+            "email": "support@creativefuse.org"
+        }
+     ],
+    "support": {
+      "issues": "https://github.com/CreativeFuse/cf.mu.tracer/issues"
+    },
+    "require": {
+        "php": ">=7.1",
+        "composer/installers": "~1.0",
+        "kint-php/kint" : "~2.0",
+        "filp/whoops": "~2.0"
+    },
+    "autoload" : {
+        "files": [
+            "src/Support/whoops-loader.php",
+            "src/Admin/admin-color.php"
+        ]
+    },
+    "config": {
+
+        "vendor-dir": "assets/vendor"
+
+    }
+    
+}

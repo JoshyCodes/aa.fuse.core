@@ -1,0 +1,40 @@
+/**
+ * Type   : Function
+ * Group  : Radius
+ * Desc   : Functions for dealing with border radius
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+
+/**
+ * A function for getting a value from the border radius configuration map.
+ * @param  $size	- The key to get our value from 
+ * @return			- The returned value form our key
+ *
+ * @since 1.0.0
+ */
+
+//
+// @example - Usage
+// 
+// radius( btn )
+//
+// -> returns the `btn` radius value as defined in the radius config map
+
+
+@function radius( $size ){	
+	
+
+	// If our requested size doesn't exist in the map
+	@if not map-has-key( $border-radius_config, $size ){
+		
+		// Throw an error.
+		@error "No value found for the key, `#{$size}`. The radius() function only accepts the following values: " + " #{map-keys($spacing-values_config)}";
+
+	}
+
+	@return map-get( $border-radius_config, $size );
+	
+}

@@ -1,0 +1,41 @@
+<?php
+namespace App;
+
+return array(
+
+	'project'	=> array(
+
+		'name'					=> '',
+		'version' 				=> '0.0.1',
+		'text_domain'			=> '',
+		'timezone'				=> 'America/New_York',
+
+	),
+
+	'author'	=> array(
+
+		'name'	=> 'CreativeFuse',
+		'email'	=> 'support@creativefuse.org',
+
+	),
+
+	'env' => array(
+
+		// An array of potential dev environments
+		'dev'	=> array( 
+			'.local',
+			'.dev',
+			'localhost:3000',
+		),
+		
+	),
+
+	'modules'	=> array(
+
+		'admin'
+		'analytics'
+		'team'
+
+	)
+
+);

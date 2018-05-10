@@ -1,0 +1,16 @@
+.p-home--hero .x-container{
+	
+	display: flex;
+
+}
+
+.p-home--hero .l-flex-column.-left{
+	
+	
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	@include spacer( p, x, xl );
+	@include spacer( p, y, 2xl );
+
+}

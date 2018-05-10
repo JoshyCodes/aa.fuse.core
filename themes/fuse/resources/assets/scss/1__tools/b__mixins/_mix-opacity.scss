@@ -1,0 +1,29 @@
+/**
+ * Type		:	Mixin
+ * Group	:	Opacity
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * A simple mixin that nicely handles opacity and 
+ * provides fallbacks for IE.
+ *
+ * @param $opacity - takes any decimal number between 1 and 0 ( ad also takes the numbers 1 and 0 )
+ */
+
+//
+// @example - Usage
+//
+// @include opacity(.8);
+//
+
+@mixin opacity($opacity) {
+	
+	$opacity-ie: $opacity * 100;
+	
+	opacity: $opacity;
+  	filter: alpha(opacity=$opacity-ie); //IE8
+
+}

@@ -1,0 +1,19 @@
+.o-nav__logo{
+	
+	max-width: 350px;
+	@include transition(link);
+
+	img{	
+		
+		width: 100%;
+
+	}
+
+}
+
+
+.o-nav__logo:hover{
+	
+	@include opacity(.75);
+
+}

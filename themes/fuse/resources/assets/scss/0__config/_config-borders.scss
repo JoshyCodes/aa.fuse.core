@@ -1,0 +1,35 @@
+/**
+ * Type		:	Config
+ * Group	:	Borders
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+
+$border_config : (
+
+	btn--primary:(
+
+		width	: 2px,
+		style	: solid,
+		color	: grayscale,
+		tone	: white,
+
+	),
+
+	story:(
+
+		width	: 20px,
+		style	: solid,
+
+	),
+	
+);
+
+
+$border-radius_config : (
+
+	default : 0px
+
+);

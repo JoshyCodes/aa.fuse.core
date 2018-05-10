@@ -1,0 +1,36 @@
+/**
+ * Type		: Utility
+ * Group	: Visibility
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+.u-underline{
+	
+	position: relative;
+
+	&:before{
+		
+		bottom: -16px;
+		content: '';
+		display: block;
+		height: 5px;
+		left: 0px;
+		position: absolute;
+		width: 140px;	
+
+	}
+
+}
+
+.u-underline--blue:before{
+	background: c( viridian );
+}
+
+
+.u-underline{
+	
+	margin-bottom: 48px !important;
+
+}

@@ -1,0 +1,24 @@
+/**
+ * Name		: Loader
+ * Desc		: Handles importing/loading of all partial files in the specified group.
+ * Group	: Layout
+ * 
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+
+/**
+ * ****************
+ * File Import List
+ * ****************
+ */
+	
+	//
+	// All files are imported in alphabetical order unless otherwise specified.
+	//
+	
+	@import '_l-body';
+	@import '_l-site';
+	@import '_l-entry-content';
+	@import '_l-cols';

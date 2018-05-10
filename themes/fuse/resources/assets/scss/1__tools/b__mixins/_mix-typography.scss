@@ -1,0 +1,59 @@
+/**
+ * Type		:	Mixin
+ * Group	:	Typography
+ * Desc		:	
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * Get the base settings for a typeface from
+ * our font config map.
+ *
+ * @param	$type	the typeface to get from our config
+ * @param	$weight	the font-weight to fetch from the typeface we chose
+ */
+
+@mixin font( $type, $weight: '' ){
+
+	// Set Vars
+	$_font-family	: get_font_stack( $type );
+	$_font-style	: get_config( $font_config, $type, style );
+	$_font-weight	: null; // Blank variable to be defined later
+
+	// If we passed in a weight
+	@if( $weight != '' ){
+		
+		// Set it
+		$_font-weight: get_config( $font_config, $type, weights, $weight );
+
+	}
+
+	// If not, inherit line weight from the body as fallback
+	@else {
+
+		$_font-weight: inherit;
+
+	}
+	
+	// Finally output our font styles
+	font-family: $_font-family;
+	font-style: $_font-style;
+	font-weight: $_font-weight;
+
+}
+
+
+/**
+ * Process a REM value and provide a pixel fallback
+ * 
+ * @param	$size The font size to work with
+ */
+
+@mixin font-size($size) {
+
+  font-size: $size; //Fallback in px
+  font-size: calculateRem($size);
+
+}

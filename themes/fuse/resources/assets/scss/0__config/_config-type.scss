@@ -1,0 +1,86 @@
+/**
+ * Type		:	Config
+ * Group	:	Typography
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+
+
+/**
+ * The core type settings for our project
+ * @type {[type]}
+ */
+$type_config : (
+
+	root-font-size		:	100%,	// sets the base for our entire project
+
+	base-font-size		:	1rem,	// used for base body
+	base-font-size-px	:	16, 	// used for generating px fallbacks for our rem values
+	base-line-height	:	1.5,
+
+	scale : (
+
+		desktop	: 1.250,
+		mobile	: 1.150,
+
+	)
+
+);
+
+/**
+ * A configuration map to set up our fonts
+ */
+$font_config : (
+
+
+	// Configure the font
+	// used for our project's body
+	body: (
+
+		family 		: ( "IBM Plex Sans" ),
+		fallback	: ( serif ),
+		style		: normal,
+
+		// Delete weights you don't need
+		weights: (
+
+			light		:	300,
+			regular		:	400,
+			medium		:	500,
+			semi-bold 	:	600,
+			bold 		:	700,
+		
+
+		)
+
+	),
+
+
+	// Configure font options for our
+	// project's headings
+	heading: (
+
+		family 		: ( "Heebo" ),
+		fallback	: ( sans-serif ),
+		style		: normal,
+
+
+		// Delete weights you don't need
+		weights: (
+
+			light		:	300,
+			regular		:	400,
+			medium		:	500,
+			bold 		:	700,
+			extra-bold	:	800,
+			black		:	900,
+
+		)
+
+
+	),
+
+
+);

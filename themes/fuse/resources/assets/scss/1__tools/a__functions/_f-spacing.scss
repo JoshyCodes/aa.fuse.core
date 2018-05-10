@@ -1,0 +1,41 @@
+/**
+ * Type		:	Function
+ * Group	:	Spacing
+ * Desc		:	Functions that help us work with our spacing scale
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+
+
+/**
+ * A function for getting a predetermined value from the spacing configuration map.
+ * 
+ * @param  $size 	- The get to get our value from
+ * @return 			- a final spacing value with a unit attached.
+ *
+ * @since 1.0.0
+ */
+
+ //
+ // @example - Usage
+ // 
+ // spacer( xl )
+ //
+ // -> returns the value of the spacing size `xl` as defined in the spacing config map
+
+
+@function spacer( $size ){	
+	
+	// Of the requested size doesn't exist
+	@if not map-has-key( $spacing-values_config, $size ){
+		
+		// Throw an error.
+		@error "No value found for the key, `#{$size}`. The spacer() function only accepts the following values: " + " #{map-keys($spacing-values_config)}";
+
+	}
+
+	@return map_get( $spacing-values_config, $size ) + map_get( $spacing-config, unit );
+
+}

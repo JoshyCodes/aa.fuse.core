@@ -1,0 +1,127 @@
+/**
+ * Type		:	Mixin
+ * Group	:	Spacing
+ * Desc		:	Create a systematic way to implement spacing throughout our site to keep
+ * the entire codebase locked into a uniform framework of pre-defined values.
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+
+/**
+ * This is one badass mixin that takes care of setting margin or padding
+ * in any direction, with a value fetched from our spacing config.
+ *
+ * @param	$property	- The property to use for our spacer
+ * @param	$direction	- The direction we want to apply our spacer to
+ * @param	$size		- The size to fetch from our config
+ */
+
+//
+// @example - Usage
+//
+// .some-element{
+// 
+//		@include spacer( p, all, xl );
+//
+// }
+//
+// --> Compiles to
+//
+// .some-element{
+//	
+//		padding: 64px; 	
+//
+// }
+//
+
+@mixin spacer( $property, $direction, $size ){
+	
+	/**
+	 * Handle setting of our property type. This $property variable
+	 * will be interpolated throughout the rest of this mixin.
+	 */
+
+	// Set Padding
+	@if( $property == 'p' ){
+		
+		$property: padding;
+
+	}
+	
+	// Set Margin
+	@else if( $property == 'm' ){
+
+		$property: margin;
+
+	}
+	
+	// If not `m` or `p`
+	@else {
+		
+		// Throw an error
+		@error "The `spacer` mixin only accepts $property values of `m` and `p`. You attempted to use: `#{$size}`";
+
+	}
+
+	// Handle all possible directions
+	@if( $direction == 'all' ){
+		
+		#{$property} : spacer( $size );
+	}
+
+	// Horizontal
+	@else if( $direction == 'x' ){
+
+		#{$property}-right	: spacer( $size );
+		#{$property}-left	: spacer( $size );
+
+	}
+	
+	// Vertical
+	@else if ( $direction == 'y' ){
+
+		#{$property}-top 	: spacer( $size );
+		#{$property}-bottom : spacer( $size );
+
+	}
+	
+	// Top
+	@else if ( $direction == 't' ){
+
+		#{$property}-top : spacer( $size );
+
+	}
+	
+	// Right
+	@else if ( $direction == 'r' ){
+
+		#{$property}-right : spacer( $size );
+
+	}
+	
+	// Bottom
+	@else if ( $direction == 'b' ){
+
+		#{$property}-bottom : spacer( $size );
+
+	}
+	
+	// Left
+	@else if ( $direction == 'l' ){
+
+		#{$property}-left : spacer( $size );
+
+	}
+
+	// If a valid direction was not passed
+	@else{
+		
+		// Throw an error
+		@error "The `spacer` mixin only accepts $direction values of x, y, t, r, b, and l. You attempted to use: `#{$direction}`";
+
+	}
+
+
+}
