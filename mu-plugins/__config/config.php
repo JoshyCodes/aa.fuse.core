@@ -7,7 +7,7 @@ return array(
 
 		'name'					=> 'creativefuse',
 		'version' 				=> '0.0.1',
-		'text_domain'			=> 'cf',
+		'text_domain'			=> 'fuse',
 		'timezone'				=> 'America/New_York',
 
 	),
