@@ -18,13 +18,13 @@ function setup(){
 
 	function load_summary(){
 
-		Controllers\render( 'fragments/posts/single/summary' );
+		Controllers\render( 'fragments/posts/post/single/summary' );
 
 	}
 
 	function load_content(){
 
-		Controllers\render( 'fragments/posts/single/content' );
+		Controllers\render( 'fragments/posts/post/single/content' );
 
 	}
 	
