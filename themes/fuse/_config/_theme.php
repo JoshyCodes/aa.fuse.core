@@ -20,6 +20,7 @@ return [
         'supports'      => [
 
             'automatic-feed-links',
+            'menus',
             'post-thumbnails',
             'title-tag'
 
