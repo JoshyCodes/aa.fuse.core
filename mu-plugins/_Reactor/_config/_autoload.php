@@ -15,13 +15,12 @@ return [
 		'_helpers/images',
 		'_helpers/svg',
 		'_helpers/posts',
-
 		
 		// Security
-		'security/module',
+		'security/functions',
 
 		// Optimizations
-		'optimize/module',
+		'optimize/functions',
 
 		// Integrations,
 		'integrations/acf/acf',

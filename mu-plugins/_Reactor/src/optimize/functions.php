@@ -29,9 +29,6 @@ function set_timezone(){
 }
 
 
-
-
-
 /**
  * REMOVE Support for WP-EMOJIS
  * because the script force loads in header...boooooooo
