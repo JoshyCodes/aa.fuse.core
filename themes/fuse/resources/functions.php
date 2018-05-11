@@ -1,6 +1,9 @@
 <?php
 namespace Fuse;
 
+
+add_action( 'fuse_init', fuse() );
+
 /**
  * This is the main class for our theme. It's purposes
  * is to load and make globally available our theme config
@@ -184,5 +187,25 @@ function fuse(){
 
 }
 
-// Obfuscate our class and make it available globally!
-fuse();
+/**
+ * Fires before Fuse is officially initialized
+ *
+ * @since  1.0.0
+ */
+do_action( 'fuse_before_init' );
+
+    /**
+     * Fire it all up! The class is obfuscated to make it globally available,
+     * which makes it easy to get our config values!
+     *
+     * @since  1.0.0
+     */
+    fuse();
+
+/**
+ * Fires after Fuse is fully initialized
+ *
+ * @since  1.0.0
+ */
+
+do_action( 'fuse_after_init' );
