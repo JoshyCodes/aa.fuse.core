@@ -1,6 +1,7 @@
 <?php
 namespace Fuse\Enqueues;
 use Reactor\Helpers;
+use Fuse;
 
 /**
  * Load JQuery from Google CDN if Available. This can lead to huge performance gains
@@ -20,7 +21,7 @@ function maybe_load_jquery_from_google_cdn(){
 
 
 	// What version are we loading
-	$jquery_version 	= fuse()->config('jquery', 'version');
+	$jquery_version 	= Fuse\fuse()->config('jquery', 'version');
 
 
 	/**

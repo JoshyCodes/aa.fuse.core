@@ -1,5 +1,6 @@
 <?php
 namespace Fuse\Controllers;
+use Fuse;
 
 // https://viastudio.com/better-partial-templates-in-wordpress/
 
@@ -16,13 +17,15 @@ namespace Fuse\Controllers;
 * @since  1.0.0
 */
 
-function render_fragment( $path, $args = [], $echo = true ) {
+function render( $path, $args = [], $echo = true ) {
+
+    
 
 	// Set the partial root
-	$fragment_root	= Config\config()->get_config( 'theme', 'fragment_root' );
+	$view_root	= Fuse\fuse()->config( 'paths', 'view_root' );
 
 	// Build the full path to the file we are requesting
-	$_path		 	= $fragment_root . $path;
+	$_path		 	= $view_root . $path;
 
 	// Define the extension as .php for the partial file
 	$partial_file	= $_path . '.php';
@@ -37,7 +40,7 @@ function render_fragment( $path, $args = [], $echo = true ) {
     // Echo the partial and bail
     if ($echo) {
 
-        include( locate_template( $partial_file ) );
+        include( $partial_file );
 
         return;
 

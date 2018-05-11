@@ -13,6 +13,7 @@ use Fuse;
  *
  * @param  string $template The name of the requested template
  */
+
 function load_template( $template ){
 
 	// Set the template root
@@ -20,9 +21,11 @@ function load_template( $template ){
 
 	// Build the full template path
 	$final_template = $template_root . $template . '.php';
+	
+		d( $final_template );
 
 		// include the final template file
-		include( $final_template );
+		include( locate_template( $final_template ) );
 
 	// Bail after our file is included
 	return;

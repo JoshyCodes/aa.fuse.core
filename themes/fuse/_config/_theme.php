@@ -22,9 +22,11 @@ return [
     // Here you may specify an array of paths that should be checked for your views.
     'paths' => [
 
-        'template_root' => get_theme_file_path() . '/resources/views/templates/',
-        'fragment_root' => get_theme_file_path() . '/resources/views/partials/',
-
+        'view_root'         => get_theme_file_path()    . '/resources/views/',
+        'template_root'     => get_theme_file_path()    . '/resources/views/templates/',
+        'fragment_root'     => get_theme_file_path()    . '/resources/views/fragments/',
+        'structure_root'    => get_theme_file_path()    . '/resources/views/structure/',
+        
     ]
    
 ];

@@ -1,35 +1,59 @@
 <?php
 namespace Fuse;
-use Fuse\Controllers;
+use Reactor\Helpers;
 
-// If we have a basename in play, use it, otherwise, assume index.php
-$template = Controllers\get_template_base() ?? 'index';
+// Get nae of the current post type
+$post_type = Helpers\post_type_name();
 
 ?>
 
 
-<?php do_action( 'fuse_header' ); ?>
+<?php do_action( 'fuse_site_begin' ); ?>
 
-<?php do_action( 'fuse_before_content_div' ); ?>
+	<?php do_action( 'fuse_header' ); ?>
 
-	<div id="site-content" class="o-content o-content--<?php esc_html_e( $template); ?>">
-			
-			<?php do_action( 'fuse_before_main_div' ); ?>
+	<?php do_action( 'fuse_before_content_div' ); ?>
 
-			<main class="o-content__main">
+		<div id="site-content" class="o-content o-content--<?php esc_html_e( $post_type ); ?>">
+							
+				<?php do_action( 'fuse_before_main_div' ); ?>
 
-				<?php do_action( 'fuse_before_content' ); ?>
+				<main class="o-content__main">
+						
+					<?php if( have_posts() ){ ?>
 
-					<?php Controllers\load_template( $template ) ?>
+							<?php do_action( 'fuse_before_loop' ); ?>
+								
+								<?php while( have_posts() ): the_post(); ?>
 
-				<?php do_action( 'fuse_after_content' ); ?>
+									<?php do_action( 'fuse_before_content' ); ?>
+										
+										<?php do_action( 'fuse_content' ); ?>
 
-			</main>
+									<?php do_action( 'fuse_after_content' ); ?>
 
-			<?php do_action( 'fuse_after_main_div' ); ?>
+								<?php endwhile; ?>
+								
+							<?php do_action( 'fuse_after_loop' ); ?>
 
-	</div>
+							
 
-<?php do_action( 'fuse_after_content_div' ); ?>
+					<?php } else { ?>
 
-<?php do_action( 'fuse_footer' ); ?>
+		
+						<?php do_action( 'fuse_no_content' ); ?>				
+		
+
+					<?php } ?>
+
+				</main>
+
+				<?php do_action( 'fuse_after_main_div' ); ?>
+
+		</div>
+
+	<?php do_action( 'fuse_after_content_div' ); ?>
+
+	<?php do_action( 'fuse_footer' ); ?>
+
+<?php do_action( 'fuse_site_end' ); ?>

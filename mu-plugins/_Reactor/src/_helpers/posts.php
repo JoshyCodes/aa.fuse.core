@@ -10,22 +10,27 @@ namespace Reactor\Helpers;
  * 
  * @since  1.0.0
  */
-function post_type_name( $echo = true ){
+function post_type_name( $echo = false ){
 
-	// usable outside of the loop
-	global $post;
+	// If we don't have access to our $post variable
+	if( ! isset( $post ) ){
+
+		// Set it (usable outside of the loop)
+		global $post;
+
+	}
 
 	$current_post_type = $post->post_type;
 
 	$replace = '_';
 
 	$with = '-';
-
+	
 	// Replace underscores with hyphens
 	$post_type_name = str_replace( $replace, $with, $current_post_type );
 
 	// sanitize
-	$post_type_name = esc_attr( $post_type_name );
+	$post_type_name = $post_type_name;
 
 	if( $echo == true ){
 

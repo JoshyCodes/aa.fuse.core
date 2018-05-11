@@ -8,7 +8,7 @@ namespace Reactor\Security;
  * issues!
  */
 
-add_filter('the_generator', 'remove_wp_version');
+add_filter('the_generator', __NAMESPACE__ . '\remove_wp_version');
 
 function remove_wp_version() {
 	return '';
@@ -20,7 +20,7 @@ function remove_wp_version() {
  * so the person attempting to login has no context
  * for the failure. This helps improve security.
  */
-add_filter( 'login_errors', 'give_general_wp_login_error' );
+add_filter( 'login_errors', __NAMESPACE__ . '\give_general_wp_login_error' );
 
 function give_general_wp_login_error(){
   return 'Login Unsuccessful :)';
