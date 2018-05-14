@@ -2,8 +2,6 @@
 namespace Fuse;
 
 
-add_action( 'fuse_init', fuse() );
-
 /**
  * This is the main class for our theme. It's purposes
  * is to load and make globally available our theme config
@@ -109,6 +107,7 @@ final class Fuse{
         );
 
     }
+
 
 
     /**
