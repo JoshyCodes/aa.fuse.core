@@ -6,7 +6,8 @@ return [
    'files' => [
 
         // Base
-        'setup',
+        'setup/theme',
+        'setup/timber',
         'helpers',
         'admin',
         'filters',
