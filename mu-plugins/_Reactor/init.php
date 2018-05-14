@@ -1,24 +1,23 @@
 <?php
-/**
- * The plugin bootstrap file
- * @since 1.0.0
- * @package Reactor
- * 
- * Plugin Name: Reactor • Reactor
- * Plugin Description: The core of all Reactor custom functionality.
- * Author: Christopher Hahn - CreativeFuse
- * 
- * Version:           1.0.0
- * License:           GPL-2.0+
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- */
 
 namespace Reactor;
+
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
     die( 'You cannot access this file!' );
 }
+
+/**
+ * Reactor is a suite of tools, optimizations, factories & helper functions
+ * to extend Wordpress and make developing Wordpress-based sites much faster
+ * and more streamlined.
+ * 
+ * @since 1.0.0
+ * @package Reactor
+ * @autor   CreativeFuse
+ * 
+ */
 
 class Reactor{
 
@@ -57,6 +56,11 @@ class Reactor{
 
      }
 
+     /**
+     * Waking Up singleton is not possible.
+     *
+     * @throws Exception
+     */
      protected function __wakeup() {
 
         throw new Exception('You cannot wakeup singleton object');
@@ -67,10 +71,11 @@ class Reactor{
 
 
      /**
-      * 
-      *
-      * 
-      */
+     * Return the one true instance of our class if already exists,
+     * otherwise, we will instantiate the class here.
+     *
+     * @since  1.0.0
+     */
      public static function get_instance(){
 
          if (! isset(self::$instance) ) {
@@ -84,7 +89,13 @@ class Reactor{
     }
 
     /**
-     * Get the config file or a value from the config
+     * Get the config object or a value from the config
+     *
+     * @since  1.0.0
+     * 
+     * @param string $key The first level key to return values for
+     * @param string $value The specific value to retrieve
+     *
      */
     public function config( $key = '', $value = '' ){
 
@@ -108,17 +119,19 @@ class Reactor{
     }
 
     /**
-     * Init Reactor & Load All Files
+     * Initialize Reactor & require needed files.
+     *
+     * @since  1.0.0
      */
     private function init(){
 
         /**
-         * Fire up autoloader and load our dependencies
+         * Fire up autoloader and load our composer dependencies
          */
         require_once( __DIR__ . '/assets/vendor/autoload.php' );
             
         /**
-         * Begin loading additional modules if our module framework exists
+         * Load all dependencies as defined in our config file.
          */
         if( $this->config('files') ){
 
@@ -136,10 +149,10 @@ class Reactor{
 }
 
 /**
- * Instantiate & return the one true instance of our Reactor Reactor.
- * We never want to instantiate core twice!
+ * Instantiate & return the one true instance of Reactor.
+ * We never want to instantiate Reactor twice!
  *
- * @return OBJECT $config
+ * @return OBJECT Reactor Instance
  * 
  */
 function reactor(){
@@ -147,4 +160,29 @@ function reactor(){
     return Reactor::get_instance();
     
 }
-reactor();
+
+
+
+/**
+ * Fires before Reactor is officially initialized
+ *
+ * @since  1.0.0
+ */
+do_action( 'reactor_before_init' );
+
+    
+    /**
+     * Fire it all up! The class is obfuscated to make it globally available,
+     * in case we ever need to get a value from it.
+     *
+     * @since  1.0.0
+     */
+    reactor();
+
+
+/**
+ * Fires after Reactor is officially initialized
+ *
+ * @since  1.0.0
+ */
+do_action( 'reactor_after_init' );
