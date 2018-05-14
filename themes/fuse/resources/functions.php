@@ -1,6 +1,6 @@
 <?php
 namespace Fuse;
-
+use Timber;
 
 /**
  * This is the main class for our theme. It's purposes
@@ -28,12 +28,6 @@ final class Fuse{
 	 */
 	public $config = [];
 
-    /**
-     * Main Theme Folder
-     */
-
-    public $theme_root;
-
 
 	 /**
      * Instantiation can be done only inside the class itself
@@ -45,6 +39,7 @@ final class Fuse{
         // Must load config in before theme root defined
         $this->config = include_once dirname(__FILE__, 2) .'/_config/config.php';
 
+        // Load local dependencies
 		$this->load_dependencies();
 
 	}
@@ -94,11 +89,10 @@ final class Fuse{
     /**
      * Tell WP to look in this directory for anything theme related, but look in the root of our project
      * otherwise.
+     * 
      * @param [type] $path [description]
      */
     private function set_theme_root(){
-
-        $this->theme_root = dirname( __FILE__ );
 
         array_map(
             'add_filter',
@@ -141,17 +135,6 @@ final class Fuse{
     }
         
 
-    /**
-     * Get the theme root
-     *
-     * @since  1.0.0
-     */
-    public function get_theme_root(){
-
-
-        return $this->theme_root;
-
-    }
 
     /**
      * Load all dependencies as defined in our config file.
@@ -160,9 +143,20 @@ final class Fuse{
      */
     private function load_dependencies(){
 
-        $dependencies = $this->config( 'files' );
+        // Set dependency vars
+        $composer_dependencies  = $this->config( 'assets', 'src_path' ) . 'vendor/autoload.php';
+        $local_dependencies     = $this->config( 'files' );
 
-        foreach ( $dependencies as $file ){
+
+        // Load composer deps
+        require_once( $composer_dependencies );
+
+        // Fire up Timber
+        $timber = new Timber\Timber();
+
+
+        // Load all local deps
+        foreach ( $local_dependencies as $file ){
 
             include_once get_theme_file_path() . '/app/' . $file . '.php';
 

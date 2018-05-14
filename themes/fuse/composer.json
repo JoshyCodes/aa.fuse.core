@@ -1,0 +1,24 @@
+{
+  "name": "creativefuse/fuse",
+  "description": "An incredibly powerful and flexible Wordpress theme, meant to serve as a platform to build anything you can imagine.",
+  "type": "wordpress-theme",
+  "authors": [
+      {
+          "name": "CreativeFuse",
+          "email": "support@creativefuse.org"
+      }
+   ],
+  "support": {
+    "issues": "https://github.com/CreativeFuse/cf.theme.fuse/issues"
+  },
+  "require": {
+     "php": ">=7.1",
+     "composer/installers": "~1.0",
+     "timber/timber": "~1.0"
+  },
+  "config": {
+
+        "vendor-dir": "resources/assets/vendor"
+
+    }
+}

@@ -5,8 +5,9 @@ return [
 
     'assets' => [
 
-        'src'   => get_theme_file_uri().'/resources/assets/',
-        'prod'  => '/_dist'
+        'src_uri'   => get_theme_file_uri() .'/resources/assets/',
+        'src_path'  => get_theme_file_path() .'/resources/assets/',
+        'prod'      => get_theme_file_path() . '/_dist'
 
     ],
 
