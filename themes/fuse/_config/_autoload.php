@@ -7,7 +7,6 @@ return [
 
         // Base
         'setup/theme',
-        'setup/timber',
         'helpers',
         'admin',
         'filters',

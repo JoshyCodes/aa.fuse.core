@@ -1,6 +1,5 @@
 <?php
 namespace Fuse;
-use Timber;
 
 /**
  * This is the main class for our theme. It's purposes
@@ -144,15 +143,7 @@ final class Fuse{
     private function load_dependencies(){
 
         // Set dependency vars
-        $composer_dependencies  = $this->config( 'assets', 'src_path' ) . 'vendor/autoload.php';
-        $local_dependencies     = $this->config( 'files' );
-
-
-        // Load composer deps
-        require_once( $composer_dependencies );
-
-        // Fire up Timber
-        $timber = new Timber\Timber();
+        $local_dependencies = $this->config( 'files' );
 
 
         // Load all local deps
