@@ -44,8 +44,9 @@ return [
         'templates/layout/legacy-splash',
 
         // Enqueues
-        'enqueue/styles',
-        'enqueue/scripts'
+        'assets/styles',
+        'assets/scripts',
+        'assets/svg'
 
    ]
 

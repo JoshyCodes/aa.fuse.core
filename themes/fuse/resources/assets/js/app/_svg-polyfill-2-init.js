@@ -16,5 +16,3 @@
  	});
 
  })( jQuery, window, document );
-
-

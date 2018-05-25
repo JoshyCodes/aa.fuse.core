@@ -15,4 +15,5 @@
 
 <body <?php body_class(); ?>>
 
-  <?php do_action( 'fuse_after_body_open' ); ?>
+	<?php do_action( 'fuse_gtm' ); ?>
+  	<?php do_action( 'fuse_after_body_open' ); ?>
