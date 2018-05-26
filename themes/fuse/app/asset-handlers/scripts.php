@@ -1,5 +1,5 @@
 <?php
-namespace Fuse\Enqueues;
+namespace Fuse\AssetHandler;
 use Reactor\Helpers;
 use Fuse;
 
@@ -18,8 +18,7 @@ function maybe_load_jquery_from_google_cdn(){
 
 	// Set the site protocol for our final request
 	$protocol			= Helpers\get_url_protocol();
-
-
+	
 	// What version are we loading
 	$jquery_version 	= Fuse\fuse()->config('jquery', 'version');
 

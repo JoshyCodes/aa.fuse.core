@@ -44,9 +44,10 @@ return [
         'templates/layout/legacy-splash',
 
         // Enqueues
-        'assets/styles',
-        'assets/scripts',
-        'assets/svg'
+        'asset-handlers/helpers',
+        'asset-handlers/styles',
+        'asset-handlers/scripts',
+        'asset-handlers/svg'
 
    ]
 

@@ -112,7 +112,7 @@ eval("\n/**\n * When source maps are enabled, `style-loader` uses a link element
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(/*! ../scss/app.scss */ \"./resources/assets/scss/app.scss\");\n\nvar sum = function sum(a, b) {\n  return a + b;\n};\n\nconsole.log(sum(3, 5));\n\n//# sourceURL=webpack:///./resources/assets/js/app.js?");
+eval("\n\n__webpack_require__(/*! ../scss/app.scss */ \"./resources/assets/scss/app.scss\");\n\nvar sum = function sum(a, b) {\n  return a + b;\n};\n\nalert(2121);\n\nconsole.log(sum(322222222, 1253));\n\n//# sourceURL=webpack:///./resources/assets/js/app.js?");
 
 /***/ }),
 
