@@ -73,7 +73,7 @@ const config = {
               loader: 'svg-sprite-loader',
               options: {
                     extract: true,
-                    spriteFilename: devMode ? 'sprite.svg' : 'sprite-[hash:7].svg',
+                    spriteFilename: devMode ? 'sprite.svg' : 'sprite.svg',
                 }
             }       
 
@@ -202,7 +202,7 @@ const config = {
          * when it comes time to load our assets.
          */
         new WebpackAssetsManifest({
-
+            
             // Possible SVG Fix https://github.com/kisenka/svg-sprite-loader/issues/166
            
         }),
