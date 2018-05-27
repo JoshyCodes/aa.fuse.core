@@ -5,15 +5,18 @@
  * @Part 1 - https://hackernoon.com/a-tale-of-webpack-4-and-how-to-finally-configure-it-in-the-right-way-4e94c8e7e5c1
  * @Part 2 - https://medium.freecodecamp.org/how-to-develop-react-js-apps-fast-using-webpack-4-3d772db957e4
  */
-const path 							= require( 'path' );
-const MiniCssExtractPlugin 			= require('mini-css-extract-plugin');
-const WebpackMd5Hash 				= require('webpack-md5-hash');
-const CleanWebpackPlugin 			= require('clean-webpack-plugin');
-const CleanObsoleteChunks 			= require('webpack-clean-obsolete-chunks');
-const BrowserSyncPlugin 			= require('browser-sync-webpack-plugin');
-const WebpackAssetsManifest 		= require('webpack-assets-manifest');
-const FriendlyErrorsWebpackPlugin 	= require('friendly-errors-webpack-plugin');
+const BrowserSyncPlugin             = require('browser-sync-webpack-plugin');
+const CleanObsoleteChunks           = require('webpack-clean-obsolete-chunks');
+const CleanWebpackPlugin            = require('clean-webpack-plugin');
+const CopyWebpackPlugin             = require('copy-webpack-plugin')
+const FriendlyErrorsWebpackPlugin   = require('friendly-errors-webpack-plugin');
+const MiniCssExtractPlugin          = require('mini-css-extract-plugin');
+const SpriteLoaderPlugin            = require('svg-sprite-loader/plugin');
+const WebpackAssetsManifest         = require('webpack-assets-manifest');
+const WebpackMd5Hash                = require('webpack-md5-hash');
 
+const devMode                       = process.env.NODE_ENV !== 'production';
+const path                          = require( 'path' );
 
 const config = {
 
@@ -27,8 +30,9 @@ const config = {
 	output: {
 
 		path: path.resolve( __dirname, '_dist' ),
-		filename: '[name].[chunkhash].bundle.js',
-		chunkFilename: '[id].[chunkhash].js',
+
+		filename: devMode  ? '[name].js' : '[name].[chunkhash].bundle.js',
+		chunkFilename: devMode ? '[id].js' : '[id].[chunkhash].js',
 		sourceMapFilename: '[name].map'
 
 	},
@@ -62,7 +66,16 @@ const config = {
                 	'sass-loader'
 	            ],
 
-			}
+			},
+
+            {
+              test: /\.svg$/,
+              loader: 'svg-sprite-loader',
+              options: {
+                    extract: true,
+                    spriteFilename: devMode ? 'sprite.svg' : 'sprite-[hash:7].svg',
+                }
+            }       
 
 		]
 
@@ -84,7 +97,7 @@ const config = {
 		 */
   		new MiniCssExtractPlugin({
 
-            filename: '[name].[contenthash].bundle.css',
+            filename: devMode ? '[name].css' : '[name].[contenthash].bundle.css',
 
         }),
 
@@ -111,6 +124,7 @@ const config = {
          */
     	new BrowserSyncPlugin( {
 
+                injectChanges: true,
                 proxy: 'https://cf.dev',
 
                 files: [
@@ -124,17 +138,6 @@ const config = {
                 reloadDelay: 0
             }
         ),
-
-    	/**
-    	 * WebpackAssetsManifest
-    	 * @since  1.0.0
-    	 * 
-    	 * Repo : https://github.com/webdeveric/webpack-assets-manifest 
-    	 * Desc : This Webpack plugin will generate a JSON file that matches
-    	 * the original filename with the hashed version. This will help us
-    	 * when it comes time to load our assets.
-    	 */
-        new WebpackAssetsManifest({}),
 
         /**
          * FriendlyErrorsWebpackPlugin
@@ -168,7 +171,45 @@ const config = {
          * all the old files behind when new ones are recompiled
          * with new hashes.
          */
-        new CleanObsoleteChunks({})
+        new CleanObsoleteChunks({}),
+
+
+        new CopyWebpackPlugin([
+
+            // Image Handler + add content hash
+            {
+                from:   './resources/assets/images/**/*',
+                to:     './',
+                flatten: true
+            },
+
+            // Copy fonts to dist
+            {
+                from: './resources/assets/fonts/**/*',
+                to: './',
+                flatten: true
+            },
+
+        ]),
+
+        /**
+         * WebpackAssetsManifest
+         * @since  1.0.0
+         * 
+         * Repo : https://github.com/webdeveric/webpack-assets-manifest 
+         * Desc : This Webpack plugin will generate a JSON file that matches
+         * the original filename with the hashed version. This will help us
+         * when it comes time to load our assets.
+         */
+        new WebpackAssetsManifest({
+
+            // Possible SVG Fix https://github.com/kisenka/svg-sprite-loader/issues/166
+           
+        }),
+
+
+        new SpriteLoaderPlugin({ plainSprite: true })
+
 
 	],
 
