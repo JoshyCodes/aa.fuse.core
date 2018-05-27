@@ -44,11 +44,13 @@ return [
         'templates/layout/legacy-splash',
 
         // Enqueues
-        'asset-handlers/helpers',
-        'asset-handlers/styles',
+        'asset-handlers/_helpers',
+        'asset-handlers/fonts',
+        'asset-handlers/images',
         'asset-handlers/scripts',
+        'asset-handlers/styles',
         'asset-handlers/svg'
-
+        
    ]
 
 ];
