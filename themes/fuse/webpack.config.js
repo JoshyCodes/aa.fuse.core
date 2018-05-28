@@ -1,6 +1,12 @@
 /**
  * Webpack V4
  *
+ * @author  CreativeFuse
+ * @since   1.0.0
+ * 
+ * 
+ * WP JS Coding Standards Reference: https://make.wordpress.org/core/handbook/best-practices/inline-documentation-standards/javascript/
+ * 
  * Awesome References
  * @Part 1 - https://hackernoon.com/a-tale-of-webpack-4-and-how-to-finally-configure-it-in-the-right-way-4e94c8e7e5c1
  * @Part 2 - https://medium.freecodecamp.org/how-to-develop-react-js-apps-fast-using-webpack-4-3d772db957e4
@@ -42,7 +48,14 @@ const config = {
 		rules: [
 
 			/**
-			 * Babel Loader
+			 * Babel Loader.
+             *
+             * A compiler that allows us to use the latest JS standards without
+             * breaking stuff on older browsers.
+             * 
+             * @kind    loader
+             * @url     https://github.com/babel/babel-loader
+             * @since   1.0.0
 			 */
 			{
 				test:	/\.js$/,
@@ -54,6 +67,10 @@ const config = {
 
 			/**
 			 * SCSS Loader w/ POSTCss
+             *
+             * @kind    loader
+             * @since   1.0.0
+             * @uses    MiniCssExtractPlugin
 			 */
 			{
 
@@ -67,6 +84,16 @@ const config = {
 	            ],
 
 			},
+
+            /**
+             * SVG Sprite Loader.
+             *
+             * A loader to handle managing our SVG sprites.
+             *
+             * @kind    loader
+             * @url     https://github.com/kisenka/svg-sprite-loader
+             * @since   1.0.0
+             */
 
             {
               test: /\.svg$/,
@@ -84,16 +111,13 @@ const config = {
 	plugins: [
 
 		/**
-		 * MiniCssExtractPlugin
-		 *
-		 * @since  1.0.0
+		 * MiniCssExtractPlugin.
+         *
+         * Create CSS files from our SCSS files and bundle them together.
 		 * 
-		 * @repo https://github.com/webpack-contrib/mini-css-extract-plugin
+		 * @url   https://github.com/webpack-contrib/mini-css-extract-plugin
+         * @since 1.0.0
 		 * 
-		 * @desc Create CSS files from our SCSS files
-		 * and bundle them together.
-		 * 
-		 * @ref https://webpack.js.org/plugins/mini-css-extract-plugin/
 		 */
   		new MiniCssExtractPlugin({
 
