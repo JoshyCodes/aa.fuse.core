@@ -55,3 +55,8 @@ if( class_exists( 'Reactor\Factory\ModuleFactory' ) ){
 
 	}
 }
+
+
+// Load Legacy Modules
+
+// require_once( __DIR__ . '/legacy-gtm/bootstrap.php' );
