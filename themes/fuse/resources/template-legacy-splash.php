@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Landing • No Header | No Footer
+ * Template Name: Legacy Splash Page
  *
  * @package WordPress
  * @subpackage Fuse
@@ -11,8 +11,4 @@
  * This file is blank intentionally. Nothing here will ever be rendered.
  * It is used only for the initial WP template request life cycle. The template
  * request will be handled by our custom wrapper.
- */
-
-/**
- * Note: This legacy splash page will get retired when our new site is built :)
  */
