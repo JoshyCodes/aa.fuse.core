@@ -42,11 +42,16 @@ return [
 
         // Layout • Legacy Pages
         'templates/layout/legacy-splash',
+        'templates/layout/legacy-thanks',
 
         // Enqueues
-        'enqueue/styles',
-        'enqueue/scripts'
-
+        'asset-handlers/_helpers',
+        'asset-handlers/fonts',
+        'asset-handlers/images',
+        'asset-handlers/scripts',
+        'asset-handlers/styles',
+        'asset-handlers/svg'
+        
    ]
 
 ];

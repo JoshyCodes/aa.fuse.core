@@ -15,7 +15,8 @@ namespace Fuse;
  *
  * @since 1.1.0
  */
-function svg( $location, $name, $title, $class = '', $type = 'sprite'){
+function svg( $name, $title,  $location, $class = '', $type = 'sprite'){
+
 
     // If we are using our SVG Sprite
     if(  $type == 'sprite' ){
@@ -29,7 +30,7 @@ function svg( $location, $name, $title, $class = '', $type = 'sprite'){
 
         $svg = '<svg class="c-svg-icon c-svg-icon--'.$name.' '.esc_attr( $class ).'" xmlns=http://www.w3.org/2000/svg role="img" >';
         	$svg .= '<title>'.esc_html( $title ).'</title>';
-           	$svg .= '<use xlink:href="'. $location . '#' . $name .'"></use>';
+           	$svg .= '<use xlink:href="#' . $name .'"></use>';
         $svg .= '</svg>';
 
 	} else {

@@ -12,3 +12,7 @@
  * It is used only for the initial WP template request life cycle. The template
  * request will be handled by our custom wrapper.
  */
+
+/**
+ * Note: This legacy splash page will get retired when our new site is built :)
+ */

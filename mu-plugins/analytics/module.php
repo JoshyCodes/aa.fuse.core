@@ -29,7 +29,7 @@ class Analytics extends ModuleFactory{
 		$config		= include_once( 'config/config.php' );
 		$module_dir = __DIR__;
 		$module_url	= plugin_dir_url( __FILE__ );
-		
+				
 		$this->register( $config, $module_dir, $module_url );
 
 	}

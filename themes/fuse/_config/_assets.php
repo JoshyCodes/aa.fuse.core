@@ -5,9 +5,9 @@ return [
 
     'assets' => [
 
-        'src_uri'   => get_theme_file_uri() .'/resources/assets/',
-        'src_path'  => get_theme_file_path() .'/resources/assets/',
-        'prod'      => get_theme_file_path() . '/_dist'
+        'src'       => get_theme_file_uri() .'/resources/assets/',
+        'prod_path' => get_theme_file_path() . '/_dist/',
+        'prod_uri'  => get_theme_file_uri() . '/_dist/'
 
     ],
 
@@ -40,7 +40,7 @@ return [
 
     'cachebust' => [
 
-        'core_stylesheet' => file_exists( get_theme_file_path() . '/_dist/css/app.css' ) ? filemtime( get_theme_file_path() . '/_dist/css/app.css' ) : null,
+        'core_stylesheet' => file_exists( get_theme_file_path() . '/_dist/css/app.min.css' ) ? filemtime( get_theme_file_path() . '/_dist/css/app.min.css' ) : null,
         'core_js' => file_exists( get_theme_file_path() . '/_dist/js/app.bundle.js' ) ? filemtime( get_theme_file_path() . '/_dist/js/app.bundle.js' ) : null,
 
     ],

@@ -1,0 +1,134 @@
+/**
+ * *********************************************************
+ * 
+ * ***************************
+ *	Project Setup
+ * ***************************
+ *
+ *	Before any output happens, we need to pull in all of
+ *	our dependenices. These dependencies include:
+ *
+ * 1. Configuration Files
+ * 2. Mixins and Functions
+ *
+ * @since 1.0.0
+ *
+ * ******************************************************** 
+ */
+	/**
+	 * Load our Project's configurations.
+	 *
+	 */
+
+	@import '0__config/_config-borders';
+	@import '0__config/_config-breakpoints';
+	@import '0__config/_config-colors';
+	@import '0__config/_config-grid';
+	@import '0__config/_config-shadows';
+	@import '0__config/_config-spacing';
+	@import '0__config/_config-transitions';
+	@import '0__config/_config-type';
+	@import '0__config/_config-widths';
+	@import '0__config/_config-z-index';
+
+
+
+	/**
+	 * Next, we need to load the required tools ( functions and mixins )
+	 * for our project. Our token definitions and various properties
+	 * and values throughout our project depend on these tools.
+	 *
+	 */
+	@import '1__tools/a__functions/_aa-loader';
+	@import '1__tools/b__mixins/_aa-loader';
+	@import '1__tools/c__extends/_aa-loader';
+
+
+
+/**
+ * *********************************************************
+ * 
+ * ***************************
+ *	Project Styles
+ * ***************************
+ *
+ *	Now that our project has been configured and our
+ *	dependencies are in place, we can begin loading
+ *	files that will contain actual output that will 
+ *	end up in our project's /dist folder. These are
+ *	loaded in an intentional order bases on selector
+ *	scope, function and specificity. 
+ *
+ * 1. Libs
+ * 2. Layout
+ * 3. Atoms 
+ * 4. Molecules
+ * 5. Organisms
+ * 6. Pages 
+ * 7. Utility
+ *
+ * ********************************************************
+ *
+ * Note: We use the core concepts behind the following
+ * methodologies in this project:
+ *
+ * 1. BEM (modified) - http://getbem.com/introduction/
+ * 2. ITSCSS (modified) - https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
+ * 3. Atomic Design - http://atomicdesign.bradfrost.com/table-of-contents/
+ *
+ * ******************************************************** 
+ */
+
+
+	/**
+	 * Load any 3rd party Libraries we need
+	 */
+	@import '2__libs/_aa-loader';
+
+	/**
+	 * Load layout (grid) related styles
+	 */
+	@import '3__layout/_aa-loader';
+
+
+	/**
+	 * Load our Atoms
+	 */
+	@import '4__atoms/_aa-loader';
+
+	/**
+	 * Load our Molecules
+	 */
+	@import '5__molecules/_aa-loader';
+
+	/**
+	 * Load our Organisms
+	 */
+	@import '6__organisms/_aa-loader';
+
+
+	/**
+	 * Load page-specific code
+	 */
+	@import '7__pages/_aa-loader';
+
+
+	/**
+	 * Load our utility classes 
+	 */
+	@import '8__utility/_aa-loader';
+
+
+
+/**
+ * SHAME!!!
+ *
+ * In a perfect world. you should NEVER need to use this file...BUT...stuff happens
+ * and if you need to make a very quick hack to fix a bug, put your code in this file.
+ * 
+ * Please move the code out of this file and properly fix whatever you need
+ * to fix as soon as possible. Code should never be left in _shame for any length of time.
+ *
+ */
+
+	@import '_shame';
