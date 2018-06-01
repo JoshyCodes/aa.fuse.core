@@ -3,7 +3,7 @@
 
 	<div class="c-logo">
 
-		<img class="c-logo__img "src="https://vxpubdv2eq-flywheel.netdna-ssl.com/wp-content/themes/cfi-molecule/framework/assets/dist/imgs/cfi-logo.png" alt="The CreativeFuse logo in full color"/>
+		<img class="c-logo__img "src="/wp-content/uploads/2018/06/cfi-logo-clean-1024x1024.png" alt="The CreativeFuse logo in full color"/>
 
 	</div>
 
