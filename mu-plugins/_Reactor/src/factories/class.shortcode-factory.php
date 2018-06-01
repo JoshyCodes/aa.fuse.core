@@ -25,26 +25,44 @@ class ShortcodeFactory{
 	/**
 	 * Runtime Configuration parameters
 	 *
+	 * @since  1.0.0
 	 * @var The configuration file for the shortcode
 	 */
 	public static $config = [];
 
-	public static $attributes = [];
 
-
+	/**
+	 * Shortcode Constructor registers
+	 * the config for the shortcode instance.
+	 *
+	 * @since  1.0.0
+	 * @param array $config shortcode configuration
+	 */
 	public function __construct( $config ){
 
 		$this->register( $config );
 
 	}
 
+
 	/**
 	 * Register the shortcode's config file
+	 * by merging defined $config values with
+	 * a set of default values, storing the
+	 * new config, and officially adding the
+	 * shortcode.
+	 *
+	 * @since  1.0.0
+	 * @param array $config shortcode configuration
 	 */
 
 	protected function register( $config ){
 
-		// Set our shortcode defaults
+		/**
+		 * Set our shortcode defaults & merge with
+		 * passed in $config params
+		 */
+
 		$config = array_merge(
 
 			array(
@@ -59,7 +77,10 @@ class ShortcodeFactory{
 
 		);
 
+		// Store our new config
 		$this->store_config( $config['shortcode_name'], $config );
+
+		// Officially add the shortcode
 		$this->add_shortcode( $config['shortcode_name'] );
 
 	}
@@ -71,7 +92,13 @@ class ShortcodeFactory{
 
 	}
 
-
+	/**
+	 * Add the shortcode to Wordpress and define
+	 * the preccessing callback function.
+	 *
+	 * @since  1.0.0
+	 * @param string $shortcode_name The name of the shortcode
+	 */
 	public function add_shortcode( $shortcode_name ){
 
 		if ( ! $this->get_config( $shortcode_name ) ) {
@@ -80,25 +107,27 @@ class ShortcodeFactory{
 
 		}
 
-		\add_shortcode( $this->get_config( $shortcode_name, 'shortcode_name' ), array( $this, 'process_shortcode_callback' ) );
+		\add_shortcode(
+
+			$this->get_config( $shortcode_name, 'shortcode_name' ),
+			array( $this, 'process_shortcode_callback' )
+
+		);
 
 
-	}
+	}	
 
-	public function store_atts( $attributes ){
 
-		// Store the settings for this shortcode in our shortcode config by name
-		$this->atts = $attributes;
-
-	}
 
 	public function process_shortcode_callback( $instance_args, $content, $shortcode_name ){
-
-		
-
+	
+		/**
+		 * Get the config for the shortcode we are currently working with
+		 */
 		$config = $this->get_config( $shortcode_name );
 
-		// Set shortcode attributes
+
+		// Set shortcode attributes using the current shortcode instance
 		$attributes = shortcode_atts(
 
 			$config['defaults'],
@@ -107,6 +136,7 @@ class ShortcodeFactory{
 
 		);
 		
+		// Determine if we need to process the shortcode within $content or not
 		if ( $content && $config['do_shortcode_within_content'] ) {
 
 			$content = \do_shortcode( $content );
@@ -114,14 +144,18 @@ class ShortcodeFactory{
 		}
 
 
+		// If no processing function could be found in the shortcode $config
 		if ( ! $config['processing_function'] ) {
 
 			return "No shortcode process function defined for " . $shortcode_name . ".";
 
 		}
 
+
+		// Set process function name
 		$function_name = $config['processing_function'];
 
+		// Run the processing function and make all data vailable to it.
 		return $function_name( $config, $attributes, $content, $shortcode_name );
 
 	}

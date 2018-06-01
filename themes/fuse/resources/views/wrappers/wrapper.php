@@ -36,8 +36,6 @@ $post_type = Helpers\post_type_name();
 								
 							<?php do_action( 'fuse_after_loop' ); ?>
 
-							
-
 					<?php } else { ?>
 
 		
