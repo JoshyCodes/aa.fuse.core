@@ -18,6 +18,7 @@ const CopyWebpackPlugin             = require('copy-webpack-plugin')
 const FriendlyErrorsWebpackPlugin   = require('friendly-errors-webpack-plugin');
 const MiniCssExtractPlugin          = require('mini-css-extract-plugin');
 const SpriteLoaderPlugin            = require('svg-sprite-loader/plugin');
+const StyleLintPlugin               = require('stylelint-webpack-plugin');
 const WebpackAssetsManifest         = require('webpack-assets-manifest');
 const WebpackMd5Hash                = require('webpack-md5-hash');
 
@@ -58,12 +59,15 @@ const config = {
              * @since   1.0.0
 			 */
 			{
-				test:	/\.js$/,
+				test: /\.(js|jsx)$/,
 				exclude: /(node_modules|bower_components)/,
-				use: {
-					loader: 'babel-loader',
-				}
+				use: ['babel-loader']
 			},
+            {
+                test:   /\.js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: ['babel-loader', 'eslint-loader']
+            },
 
 			/**
 			 * SCSS Loader w/ POSTCss
@@ -122,6 +126,24 @@ const config = {
   		new MiniCssExtractPlugin({
 
             filename: devMode ? '[name].css' : '[name].[contenthash].bundle.css',
+
+        }),
+
+        /**
+         * StyleLintPlugin.
+         *
+         * A Stylelint plugin for webpack.
+         * 
+         * @url   https://github.com/webpack-contrib/stylelint-webpack-plugin
+         * @since 1.0.0
+         * 
+         */
+        new StyleLintPlugin({
+
+            configFile: '.stylelintrc',
+            failOnError: false,
+            files: '**/*.scss',
+            quiet: false,
 
         }),
 
