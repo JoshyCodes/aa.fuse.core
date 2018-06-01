@@ -9,7 +9,7 @@ add_action( 'wp', __NAMESPACE__ . '\setup');
 function setup(){
 
 	// If we are on our landing page
-	if( is_page_template( 'template-landing.php' ) || is_page_template( 'template-legacy-splash.php' ) ){
+	if( is_page_template( ['template-landing.php', 'template-legacy-splash.php', 'template-legacy-thanks.php'] ) ){
 
 		/**
 		 * Remove the Header and Footer

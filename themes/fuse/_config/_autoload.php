@@ -42,6 +42,7 @@ return [
 
         // Layout • Legacy Pages
         'templates/layout/legacy-splash',
+        'templates/layout/legacy-thanks',
 
         // Enqueues
         'asset-handlers/_helpers',
