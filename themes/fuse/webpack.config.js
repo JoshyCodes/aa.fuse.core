@@ -42,7 +42,7 @@ const config = {
 
 		filename: devMode  ? '[name].js' : '[name].[chunkhash].bundle.js',
 		chunkFilename: devMode ? '[id].js' : '[id].[chunkhash].js',
-		sourceMapFilename: '[name].map'
+		sourceMapFilename: '[file].map'
 
 	},
 
@@ -84,9 +84,16 @@ const config = {
 	            use: [
 	                'style-loader',
                 	MiniCssExtractPlugin.loader,
-                	'css-loader',
+
+                	{
+                		loader: 'css-loader', options: { sourceMap: true }
+                	},
+
                 	'postcss-loader',
-                	'sass-loader'
+
+                	{
+                		loader: 'sass-loader', options: { sourceMap: true }
+                	}
 	            ],
 
 			},
@@ -105,28 +112,31 @@ const config = {
 
             {
              	test: /\.svg$/,
-             	use: [
+             	use: [{
 
-	              { loader: 'svg-sprite-loader',
-	              options: {
+					loader: 'svg-sprite-loader', options: {
 	                    extract: true,
 	                    spriteFilename: devMode ? 'sprite.svg' : 'sprite.svg',
-	                } },
+	                }
 
-	              { loader: 'svgo-loader',
-	              options: {
-	                      plugins: [
-	                      	{cleanupAttrs: true},
-	                        {removeTitle: true},
-	                        {removeUselessStrokeAndFill: true},
+	            },
+
+				{
+					loader: 'svgo-loader', options: {
+
+						plugins: [
+							{cleanupAttrs: true},
+							{removeTitle: true},
+							{removeUselessStrokeAndFill: true},
 	                        {convertColors: {shorthex: false}},
 	                        {convertShapeToPath: true},
 	                        {removeAttrs: {attrs: '(stroke|fill)'}},
 	                        {removeMetadata: true}
-	                      ]
-	                    }
-	               }
-            	]
+						]
+					}
+
+				}
+				]
             }
 
 		]

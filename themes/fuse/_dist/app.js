@@ -86,10 +86,10 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/index.js!./node_modules/postcss-loader/lib/index.js!./node_modules/sass-loader/lib/loader.js!./resources/assets/scss/app.scss":
-/*!***************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader!./node_modules/postcss-loader/lib!./node_modules/sass-loader/lib/loader.js!./resources/assets/scss/app.scss ***!
-  \***************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/index.js??ref--6-2!./node_modules/postcss-loader/lib/index.js!./node_modules/sass-loader/lib/loader.js??ref--6-4!./resources/assets/scss/app.scss":
+/*!***********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader??ref--6-2!./node_modules/postcss-loader/lib!./node_modules/sass-loader/lib/loader.js??ref--6-4!./resources/assets/scss/app.scss ***!
+  \***********************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1318,7 +1318,7 @@ __webpack_require__("./resources/assets/icons/svg sync recursive \\.svg$");
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/mini-css-extract-plugin/dist/loader.js!../../../node_modules/css-loader!../../../node_modules/postcss-loader/lib!../../../node_modules/sass-loader/lib/loader.js!./app.scss */ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/index.js!./node_modules/postcss-loader/lib/index.js!./node_modules/sass-loader/lib/loader.js!./resources/assets/scss/app.scss");
+var content = __webpack_require__(/*! !../../../node_modules/mini-css-extract-plugin/dist/loader.js!../../../node_modules/css-loader??ref--6-2!../../../node_modules/postcss-loader/lib!../../../node_modules/sass-loader/lib/loader.js??ref--6-4!./app.scss */ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/index.js??ref--6-2!./node_modules/postcss-loader/lib/index.js!./node_modules/sass-loader/lib/loader.js??ref--6-4!./resources/assets/scss/app.scss");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
