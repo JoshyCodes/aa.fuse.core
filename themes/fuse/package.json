@@ -37,6 +37,8 @@
     "stylelint": "^9.2.1",
     "stylelint-webpack-plugin": "^0.10.5",
     "svg-sprite-loader": "^3.8.0",
+    "svgo": "^1.0.5",
+    "svgo-loader": "^2.1.0",
     "webpack": "^4.9.1",
     "webpack-assets-manifest": "^3.0.1",
     "webpack-clean-obsolete-chunks": "^0.4.0",

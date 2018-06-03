@@ -96,16 +96,35 @@ const config = {
              *
              * @kind    loader
              * @url     https://github.com/kisenka/svg-sprite-loader
+             * @url		https://github.com/rpominov/svgo-loader
+             * @url 	https://github.com/svg/svgo
              * @since   1.0.0
              */
 
             {
-              test: /\.svg$/,
-              loader: 'svg-sprite-loader',
-              options: {
-                    extract: true,
-                    spriteFilename: devMode ? 'sprite.svg' : 'sprite.svg',
-                }
+             	test: /\.svg$/,
+             	use: [
+
+	              { loader: 'svg-sprite-loader',
+	              options: {
+	                    extract: true,
+	                    spriteFilename: devMode ? 'sprite.svg' : 'sprite.svg',
+	                } },
+
+	              { loader: 'svgo-loader',
+	              options: {
+	                      plugins: [
+	                      	{cleanupAttrs: true},
+	                        {removeTitle: true},
+	                        {removeUselessStrokeAndFill: true},
+	                        {convertColors: {shorthex: false}},
+	                        {convertShapeToPath: true},
+	                        {removeAttrs: {attrs: '(stroke|fill)'}},
+	                        {removeMetadata: true}
+	                      ]
+	                    }
+	               }
+            	]
             }
 
 		]
