@@ -14,7 +14,7 @@
 const BrowserSyncPlugin             = require('browser-sync-webpack-plugin');
 const CleanObsoleteChunks           = require('webpack-clean-obsolete-chunks');
 const CleanWebpackPlugin            = require('clean-webpack-plugin');
-const CopyWebpackPlugin             = require('copy-webpack-plugin')
+const CopyWebpackPlugin             = require('copy-webpack-plugin');
 const FriendlyErrorsWebpackPlugin   = require('friendly-errors-webpack-plugin');
 const MiniCssExtractPlugin          = require('mini-css-extract-plugin');
 const SpriteLoaderPlugin            = require('svg-sprite-loader/plugin');
@@ -224,7 +224,10 @@ const config = {
          * Desc : recognizes certain classes of webpack errors and cleans, aggregates
          * and prioritizes them to provide a better Developer Experience.
          */
-        new FriendlyErrorsWebpackPlugin(),
+        new FriendlyErrorsWebpackPlugin({
+
+
+        }),
 
         /**
          * CleanWebpackPlugin
