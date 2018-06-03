@@ -40,7 +40,7 @@ const config = {
 
 		path: path.resolve( __dirname, '_dist' ),
 
-		filename: devMode  ? '[name].js' : '[name].[chunkhash].bundle.js',
+		filename: devMode  ? 'js/[name].js' : 'js/[name].[chunkhash].bundle.js',
 		chunkFilename: devMode ? '[id].js' : '[id].[chunkhash].js',
 		sourceMapFilename: '[file].map'
 
@@ -116,7 +116,7 @@ const config = {
 
 					loader: 'svg-sprite-loader', options: {
 	                    extract: true,
-	                    spriteFilename: devMode ? 'sprite.svg' : 'sprite.svg',
+	                    spriteFilename: devMode ? 'sprites/sprite.svg' : 'sprites/sprite.svg',
 	                }
 
 	            },
@@ -156,7 +156,7 @@ const config = {
 		 */
   		new MiniCssExtractPlugin({
 
-            filename: devMode ? '[name].css' : '[name].[contenthash].bundle.css',
+            filename: devMode ? 'css/[name].css' : 'css/[name].[contenthash].bundle.css',
 
         }),
 
@@ -256,14 +256,14 @@ const config = {
             // Image Handler + add content hash
             {
                 from:   './resources/assets/images/**/*',
-                to:     './',
+                to:     './images/',
                 flatten: true
             },
 
             // Copy fonts to dist
             {
                 from: './resources/assets/fonts/**/*',
-                to: './',
+                to: './fonts/',
                 flatten: true
             },
 

@@ -1,6 +1,9 @@
 {
-  "app.css": "app.css",
-  "app.js": "app.js",
-  "posts.js": "posts.js",
-  "sprite.svg": "sprite.svg"
+  "app.css": "css/app.e9684422f353a6acac38.bundle.css",
+  "app.css.map": "css/app.e9684422f353a6acac38.bundle.css.map",
+  "app.js": "js/app.83b4a0d190329e062611.bundle.js",
+  "app.js.map": "js/app.83b4a0d190329e062611.bundle.js.map",
+  "posts.js": "js/posts.8971778a9cc0ad74eeea.bundle.js",
+  "posts.js.map": "js/posts.8971778a9cc0ad74eeea.bundle.js.map",
+  "sprites/sprite.svg": "sprites/sprite.svg"
 }
