@@ -34,6 +34,8 @@ const config = {
 
 	},
 
+	devtool: devMode ? 'none' : 'source-map',
+
 	output: {
 
 		path: path.resolve( __dirname, '_dist' ),

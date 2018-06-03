@@ -17,6 +17,7 @@
     "babel-loader": "^7.1.4",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
+    "babel-preset-minify": "^0.4.3",
     "babel-runtime": "^6.26.0",
     "browser-sync": "^2.24.4",
     "browser-sync-webpack-plugin": "^2.2.2",
