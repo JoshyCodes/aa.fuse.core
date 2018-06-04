@@ -1,13 +1,18 @@
 <?php
 namespace CreativeFuse\Analytics;
-
+use Reactor\Helpers;
 
 add_action('init', __NAMESPACE__ . '\load_gtm');
 
 function load_gtm(){
 
-	add_action( 'wp_head', __NAMESPACE__ . '\load_gtm_head', 1);
-	add_action( 'fuse_gtm', __NAMESPACE__ . '\load_gtm_body', 1);
+	// Fire off GTM & Hotjar if we are not in a dev environment
+	if( ! Helpers\is_dev_env() ){
+
+		add_action( 'wp_head', __NAMESPACE__ . '\load_gtm_head', 1);
+		add_action( 'fuse_gtm', __NAMESPACE__ . '\load_gtm_body', 1);
+
+	}
 
 }
 
