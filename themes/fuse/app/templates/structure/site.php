@@ -2,6 +2,7 @@
 namespace Fuse\Structure;
 use Fuse\Controllers;
 use Fuse\AssetHandler;
+use Reactor\Helpers;
 
 // Bring in site assets
 add_action( 'wp_enqueue_scripts',	__NAMESPACE__ . '\load_core_app_styles', 999999999 );
@@ -12,7 +13,6 @@ add_action( 'fuse_site_begin',		__NAMESPACE__ . '\open_site',		1 );
 add_action( 'fuse_header',			__NAMESPACE__ . '\load_header',		1 );
 add_action( 'fuse_footer',			__NAMESPACE__ . '\load_footer',		1 );
 add_action( 'fuse_site_end',		__NAMESPACE__ . '\close_site',		1 );
-
 
 /**
  * Register & enqueue the main stylesheet for our application

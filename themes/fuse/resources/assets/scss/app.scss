@@ -1,6 +1,6 @@
 /**
  * *********************************************************
- * 
+ *
  * ***************************
  *	Project Setup
  * ***************************
@@ -13,7 +13,7 @@
  *
  * @since 1.0.0
  *
- * ******************************************************** 
+ * ********************************************************
  */
 	/**
 	 * Load our Project's configurations.
@@ -45,24 +45,24 @@
 
 /**
  * *********************************************************
- * 
+ *
  * ***************************
  *	Project Styles
  * ***************************
  *
  *	Now that our project has been configured and our
  *	dependencies are in place, we can begin loading
- *	files that will contain actual output that will 
+ *	files that will contain actual output that will
  *	end up in our project's /dist folder. These are
  *	loaded in an intentional order bases on selector
- *	scope, function and specificity. 
+ *	scope, function and specificity.
  *
  * 1. Libs
  * 2. Layout
- * 3. Atoms 
+ * 3. Atoms
  * 4. Molecules
  * 5. Organisms
- * 6. Pages 
+ * 6. Pages
  * 7. Utility
  *
  * ********************************************************
@@ -74,7 +74,7 @@
  * 2. ITSCSS (modified) - https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
  * 3. Atomic Design - http://atomicdesign.bradfrost.com/table-of-contents/
  *
- * ******************************************************** 
+ * ********************************************************
  */
 
 
@@ -112,7 +112,7 @@
 
 
 	/**
-	 * Load our utility classes 
+	 * Load our utility classes
 	 */
 	@import '8__utility/_aa-loader';
 
@@ -122,7 +122,7 @@
  *
  * In a perfect world. you should NEVER need to use this file...BUT...stuff happens
  * and if you need to make a very quick hack to fix a bug, put your code in this file.
- * 
+ *
  * Please move the code out of this file and properly fix whatever you need
  * to fix as soon as possible. Code should never be left in _shame for any length of time.
  *
