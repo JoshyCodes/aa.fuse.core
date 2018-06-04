@@ -35,6 +35,7 @@
 		// Fade in when loaded
 		transition: 1s all ease-in .2s;
  		@include opacity(1);
+ 		
 	}
 
 }

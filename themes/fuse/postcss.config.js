@@ -5,9 +5,15 @@
  * @github https://github.com/postcss/postcss
  */
 
+const devMode = process.env.NODE_ENV !== 'production';
+
 module.exports = {
-    plugins: [
-      require('autoprefixer'),
-      require('postcss-clean')
-    ]
+	sourceMap: true,
+    plugins: {
+    	'postcss-minify-font-values': {},
+    	'postcss-merge-longhand': {},
+		'autoprefixer': {},
+		'postcss-clean': { format: devMode ? 'beautify' : '' },
+		'css-mqpacker': {},
+    }
 }
