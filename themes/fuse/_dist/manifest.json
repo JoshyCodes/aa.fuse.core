@@ -2,5 +2,5 @@
   "app.css": "css/app.css",
   "app.js": "js/app.js",
   "posts.js": "js/posts.js",
-  "sprites/sprite.svg": "sprites/sprite.svg"
+  "sprite.svg": "sprite.svg"
 }

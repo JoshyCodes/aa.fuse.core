@@ -664,7 +664,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
       id: "arrow-l-usage",
       viewBox: "0 0 66 66",
-      url: __webpack_require__.p + "sprites/sprite.svg#arrow-l",
+      url: __webpack_require__.p + "sprite.svg#arrow-l",
       toString: function () {
         return this.url;
       }
@@ -684,7 +684,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
       id: "arrow-m-usage",
       viewBox: "0 0 34 34",
-      url: __webpack_require__.p + "sprites/sprite.svg#arrow-m",
+      url: __webpack_require__.p + "sprite.svg#arrow-m",
       toString: function () {
         return this.url;
       }
@@ -704,7 +704,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
       id: "caret-s-usage",
       viewBox: "0 0 22 22",
-      url: __webpack_require__.p + "sprites/sprite.svg#caret-s",
+      url: __webpack_require__.p + "sprite.svg#caret-s",
       toString: function () {
         return this.url;
       }
@@ -724,7 +724,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
       id: "clock-s-usage",
       viewBox: "0 0 22 22",
-      url: __webpack_require__.p + "sprites/sprite.svg#clock-s",
+      url: __webpack_require__.p + "sprite.svg#clock-s",
       toString: function () {
         return this.url;
       }
@@ -744,7 +744,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
       id: "clock-xs-usage",
       viewBox: "0 0 14 14",
-      url: __webpack_require__.p + "sprites/sprite.svg#clock-xs",
+      url: __webpack_require__.p + "sprite.svg#clock-xs",
       toString: function () {
         return this.url;
       }
@@ -764,7 +764,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
       id: "donate-s-usage",
       viewBox: "0 0 22 22",
-      url: __webpack_require__.p + "sprites/sprite.svg#donate-s",
+      url: __webpack_require__.p + "sprite.svg#donate-s",
       toString: function () {
         return this.url;
       }
@@ -784,7 +784,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
       id: "donate-xs-usage",
       viewBox: "0 0 14 14",
-      url: __webpack_require__.p + "sprites/sprite.svg#donate-xs",
+      url: __webpack_require__.p + "sprite.svg#donate-xs",
       toString: function () {
         return this.url;
       }
@@ -804,7 +804,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
       id: "download-s-usage",
       viewBox: "0 0 22 22",
-      url: __webpack_require__.p + "sprites/sprite.svg#download-s",
+      url: __webpack_require__.p + "sprite.svg#download-s",
       toString: function () {
         return this.url;
       }
@@ -824,7 +824,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
       id: "email-s-usage",
       viewBox: "0 0 22 22",
-      url: __webpack_require__.p + "sprites/sprite.svg#email-s",
+      url: __webpack_require__.p + "sprite.svg#email-s",
       toString: function () {
         return this.url;
       }
@@ -844,7 +844,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
       id: "email-xs-usage",
       viewBox: "0 0 14 14",
-      url: __webpack_require__.p + "sprites/sprite.svg#email-xs",
+      url: __webpack_require__.p + "sprite.svg#email-xs",
       toString: function () {
         return this.url;
       }
@@ -864,7 +864,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
       id: "facebook-s-usage",
       viewBox: "0 0 22 22",
-      url: __webpack_require__.p + "sprites/sprite.svg#facebook-s",
+      url: __webpack_require__.p + "sprite.svg#facebook-s",
       toString: function () {
         return this.url;
       }
@@ -884,7 +884,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
       id: "instagram-s-usage",
       viewBox: "0 0 22 22",
-      url: __webpack_require__.p + "sprites/sprite.svg#instagram-s",
+      url: __webpack_require__.p + "sprite.svg#instagram-s",
       toString: function () {
         return this.url;
       }
@@ -904,7 +904,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
       id: "like-s-usage",
       viewBox: "0 0 22 22",
-      url: __webpack_require__.p + "sprites/sprite.svg#like-s",
+      url: __webpack_require__.p + "sprite.svg#like-s",
       toString: function () {
         return this.url;
       }
@@ -924,7 +924,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
       id: "like-xs-usage",
       viewBox: "0 0 14 14",
-      url: __webpack_require__.p + "sprites/sprite.svg#like-xs",
+      url: __webpack_require__.p + "sprite.svg#like-xs",
       toString: function () {
         return this.url;
       }
@@ -944,7 +944,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
       id: "menu-l-usage",
       viewBox: "0 0 66 66",
-      url: __webpack_require__.p + "sprites/sprite.svg#menu-l",
+      url: __webpack_require__.p + "sprite.svg#menu-l",
       toString: function () {
         return this.url;
       }
@@ -964,7 +964,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
       id: "menu-m-usage",
       viewBox: "0 0 34 34",
-      url: __webpack_require__.p + "sprites/sprite.svg#menu-m",
+      url: __webpack_require__.p + "sprite.svg#menu-m",
       toString: function () {
         return this.url;
       }
@@ -984,7 +984,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
       id: "notes-s-usage",
       viewBox: "0 0 22 22",
-      url: __webpack_require__.p + "sprites/sprite.svg#notes-s",
+      url: __webpack_require__.p + "sprite.svg#notes-s",
       toString: function () {
         return this.url;
       }
@@ -1004,7 +1004,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
       id: "notes-xs-usage",
       viewBox: "0 0 14 14",
-      url: __webpack_require__.p + "sprites/sprite.svg#notes-xs",
+      url: __webpack_require__.p + "sprite.svg#notes-xs",
       toString: function () {
         return this.url;
       }
@@ -1024,7 +1024,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
       id: "phone-s-usage",
       viewBox: "0 0 22 22",
-      url: __webpack_require__.p + "sprites/sprite.svg#phone-s",
+      url: __webpack_require__.p + "sprite.svg#phone-s",
       toString: function () {
         return this.url;
       }
@@ -1044,7 +1044,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
       id: "phone-xs-usage",
       viewBox: "0 0 14 14",
-      url: __webpack_require__.p + "sprites/sprite.svg#phone-xs",
+      url: __webpack_require__.p + "sprite.svg#phone-xs",
       toString: function () {
         return this.url;
       }
@@ -1064,7 +1064,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
       id: "play-l-usage",
       viewBox: "0 0 66 66",
-      url: __webpack_require__.p + "sprites/sprite.svg#play-l",
+      url: __webpack_require__.p + "sprite.svg#play-l",
       toString: function () {
         return this.url;
       }
@@ -1084,7 +1084,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
       id: "play-m-usage",
       viewBox: "0 0 34 34",
-      url: __webpack_require__.p + "sprites/sprite.svg#play-m",
+      url: __webpack_require__.p + "sprite.svg#play-m",
       toString: function () {
         return this.url;
       }
@@ -1104,7 +1104,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
       id: "search-s-usage",
       viewBox: "0 0 22 22",
-      url: __webpack_require__.p + "sprites/sprite.svg#search-s",
+      url: __webpack_require__.p + "sprite.svg#search-s",
       toString: function () {
         return this.url;
       }
@@ -1124,7 +1124,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
       id: "search-xs-usage",
       viewBox: "0 0 14 14",
-      url: __webpack_require__.p + "sprites/sprite.svg#search-xs",
+      url: __webpack_require__.p + "sprite.svg#search-xs",
       toString: function () {
         return this.url;
       }
@@ -1144,7 +1144,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
       id: "share-s-usage",
       viewBox: "0 0 22 22",
-      url: __webpack_require__.p + "sprites/sprite.svg#share-s",
+      url: __webpack_require__.p + "sprite.svg#share-s",
       toString: function () {
         return this.url;
       }
@@ -1164,7 +1164,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
       id: "twitter-s-usage",
       viewBox: "0 0 22 22",
-      url: __webpack_require__.p + "sprites/sprite.svg#twitter-s",
+      url: __webpack_require__.p + "sprite.svg#twitter-s",
       toString: function () {
         return this.url;
       }
@@ -1184,7 +1184,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
       id: "user-s-usage",
       viewBox: "0 0 22 22",
-      url: __webpack_require__.p + "sprites/sprite.svg#user-s",
+      url: __webpack_require__.p + "sprite.svg#user-s",
       toString: function () {
         return this.url;
       }
@@ -1204,7 +1204,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
       id: "user-xs-usage",
       viewBox: "0 0 14 14",
-      url: __webpack_require__.p + "sprites/sprite.svg#user-xs",
+      url: __webpack_require__.p + "sprite.svg#user-xs",
       toString: function () {
         return this.url;
       }
@@ -1224,7 +1224,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
       id: "view-s-usage",
       viewBox: "0 0 22 22",
-      url: __webpack_require__.p + "sprites/sprite.svg#view-s",
+      url: __webpack_require__.p + "sprite.svg#view-s",
       toString: function () {
         return this.url;
       }
@@ -1244,7 +1244,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
       id: "view-xs-usage",
       viewBox: "0 0 14 14",
-      url: __webpack_require__.p + "sprites/sprite.svg#view-xs",
+      url: __webpack_require__.p + "sprite.svg#view-xs",
       toString: function () {
         return this.url;
       }
@@ -1264,7 +1264,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
       id: "youtube-s-usage",
       viewBox: "0 0 22 22",
-      url: __webpack_require__.p + "sprites/sprite.svg#youtube-s",
+      url: __webpack_require__.p + "sprite.svg#youtube-s",
       toString: function () {
         return this.url;
       }

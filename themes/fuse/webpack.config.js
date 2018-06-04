@@ -116,7 +116,7 @@ const config = {
 
 					loader: 'svg-sprite-loader', options: {
 	                    extract: true,
-	                    spriteFilename: devMode ? 'sprites/sprite.svg' : 'sprites/sprite.svg',
+	                    spriteFilename: devMode ? 'sprite.svg' : 'sprite.svg',
 	                }
 
 	            },
