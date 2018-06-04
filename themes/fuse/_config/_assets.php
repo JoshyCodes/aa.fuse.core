@@ -5,9 +5,11 @@ return [
 
     'assets' => [
 
-        'src'       => get_theme_file_uri() .'/resources/assets/',
+    	'manifest'	=> get_theme_file_path() . '/_dist/manifest.json',
         'prod_path' => get_theme_file_path() . '/_dist/',
-        'prod_uri'  => get_theme_file_uri() . '/_dist/'
+        'prod_uri'  => get_theme_file_uri() . '/_dist/',
+        'src'       => get_theme_file_uri() .'/resources/assets/',
+
 
     ],
 
@@ -43,6 +45,6 @@ return [
         'core_stylesheet' => file_exists( get_theme_file_path() . '/_dist/css/app.min.css' ) ? filemtime( get_theme_file_path() . '/_dist/css/app.min.css' ) : null,
         'core_js' => file_exists( get_theme_file_path() . '/_dist/js/app.bundle.js' ) ? filemtime( get_theme_file_path() . '/_dist/js/app.bundle.js' ) : null,
 
-    ],
-    
+    ]
+
 ];

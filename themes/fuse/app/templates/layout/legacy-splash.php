@@ -14,13 +14,19 @@ function setup(){
 	// If we are on our splash page
 	if( is_page_template( 'template-legacy-splash.php' ) ){
 
-		add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\load_legacy_fonts', 1 );				
-		
+		add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\load_legacy_fonts', 1 );
+
 		add_action( 'wp_head', __NAMESPACE__ . '\load_legacy_typekit', 1);
 
-		add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\load_legacy_splash_assets', 999 );		
+		add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\load_legacy_splash_assets', 999 );
 
 		add_action( 'fuse_content', __NAMESPACE__ . '\load_legacy_splash_wrapper' );
+
+		/**
+		 * Remove the main site scripts & styles
+		 */
+		remove_action( 'wp_enqueue_scripts', 'Fuse\Structure\load_core_app_styles', 999999999 );
+		remove_action( 'wp_enqueue_scripts', 'Fuse\Structure\load_core_app_script', 1 );
 
 	}
 
@@ -52,7 +58,7 @@ function setup(){
 
 
 			// Build our array of font families and weights to enqueue
-		
+
 			$font_families = array(
 
 				'Nunito' => [
@@ -94,7 +100,7 @@ function setup(){
 			// Initiate the blank variables used to build our string
 
 			$weights_array	= [];
-			$fonts 			= ''; 
+			$fonts 			= '';
 			$count			= '1';
 
 
@@ -107,13 +113,13 @@ function setup(){
 					// If the defined weight exists in our definitions array
 					if( array_key_exists( $weight, $weight_definitions ) ){
 
-						// Add the current weight value definition to 
+						// Add the current weight value definition to
 						// our weights array
 						$weights_array[] = $weight_definitions[ $weight ];
 
-					}	
+					}
 
-				}	
+				}
 
 
 				// After we loop through all of the weights in the
@@ -125,11 +131,11 @@ function setup(){
 				// We don't want that!
 
 				unset( $weights_array );
-	  			
+
 
 	  			// Only add the separator before the family name
 	  			// if we are PAST the first iteration
-	  		
+
 	  			if( $count > 1 ){
 
 					// Add our family prefix element
@@ -139,16 +145,16 @@ function setup(){
 
 
 				// Build our string on each pass
-				$fonts .= $family . $family_sep . $font_weights; 
-				
+				$fonts .= $family . $family_sep . $font_weights;
+
 				// Add to our iteration count
-				$count ++;	
+				$count ++;
 
 			}
 
 
 			// | is an illegal HTML character and must be escaped
-			
+
 			$with = '%7C';
 			$fonts = str_replace( $family_prefix, $with, $fonts );
 
@@ -175,11 +181,11 @@ function setup(){
 		 * DO NOT USE THIS ANYWHERE ELSE AND FOR THE LOVE OF
 		 * GOD DELETE IT FOREVER WHEN WE ARE DONE WITH THIS SPLASH PAGE
 		 */
-		
+
 		function load_legacy_fonts(){
 
 			$google_font_base = '//fonts.googleapis.com/css';
-				
+
 			// Register our final font request
 			wp_register_style( 'legacy-splash-fonts', add_query_arg( build_google_font_request(), $google_font_base ), array(), null );
 
@@ -202,5 +208,5 @@ function setup(){
 
 		<?php }
 
-	
+
 }
