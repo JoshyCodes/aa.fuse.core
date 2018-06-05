@@ -7,6 +7,6 @@
 		<h4 class="e-p--common c-title-group__copy"><?php esc_html_e( 'but it\'s also the beginning of some crazy intergalactic awesomeness!' );?></h4>
 	</div>
 
-	<?= do_shortcode( '[gravityform id=1 ajax=true]' ); ?>
+	<?= do_shortcode( '[gravityform id=1 ajax=true title=false description=false]' ); ?>
 
 </div>
