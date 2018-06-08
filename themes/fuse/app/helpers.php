@@ -42,4 +42,3 @@ function svg( $name, $title,  $location, $class = '', $type = 'sprite'){
     return $svg;
 
 }
-

@@ -40,8 +40,6 @@ remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
 remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
-
-
 /**
  * Remove RSD Link from WP-Head
  *
@@ -68,3 +66,19 @@ remove_action('wp_head', 'wlwmanifest_link');
 remove_action( 'wp_head', 'start_post_rel_link' );
 remove_action( 'wp_head', 'index_rel_link' );
 remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head' );
+
+
+/**
+ * Remove Comment Feed Links from Head
+ * @url https://wordpress.stackexchange.com/questions/190509/where-to-remove-link-from-comments-feed?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+ **/
+add_filter( 'feed_links_show_comments_feed', '__return_false' );
+
+/**
+ * Remove WP Shortlink from Head
+ */
+remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
+
+/**
+ * Remove oEmbed
+ */

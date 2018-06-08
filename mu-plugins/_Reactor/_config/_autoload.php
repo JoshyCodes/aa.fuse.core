@@ -21,6 +21,7 @@ return [
 
 		// Optimizations
 		'optimize/functions',
+		'optimize/remove-embeds',
 
 		// Integrations,
 		'integrations/acf/acf',

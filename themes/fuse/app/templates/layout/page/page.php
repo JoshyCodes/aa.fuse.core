@@ -1,6 +1,7 @@
 <?php
 namespace Fuse\Layout\Page;
 use Fuse\Controllers;
+use Reactor\Optimize;
 
 
 
@@ -13,7 +14,9 @@ function setup(){
 	// If we are on a normal page
 	if( is_page() ){
 
+
 	}
 
-	
+
+
 }
