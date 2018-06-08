@@ -4,6 +4,13 @@ use Fuse\Controllers;
 use Fuse\AssetHandler;
 use Reactor\Helpers;
 
+/**
+ * Load Critical styles & scripts first. These
+ * wil lget injected straight into the head :)
+ */
+add_action( 'wp_head', __NAMESPACE__ . '\inject_critical_scripts_and_styles', 1);
+
+
 // Bring in site assets
 add_action( 'wp_enqueue_scripts',	__NAMESPACE__ . '\load_core_app_styles', 999999999 );
 add_action( 'wp_enqueue_scripts',	__NAMESPACE__ . '\load_core_app_script', 1 );
@@ -13,6 +20,48 @@ add_action( 'fuse_site_begin',		__NAMESPACE__ . '\open_site',		1 );
 add_action( 'fuse_header',			__NAMESPACE__ . '\load_header',		1 );
 add_action( 'fuse_footer',			__NAMESPACE__ . '\load_footer',		1 );
 add_action( 'fuse_site_end',		__NAMESPACE__ . '\close_site',		1 );
+
+
+
+
+/**
+ * Inline Critical CSS & JS
+ *
+ * https://gomakethings.com/inlining-critical-css-for-better-web-performance/
+ */
+
+function inject_critical_scripts_and_styles(){
+
+	// to do = pass array into function
+
+	$files = [
+
+		'critical.css' 	=> 'style',
+		'critical.js'	=> 'script',
+
+	];
+
+
+	// Put this in it's own injection helper function
+	foreach( $files as $file => $tag ){
+
+		$critical 	= AssetHandler\get_asset_from_manifest( $file, false );
+
+		if( file_exists( $critical )){
+
+		    echo "<{$tag}>".file_get_contents( $critical )."</{$tag}>";
+
+		}
+
+
+	}
+
+
+
+
+
+
+}
 
 /**
  * Register & enqueue the main stylesheet for our application

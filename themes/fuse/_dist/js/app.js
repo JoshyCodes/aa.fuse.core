@@ -86,14 +86,14 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/index.js??ref--6-2!./node_modules/postcss-loader/lib/index.js!./node_modules/sass-loader/lib/loader.js??ref--6-4!./resources/assets/scss/app.scss":
-/*!***********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader??ref--6-2!./node_modules/postcss-loader/lib!./node_modules/sass-loader/lib/loader.js??ref--6-4!./resources/assets/scss/app.scss ***!
-  \***********************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/extract-css-chunks-webpack-plugin/dist/loader.js!./node_modules/css-loader/index.js??ref--6-3!./node_modules/postcss-loader/lib/index.js!./node_modules/sass-loader/lib/loader.js??ref--6-5!./resources/assets/scss/app/app.scss":
+/*!*************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/extract-css-chunks-webpack-plugin/dist/loader.js!./node_modules/css-loader??ref--6-3!./node_modules/postcss-loader/lib!./node_modules/sass-loader/lib/loader.js??ref--6-5!./resources/assets/scss/app/app.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-// extracted by mini-css-extract-plugin
+// extracted by extract-css-chunks-webpack-plugin
 
 /***/ }),
 
@@ -1282,7 +1282,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 
 
-__webpack_require__(/*! ../scss/app.scss */ "./resources/assets/scss/app.scss");
+__webpack_require__(/*! ../scss/app/app.scss */ "./resources/assets/scss/app/app.scss");
 
 __webpack_require__(/*! ../js/app/icons.js */ "./resources/assets/js/app/icons.js");
 
@@ -1310,15 +1310,15 @@ __webpack_require__("./resources/assets/icons/svg sync recursive \\.svg$");
 
 /***/ }),
 
-/***/ "./resources/assets/scss/app.scss":
-/*!****************************************!*\
-  !*** ./resources/assets/scss/app.scss ***!
-  \****************************************/
+/***/ "./resources/assets/scss/app/app.scss":
+/*!********************************************!*\
+  !*** ./resources/assets/scss/app/app.scss ***!
+  \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/mini-css-extract-plugin/dist/loader.js!../../../node_modules/css-loader??ref--6-2!../../../node_modules/postcss-loader/lib!../../../node_modules/sass-loader/lib/loader.js??ref--6-4!./app.scss */ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/index.js??ref--6-2!./node_modules/postcss-loader/lib/index.js!./node_modules/sass-loader/lib/loader.js??ref--6-4!./resources/assets/scss/app.scss");
+var content = __webpack_require__(/*! !../../../../node_modules/extract-css-chunks-webpack-plugin/dist/loader.js!../../../../node_modules/css-loader??ref--6-3!../../../../node_modules/postcss-loader/lib!../../../../node_modules/sass-loader/lib/loader.js??ref--6-5!./app.scss */ "./node_modules/extract-css-chunks-webpack-plugin/dist/loader.js!./node_modules/css-loader/index.js??ref--6-3!./node_modules/postcss-loader/lib/index.js!./node_modules/sass-loader/lib/loader.js??ref--6-5!./resources/assets/scss/app/app.scss");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -1332,11 +1332,13 @@ var options = {"hmr":true}
 options.transform = transform
 options.insertInto = undefined;
 
-var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
 
 if(content.locals) module.exports = content.locals;
 
 if(false) {}
+    if(false) { var cssReload; }
+  
 
 /***/ })
 

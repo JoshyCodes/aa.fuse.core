@@ -1,6 +1,16 @@
 {
   "app.css": "css/app.css",
   "app.js": "js/app.js",
+  "critical.css": "css/critical.css",
+  "critical.js": "js/critical.js",
+  "fonts/merriweather-bold-webfont.woff": "fonts/merriweather-bold-webfont.woff",
+  "fonts/merriweather-bold-webfont.woff2": "fonts/merriweather-bold-webfont.woff2",
+  "fonts/merriweather-regular-webfont.woff": "fonts/merriweather-regular-webfont.woff",
+  "fonts/merriweather-regular-webfont.woff2": "fonts/merriweather-regular-webfont.woff2",
+  "fonts/proxima-nova-bold-webfont.woff": "fonts/proxima-nova-bold-webfont.woff",
+  "fonts/proxima-nova-bold-webfont.woff2": "fonts/proxima-nova-bold-webfont.woff2",
+  "fonts/proxima-nova-thin-webfont.woff": "fonts/proxima-nova-thin-webfont.woff",
+  "fonts/proxima-nova-thin-webfont.woff2": "fonts/proxima-nova-thin-webfont.woff2",
   "posts.js": "js/posts.js",
   "sprite.svg": "sprite.svg"
 }
