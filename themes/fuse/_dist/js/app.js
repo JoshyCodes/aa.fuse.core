@@ -1286,12 +1286,6 @@ __webpack_require__(/*! ../scss/app/app.scss */ "./resources/assets/scss/app/app
 
 __webpack_require__(/*! ../js/app/icons.js */ "./resources/assets/js/app/icons.js");
 
-var sum = function sum(a, b) {
-  return a + b;
-};
-
-console.log(sum(322222222, 1253));
-
 /***/ }),
 
 /***/ "./resources/assets/js/app/icons.js":

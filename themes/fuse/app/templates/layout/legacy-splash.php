@@ -25,6 +25,7 @@ function setup(){
 		/**
 		 * Remove the main site scripts & styles
 		 */
+		remove_action( 'wp_head', 'Fuse\Structure\inject_critical_scripts_and_styles', 1);
 		remove_action( 'fuse_after_body_open', 'Fuse\Structure\load_svg_sprite', 1);
 		remove_action( 'wp_enqueue_scripts', 'Fuse\Structure\load_core_app_styles', 999999999 );
 		remove_action( 'wp_enqueue_scripts', 'Fuse\Structure\load_core_app_script', 1 );
