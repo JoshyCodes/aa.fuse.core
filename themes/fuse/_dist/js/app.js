@@ -86,9 +86,9 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/extract-css-chunks-webpack-plugin/dist/loader.js!./node_modules/css-loader/index.js??ref--6-3!./node_modules/postcss-loader/lib/index.js!./node_modules/sass-loader/lib/loader.js??ref--6-5!./resources/assets/scss/app/app.scss":
+/***/ "./node_modules/extract-css-chunks-webpack-plugin/dist/loader.js!./node_modules/css-loader/index.js??ref--5-3!./node_modules/postcss-loader/lib/index.js!./node_modules/sass-loader/lib/loader.js??ref--5-5!./resources/assets/scss/app/app.scss":
 /*!*************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/extract-css-chunks-webpack-plugin/dist/loader.js!./node_modules/css-loader??ref--6-3!./node_modules/postcss-loader/lib!./node_modules/sass-loader/lib/loader.js??ref--6-5!./resources/assets/scss/app/app.scss ***!
+  !*** ./node_modules/extract-css-chunks-webpack-plugin/dist/loader.js!./node_modules/css-loader??ref--5-3!./node_modules/postcss-loader/lib!./node_modules/sass-loader/lib/loader.js??ref--5-5!./resources/assets/scss/app/app.scss ***!
   \*************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -1299,7 +1299,6 @@ __webpack_require__(/*! ../js/app/icons.js */ "./resources/assets/js/app/icons.j
 
 
 // Import all SVG Icons
-
 __webpack_require__("./resources/assets/icons/svg sync recursive \\.svg$");
 
 /***/ }),
@@ -1312,7 +1311,7 @@ __webpack_require__("./resources/assets/icons/svg sync recursive \\.svg$");
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../../node_modules/extract-css-chunks-webpack-plugin/dist/loader.js!../../../../node_modules/css-loader??ref--6-3!../../../../node_modules/postcss-loader/lib!../../../../node_modules/sass-loader/lib/loader.js??ref--6-5!./app.scss */ "./node_modules/extract-css-chunks-webpack-plugin/dist/loader.js!./node_modules/css-loader/index.js??ref--6-3!./node_modules/postcss-loader/lib/index.js!./node_modules/sass-loader/lib/loader.js??ref--6-5!./resources/assets/scss/app/app.scss");
+var content = __webpack_require__(/*! !../../../../node_modules/extract-css-chunks-webpack-plugin/dist/loader.js!../../../../node_modules/css-loader??ref--5-3!../../../../node_modules/postcss-loader/lib!../../../../node_modules/sass-loader/lib/loader.js??ref--5-5!./app.scss */ "./node_modules/extract-css-chunks-webpack-plugin/dist/loader.js!./node_modules/css-loader/index.js??ref--5-3!./node_modules/postcss-loader/lib/index.js!./node_modules/sass-loader/lib/loader.js??ref--5-5!./resources/assets/scss/app/app.scss");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 

@@ -86,9 +86,9 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/extract-css-chunks-webpack-plugin/dist/loader.js!./node_modules/css-loader/index.js??ref--6-3!./node_modules/postcss-loader/lib/index.js!./node_modules/sass-loader/lib/loader.js??ref--6-5!./resources/assets/scss/critical/critical.scss":
+/***/ "./node_modules/extract-css-chunks-webpack-plugin/dist/loader.js!./node_modules/css-loader/index.js??ref--5-3!./node_modules/postcss-loader/lib/index.js!./node_modules/sass-loader/lib/loader.js??ref--5-5!./resources/assets/scss/critical/critical.scss":
 /*!***********************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/extract-css-chunks-webpack-plugin/dist/loader.js!./node_modules/css-loader??ref--6-3!./node_modules/postcss-loader/lib!./node_modules/sass-loader/lib/loader.js??ref--6-5!./resources/assets/scss/critical/critical.scss ***!
+  !*** ./node_modules/extract-css-chunks-webpack-plugin/dist/loader.js!./node_modules/css-loader??ref--5-3!./node_modules/postcss-loader/lib!./node_modules/sass-loader/lib/loader.js??ref--5-5!./resources/assets/scss/critical/critical.scss ***!
   \***********************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -624,10 +624,13 @@ var FontFaceObserver = __webpack_require__(/*! fontfaceobserver */ "./node_modul
 (function () {
 
 	// Optimization for Repeat Views
-	if (sessionStorage.fontsLoadedFoutWithClassPolyfill) {
+	if (sessionStorage.fontsLoaded) {
+
 		document.documentElement.className += " fuse--fonts-loaded";
+
 		return;
 	}
+
 	var fontA = new FontFaceObserver('merriweatherregular', {
 		weight: 400
 	});
@@ -647,8 +650,9 @@ var FontFaceObserver = __webpack_require__(/*! fontfaceobserver */ "./node_modul
 	Promise.all([fontA.load(null, 10000), fontB.load(null, 10000), fontC.load(null, 10000), fontD.load(null, 10000)]).then(function () {
 
 		document.documentElement.className += " fuse--fonts-loaded";
+
 		// Optimization for Repeat Views
-		sessionStorage.fontsLoadedFoutWithClassPolyfill = true;
+		sessionStorage.fontsLoaded = true;
 	});
 })();
 
@@ -662,7 +666,7 @@ var FontFaceObserver = __webpack_require__(/*! fontfaceobserver */ "./node_modul
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../../node_modules/extract-css-chunks-webpack-plugin/dist/loader.js!../../../../node_modules/css-loader??ref--6-3!../../../../node_modules/postcss-loader/lib!../../../../node_modules/sass-loader/lib/loader.js??ref--6-5!./critical.scss */ "./node_modules/extract-css-chunks-webpack-plugin/dist/loader.js!./node_modules/css-loader/index.js??ref--6-3!./node_modules/postcss-loader/lib/index.js!./node_modules/sass-loader/lib/loader.js??ref--6-5!./resources/assets/scss/critical/critical.scss");
+var content = __webpack_require__(/*! !../../../../node_modules/extract-css-chunks-webpack-plugin/dist/loader.js!../../../../node_modules/css-loader??ref--5-3!../../../../node_modules/postcss-loader/lib!../../../../node_modules/sass-loader/lib/loader.js??ref--5-5!./critical.scss */ "./node_modules/extract-css-chunks-webpack-plugin/dist/loader.js!./node_modules/css-loader/index.js??ref--5-3!./node_modules/postcss-loader/lib/index.js!./node_modules/sass-loader/lib/loader.js??ref--5-5!./resources/assets/scss/critical/critical.scss");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 

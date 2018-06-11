@@ -43,7 +43,7 @@ const config = {
 		path: path.resolve( __dirname, '_dist' ),
 
 		filename: devMode  ? 'js/[name].js' : 'js/[name].[chunkhash].bundle.js',
-		chunkFilename: devMode ? '[id].js' : '[id].[chunkhash].js',
+		chunkFilename: devMode ? 'js/[name].js' : 'js/[name].[chunkhash].js',
 		sourceMapFilename: '[file].map'
 
 	},
@@ -62,11 +62,6 @@ const config = {
              * @url     https://github.com/babel/babel-loader
              * @since   1.0.0
 			 */
-			{
-				test: /\.(js|jsx)$/,
-				exclude: /(node_modules|bower_components)/,
-				use: ['babel-loader']
-			},
             {
                 test:   /\.js$/,
                 exclude: /(node_modules|bower_components)/,

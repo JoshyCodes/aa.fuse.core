@@ -1,36 +1,57 @@
-@font-face {
-	font-family: 'ProximaNova-Bold';
-	src: url('../../fonts/proxima-nova/proxima-nova-bold-webfont.woff2') format('woff2'),
-		 url('../../fonts/proxima-nova/proxima-nova-bold-webfont.woff') format('woff');
-	font-weight: 700;
-	font-style: normal;
-}
+body{
 
-@font-face {
-	font-family: 'ProximaNovaT-Thin';
-	src: url('../../fonts/proxima-nova/proxima-nova-thin-webfont.woff2') format('woff2'),
-		 url('../../fonts/proxima-nova/proxima-nova-thin-webfont.woff') format('woff');
-	font-weight: 700;
-	font-style: normal;
-}
-
-
-@font-face {
-
-	font-family: 'merriweatherbold';
-	src: url('../../fonts/merriweather/merriweather-bold-webfont.woff2') format('woff2'),
-		 url('../../fonts/merriweather/merriweather-bold-webfont.woff') format('woff');
-	font-weight: 700;
-	font-style: normal;
+	font-family: serif;
 
 }
 
-@font-face {
+strong{
 
-	font-family: 'merriweatherregular';
-	src: url('../../fonts/merriweather/merriweather-regular-webfont.woff2') format('woff2'),
-		 url('../../fonts/merriweather/merriweather-regular-webfont.woff') format('woff');
-	font-weight: 400;
-	font-style: normal;
+	font-weight: 700;
+
+}
+
+.a-heading--thin,
+.a-heading--bold{
+
+	font-family: sans-serif;
+}
+
+.a-heading--thin{
+
+	font-weight: 100;
+
+}
+
+.a-heading--bold{
+
+	font-weight: 700;
+
+}
+
+.fuse--fonts-loaded body{
+
+	font-family: 'merriweatherregular', sans-serif;
+
+}
+
+.fuse--fonts-loaded strong{
+
+	font-family: 'merriweatherbold', sans-serif;
+
+}
+
+
+.fuse--fonts-loaded .a-heading--thin{
+
+	font-weight: 100;
+	font-family: 'ProximaNovaT-Thin', sans-serif;
+
+}
+
+
+.fuse--fonts-loaded .a-heading--bold{
+
+	font-weight: 700;
+	font-family: 'ProximaNova-Bold', sans-serif;
 
 }

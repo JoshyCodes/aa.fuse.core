@@ -1,5 +1,26 @@
-html {
-  font-size: 100%
+@font-face {
+  font-family: ProximaNova-Bold;
+  src: url(../wp-content/themes/fuse/_dist/fonts/proxima-nova-bold-webfont.woff2) format("woff2"),url(../wp-content/themes/fuse/_dist/fonts/proxima-nova-bold-webfont.woff) format("woff");
+  font-weight: 700;
+  font-style: normal
+}
+@font-face {
+  font-family: ProximaNovaT-Thin;
+  src: url(../wp-content/themes/fuse/_dist/fonts/proxima-nova-thin-webfont.woff2) format("woff2"),url(../wp-content/themes/fuse/_dist/fonts/proxima-nova-thin-webfont.woff) format("woff");
+  font-weight: 700;
+  font-style: normal
+}
+@font-face {
+  font-family: merriweatherbold;
+  src: url(../wp-content/themes/fuse/_dist/fonts/merriweather-bold-webfont.woff2) format("woff2"),url(../wp-content/themes/fuse/_dist/fonts/merriweather-bold-webfont.woff) format("woff");
+  font-weight: 700;
+  font-style: normal
+}
+@font-face {
+  font-family: merriweatherregular;
+  src: url(../wp-content/themes/fuse/_dist/fonts/merriweather-regular-webfont.woff2) format("woff2"),url(../wp-content/themes/fuse/_dist/fonts/merriweather-regular-webfont.woff) format("woff");
+  font-weight: 400;
+  font-style: normal
 }
 body {
   font-family: serif
@@ -31,27 +52,85 @@ strong {
   font-weight: 700;
   font-family: ProximaNova-Bold,sans-serif
 }
-@font-face {
-  font-family: ProximaNova-Bold;
-  src: url(../wp-content/themes/fuse/_dist/fonts/proxima-nova-bold-webfont.woff2) format("woff2"),url(../wp-content/themes/fuse/_dist/fonts/proxima-nova-bold-webfont.woff) format("woff");
-  font-weight: 700;
-  font-style: normal
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
 }
-@font-face {
-  font-family: ProximaNovaT-Thin;
-  src: url(../wp-content/themes/fuse/_dist/fonts/proxima-nova-thin-webfont.woff2) format("woff2"),url(../wp-content/themes/fuse/_dist/fonts/proxima-nova-thin-webfont.woff) format("woff");
-  font-weight: 700;
-  font-style: normal
+body {
+  overflow-x: hidden
 }
-@font-face {
-  font-family: merriweatherbold;
-  src: url(../wp-content/themes/fuse/_dist/fonts/merriweather-bold-webfont.woff2) format("woff2"),url(../wp-content/themes/fuse/_dist/fonts/merriweather-bold-webfont.woff) format("woff");
-  font-weight: 700;
-  font-style: normal
+blockquote,
+body,
+dd,
+dl,
+dt,
+fieldset,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+html,
+iframe,
+legend,
+li,
+ol,
+p,
+pre,
+textarea,
+ul {
+  margin: 0;
+  padding: 0
 }
-@font-face {
-  font-family: merriweatherregular;
-  src: url(../wp-content/themes/fuse/_dist/fonts/merriweather-regular-webfont.woff2) format("woff2"),url(../wp-content/themes/fuse/_dist/fonts/merriweather-regular-webfont.woff) format("woff");
-  font-weight: 400;
-  font-style: normal
+a {
+  color: unset;
+  text-decoration: none
+}
+ul {
+  list-style: none
+}
+button,
+input,
+select,
+textarea {
+  margin: 0
+}
+button:focus {
+  outline: 0
+}
+*,
+:after,
+:before {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit
+}
+audio,
+embed,
+iframe,
+img,
+object,
+video {
+  height: auto;
+  max-width: 100%
+}
+button,
+iframe {
+  border: 0
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+td,
+th {
+  padding: 0;
+  text-align: left
+}
+html {
+  font-size: 100%
 }
