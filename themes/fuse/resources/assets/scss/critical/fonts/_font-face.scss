@@ -4,6 +4,11 @@ body{
 
 }
 
+strong{
+
+	font-weight: 700;
+
+}
 
 .a-heading--thin,
 .a-heading--bold{
@@ -11,6 +16,17 @@ body{
 	font-family: sans-serif;
 }
 
+.a-heading--thin{
+
+	font-weight: 100;
+
+}
+
+.a-heading--bold{
+
+	font-weight: 700;
+
+}
 
 .fuse--fonts-loaded body{
 

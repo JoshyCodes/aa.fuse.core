@@ -1,9 +1,21 @@
+html {
+  font-size: 100%
+}
 body {
   font-family: serif
+}
+strong {
+  font-weight: 700
 }
 .a-heading--bold,
 .a-heading--thin {
   font-family: sans-serif
+}
+.a-heading--thin {
+  font-weight: 100
+}
+.a-heading--bold {
+  font-weight: 700
 }
 .fuse--fonts-loaded body {
   font-family: merriweatherregular,sans-serif

@@ -1,25 +1,42 @@
 import '../scss/critical/critical.scss';
+const FontFaceObserver = require( 'fontfaceobserver' );
 
 (function() {
+
+	// Optimization for Repeat Views
+	if( sessionStorage.fontsLoadedFoutWithClassPolyfill ) {
+		document.documentElement.className += " fuse--fonts-loaded";
+		return;
+	}
+	const fontA = new FontFaceObserver('merriweatherregular', {
+			weight: 400
+		});
+
+	const fontB = new FontFaceObserver('merriweatherbold', {
+			weight: 700
+		});
+		
+	const fontC = new FontFaceObserver('ProximaNova-Bold', {
+			weight: 700
+		});
+
+	const fontD = new FontFaceObserver('ProximaNovaT-Thin', {
+			weight: 100,
+		});
+		
+	Promise.all([
+
+		fontA.load(null, 10000),
+		fontB.load(null, 10000),
+		fontC.load(null, 10000),
+		fontD.load(null, 10000)
+
+	]).then(function () {
+
+		document.documentElement.className += " fuse--fonts-loaded";
 		// Optimization for Repeat Views
-		if( sessionStorage.fontsLoadedFoutWithClass ) {
-			document.documentElement.className += " fuse--fonts-loaded";
-			return;
-		}
-		if( "fonts" in document ) {
-			Promise.all([
-				document.fonts.load("1rem merriweatherbold"),
-				document.fonts.load("700 1rem merriweatherbold"),
-				document.fonts.load("1rem merriweatherregular"),
-				document.fonts.load("400 1rem merriweatherregular"),
-				document.fonts.load("1rem ProximaNovaT-Thin"),
-				document.fonts.load("100 1rem ProximaNovaT-Thin"),
-				document.fonts.load("1rem ProximaNova-Bold"),
-				document.fonts.load("700 1rem ProximaNova-Bold"),
-			]).then(function () {
-				document.documentElement.className += " fuse--fonts-loaded";
-				// Optimization for Repeat Views
-				sessionStorage.fontsLoadedFoutWithClass = true;
-			});
-		}
-	})();
+		sessionStorage.fontsLoadedFoutWithClassPolyfill = true; 
+
+	});
+
+})();
