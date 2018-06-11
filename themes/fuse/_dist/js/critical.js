@@ -619,6 +619,22 @@ module.exports = function (css) {
 
 __webpack_require__(/*! ../scss/critical/critical.scss */ "./resources/assets/scss/critical/critical.scss");
 
+__webpack_require__(/*! ../js/critical/font-loader.js */ "./resources/assets/js/critical/font-loader.js");
+
+__webpack_require__(/*! ../js/critical/svg-sprite.js */ "./resources/assets/js/critical/svg-sprite.js");
+
+/***/ }),
+
+/***/ "./resources/assets/js/critical/font-loader.js":
+/*!*****************************************************!*\
+  !*** ./resources/assets/js/critical/font-loader.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
 var FontFaceObserver = __webpack_require__(/*! fontfaceobserver */ "./node_modules/fontfaceobserver/fontfaceobserver.standalone.js");
 
 (function () {
@@ -655,6 +671,41 @@ var FontFaceObserver = __webpack_require__(/*! fontfaceobserver */ "./node_modul
 		sessionStorage.fontsLoaded = true;
 	});
 })();
+
+/***/ }),
+
+/***/ "./resources/assets/js/critical/svg-sprite.js":
+/*!****************************************************!*\
+  !*** ./resources/assets/js/critical/svg-sprite.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// https://css-tricks.com/ajaxing-svg-sprite/
+
+var ajax = new XMLHttpRequest();
+
+ajax.open("GET", "./wp-content/themes/fuse/_dist/sprite.svg", true);
+ajax.responseType = "document";
+
+ajax.onload = function (e) {
+
+    try {
+
+        var svg = ajax.responseXML.documentElement;
+
+        svg.setAttribute("style", "display:none;");
+
+        document.body.insertBefore(svg, document.querySelector('.o-header'));
+    } catch (e) {
+        console.log(e);
+    }
+};
+
+ajax.send();
 
 /***/ }),
 
