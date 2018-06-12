@@ -14,7 +14,7 @@ add_action( 'wp_head', __NAMESPACE__ . '\inject_critical_scripts_and_styles', 1)
 // Bring in site assets
 add_action( 'wp_enqueue_scripts',	__NAMESPACE__ . '\load_core_app_styles', 999999999 );
 add_action( 'wp_enqueue_scripts',	__NAMESPACE__ . '\load_core_app_script', 1 );
-add_action( 'fuse_after_body_open', __NAMESPACE__ . '\load_svg_sprite_placeholder', 1 );
+add_action( 'fuse_after_body_open', __NAMESPACE__ . '\load_svg_sprite', 1 );
 
 add_action( 'fuse_site_begin',		__NAMESPACE__ . '\open_site',		1 );
 add_action( 'fuse_header',			__NAMESPACE__ . '\load_header',		1 );
@@ -108,9 +108,9 @@ function load_core_app_script(){
  * Add a wrapper for JS to tap into to
  * load our spritesheet
  */
-function load_svg_sprite_placeholder(){
+function load_svg_sprite(){
 
-	echo '<div class="js-fuse--svg-sprite-defs" style="display:none"></div>';
+	AssetHandler\inject_svg_sprite();
 
 }
 

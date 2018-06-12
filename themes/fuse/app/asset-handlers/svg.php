@@ -13,10 +13,10 @@ function inject_svg_sprite(){
 	if( ! $sprite )
 		return; ?>
 
-		<!-- Begin SVG Sprite -->
-		<div style="display:none;">
+		<!-- Begin SVG Sprite Definitions -->
+		<div class="fuse--sprite-defs" style="display:none;">
 			<?php include get_asset_from_manifest('sprite.svg', false); ?>
 		</div>
-		<!-- End SVG Sprite -->
+		<!-- End SVG Sprite Definitions -->
 
 <?php }
