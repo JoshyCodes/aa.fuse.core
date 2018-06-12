@@ -36,7 +36,7 @@ const config = {
 
 	},
 
-	devtool: devMode ? 'none' : 'eval-source-map',
+	devtool: devMode ? 'none' : 'none',
 
 	output: {
 

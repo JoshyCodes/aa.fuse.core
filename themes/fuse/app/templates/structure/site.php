@@ -104,10 +104,6 @@ function load_core_app_script(){
 
 }
 
-/**
- * Add a wrapper for JS to tap into to
- * load our spritesheet
- */
 function load_svg_sprite(){
 
 	AssetHandler\inject_svg_sprite();

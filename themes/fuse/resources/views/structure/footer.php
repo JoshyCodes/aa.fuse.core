@@ -1,5 +1,7 @@
 <?php
+namespace Fuse;
 use Reactor\Helpers;
+use Fuse\AssetHandler;
 
 // Get nae of the current post type
 $post_type = Helpers\post_type_name();
@@ -10,6 +12,7 @@ $post_type = Helpers\post_type_name();
 
 	<div class="o-container --max --width">
 		Hello Footer
+		<?php do_action('fuse_footer_content'); ?>
 	</div>
 
 </footer>
