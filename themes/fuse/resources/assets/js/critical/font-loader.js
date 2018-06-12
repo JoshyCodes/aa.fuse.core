@@ -5,8 +5,6 @@ const FontFaceObserver = require( 'fontfaceobserver' );
 	// Check from https://css-tricks.com/font-display-masses/
 	if (isFontDisplaySupported() === false && "fonts" in document) {
 
-		alert('not supported');
-
 		if( sessionStorage.fontsLoaded ) {
 
 			setFontsLoadedClass();
@@ -19,7 +17,6 @@ const FontFaceObserver = require( 'fontfaceobserver' );
 
 	} else {
 
-		alert('supported');
 		setFontsLoadedClass();
 
 	}

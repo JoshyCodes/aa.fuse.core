@@ -640,8 +640,6 @@ var FontFaceObserver = __webpack_require__(/*! fontfaceobserver */ "./node_modul
 	// Check from https://css-tricks.com/font-display-masses/
 	if (isFontDisplaySupported() === false && "fonts" in document) {
 
-		alert('not supported');
-
 		if (sessionStorage.fontsLoaded) {
 
 			setFontsLoadedClass();
@@ -652,7 +650,6 @@ var FontFaceObserver = __webpack_require__(/*! fontfaceobserver */ "./node_modul
 		loadFonts();
 	} else {
 
-		alert('supported');
 		setFontsLoadedClass();
 	}
 })();
