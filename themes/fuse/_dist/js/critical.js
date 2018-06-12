@@ -621,8 +621,6 @@ __webpack_require__(/*! ../scss/critical/critical.scss */ "./resources/assets/sc
 
 __webpack_require__(/*! ../js/critical/font-loader.js */ "./resources/assets/js/critical/font-loader.js");
 
-__webpack_require__(/*! ../js/critical/svg-sprite.js */ "./resources/assets/js/critical/svg-sprite.js");
-
 /***/ }),
 
 /***/ "./resources/assets/js/critical/font-loader.js":
@@ -639,13 +637,57 @@ var FontFaceObserver = __webpack_require__(/*! fontfaceobserver */ "./node_modul
 
 (function () {
 
-	// Optimization for Repeat Views
-	if (sessionStorage.fontsLoaded) {
+	// Check from https://css-tricks.com/font-display-masses/
+	if (isFontDisplaySupported() === false && "fonts" in document) {
 
-		document.documentElement.className += " fuse--fonts-loaded";
+		alert('not supported');
 
-		return;
+		if (sessionStorage.fontsLoaded) {
+
+			setFontsLoadedClass();
+
+			return;
+		}
+
+		loadFonts();
+	} else {
+
+		alert('supported');
+		setFontsLoadedClass();
 	}
+})();
+
+// Reference https://css-tricks.com/font-display-masses/
+function isFontDisplaySupported() {
+
+	var e = document.createElement("style");
+
+	try {
+
+		e.textContent = "@font-face { font-display: swap; }";
+
+		document.documentElement.appendChild(e);
+
+		var _isFontDisplaySupported = e.sheet.cssRules[0].cssText.indexOf("font-display") != -1;
+
+		e.remove();
+
+		return _isFontDisplaySupported;
+	} catch (e) {}
+}
+
+function setFontCacheFlag() {
+
+	// Optimization for Repeat Views
+	sessionStorage.fontsLoaded = true;
+}
+
+function setFontsLoadedClass() {
+
+	document.documentElement.className += " fuse--fonts-loaded";
+}
+
+function loadFonts() {
 
 	var fontA = new FontFaceObserver('merriweatherregular', {
 		weight: 400
@@ -665,76 +707,10 @@ var FontFaceObserver = __webpack_require__(/*! fontfaceobserver */ "./node_modul
 
 	Promise.all([fontA.load(null, 10000), fontB.load(null, 10000), fontC.load(null, 10000), fontD.load(null, 10000)]).then(function () {
 
-		document.documentElement.className += " fuse--fonts-loaded";
-
-		// Optimization for Repeat Views
-		sessionStorage.fontsLoaded = true;
+		setFontsLoadedClass();
+		setFontCacheFlag();
 	});
-})();
-
-/***/ }),
-
-/***/ "./resources/assets/js/critical/svg-sprite.js":
-/*!****************************************************!*\
-  !*** ./resources/assets/js/critical/svg-sprite.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/**
- * After the DOM is loaded, we can fire our
- * injection function. Trying to fire it before the DOM
- * is loaded will end with our inject container
- * returning null - because it won't exist yet.
- * 
- * We are opting for this ajax method because a simple
- * PHP inject results in the SVG sprite not being cached.
- * With the AJAX method, the file and the request are cached.
- * 
- * Based on: https://css-tricks.com/ajaxing-svg-sprite/
- */
-document.addEventListener('DOMContentLoaded', function () {
-
-    // The container we are injecting our SVG into
-    var container = document.querySelector('.js-fuse--svg-sprite-defs');
-
-    injectSVGSprite(container);
-});
-
-/**
- * Get the SVG file and then append the
- * contents to our SVG container.
- */
-function injectSVGSprite(container) {
-
-    var request = new XMLHttpRequest();
-
-    // Grab our SVG Sprite!
-    request.open("GET", "./wp-content/themes/fuse/_dist/sprite.svg", true);
-    request.responseType = "document";
-
-    // On success, attempt the injection
-    request.onload = function (e) {
-
-        try {
-
-            // parse the response
-            var svg = request.responseXML.documentElement;
-            container.append(svg);
-        }
-
-        // Catch errors ( remove console log in production )
-        catch (e) {
-
-            console.log(e);
-        }
-    };
-
-    request.send();
-}
+};
 
 /***/ }),
 

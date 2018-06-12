@@ -2,14 +2,66 @@ const FontFaceObserver = require( 'fontfaceobserver' );
 
 (function(){
 
-	// Optimization for Repeat Views
-	if( sessionStorage.fontsLoaded ) {
+	// Check from https://css-tricks.com/font-display-masses/
+	if (isFontDisplaySupported() === false && "fonts" in document) {
 
-		document.documentElement.className += " fuse--fonts-loaded";
+		alert('not supported');
 
-		return;
-		
+		if( sessionStorage.fontsLoaded ) {
+
+			setFontsLoadedClass();
+
+			return;
+			
+		}
+
+		loadFonts();
+
+	} else {
+
+		alert('supported');
+		setFontsLoadedClass();
+
 	}
+
+})();
+
+
+// Reference https://css-tricks.com/font-display-masses/
+function isFontDisplaySupported(){
+
+	const e = document.createElement("style");
+	
+	try {
+
+		e.textContent = "@font-face { font-display: swap; }";
+
+		document.documentElement.appendChild(e);
+
+		const isFontDisplaySupported = e.sheet.cssRules[0].cssText.indexOf("font-display") != -1;
+
+		e.remove();
+
+		return isFontDisplaySupported;
+		
+	  } catch (e) {}
+
+}
+
+function setFontCacheFlag(){
+
+	// Optimization for Repeat Views
+	sessionStorage.fontsLoaded = true; 
+
+}
+
+function setFontsLoadedClass(){
+
+	document.documentElement.className += " fuse--fonts-loaded";
+
+}
+
+function loadFonts(){
 	
 	const fontA = new FontFaceObserver('merriweatherregular', {
 			weight: 400
@@ -26,6 +78,7 @@ const FontFaceObserver = require( 'fontfaceobserver' );
 	const fontD = new FontFaceObserver('ProximaNovaT-Thin', {
 			weight: 100
 		});
+	
 		
 	Promise.all([
 
@@ -36,11 +89,9 @@ const FontFaceObserver = require( 'fontfaceobserver' );
 
 	]).then(function () {
 
-		document.documentElement.className += " fuse--fonts-loaded";
-
-		// Optimization for Repeat Views
-		sessionStorage.fontsLoaded = true; 
+		setFontsLoadedClass();
+		setFontCacheFlag();
 
 	});
 
-})();
+};
