@@ -684,28 +684,57 @@ var FontFaceObserver = __webpack_require__(/*! fontfaceobserver */ "./node_modul
 "use strict";
 
 
-// https://css-tricks.com/ajaxing-svg-sprite/
+/**
+ * After the DOM is loaded, we can fire our
+ * injection function. Trying to fire it before the DOM
+ * is loaded will end with our inject container
+ * returning null - because it won't exist yet.
+ * 
+ * We are opting for this ajax method because a simple
+ * PHP inject results in the SVG sprite not being cached.
+ * With the AJAX method, the file and the request are cached.
+ * 
+ * Based on: https://css-tricks.com/ajaxing-svg-sprite/
+ */
+document.addEventListener('DOMContentLoaded', function () {
 
-var ajax = new XMLHttpRequest();
+    // The container we are injecting our SVG into
+    var container = document.querySelector('.js-fuse--svg-sprite-defs');
 
-ajax.open("GET", "./wp-content/themes/fuse/_dist/sprite.svg", true);
-ajax.responseType = "document";
+    injectSVGSprite(container);
+});
 
-ajax.onload = function (e) {
+/**
+ * Get the SVG file and then append the
+ * contents to our SVG container.
+ */
+function injectSVGSprite(container) {
 
-    try {
+    var request = new XMLHttpRequest();
 
-        var svg = ajax.responseXML.documentElement;
+    // Grab our SVG Sprite!
+    request.open("GET", "./wp-content/themes/fuse/_dist/sprite.svg", true);
+    request.responseType = "document";
 
-        svg.setAttribute("style", "display:none;");
+    // On success, attempt the injection
+    request.onload = function (e) {
 
-        document.body.insertBefore(svg, document.querySelector('.o-header'));
-    } catch (e) {
-        console.log(e);
-    }
-};
+        try {
 
-ajax.send();
+            // parse the response
+            var svg = request.responseXML.documentElement;
+            container.append(svg);
+        }
+
+        // Catch errors ( remove console log in production )
+        catch (e) {
+
+            console.log(e);
+        }
+    };
+
+    request.send();
+}
 
 /***/ }),
 
