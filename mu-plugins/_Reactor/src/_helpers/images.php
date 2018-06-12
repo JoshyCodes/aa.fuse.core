@@ -18,7 +18,7 @@ namespace Reactor\Helpers;
  * @since 1.0.0
  */
 
-function get_img_meta( ... $settings ){
+function get_img_meta( $image_request_settings ){
 
 	/**
 	 * Set our function defaults & merge with
@@ -28,8 +28,9 @@ function get_img_meta( ... $settings ){
 	$settings = array_merge(
 
 		array(
+			
 			'source'		=> 'post',
-			'type'   		=> 'url',
+			'type'   		=> '',
 			'field_id'  	=> null, // Used for ACF requests
 			'term'  		=> null,
 			'size'			=> 'full',
@@ -37,7 +38,7 @@ function get_img_meta( ... $settings ){
 			'show_falback'	=> false,
 		),
 
-		$settings
+		$image_request_settings
 
 	);
 
@@ -91,21 +92,16 @@ function get_post_img_meta( array $settings ){
 		return $data;
 
 	// Get the image ID
-	$img_id = get_post_thumbnail_id( $post->ID );
+	$image_id = get_post_thumbnail_id( $post->ID );
 
 	/**
 	 * Get the URL
 	 */
 	if( $settings['type'] === 'url' ){
 
-		// Get featured image object
-		$featured_image = wp_get_attachment_image_src( $img_id , $settings['size'] );
+		$data = get_post_thumbnail_url( $image_id );
 
-		// Get just the URL of the image
-		$data = $featured_image[0];
-
-		// Return and bail
-		return esc_url( $data );
+		return $data;
 
 	}
 
@@ -114,10 +110,9 @@ function get_post_img_meta( array $settings ){
 	 */
 	if( $settings['type'] === 'alt' ){
 
-		$data = get_post_meta( $img_id, '_wp_attachment_image_alt', true);
+		$data = get_post_thumb_alt( $image_id );
 
-		// Return & bail
-		return esc_html( $data );
+		return $data;
 
 	}
 
@@ -127,6 +122,28 @@ function get_post_img_meta( array $settings ){
 
 }
 
+/**
+ * Get an Image URL from an image based off of its ID
+ */
+function get_post_thumbnail_url( $image_id ) {
+
+	// Get featured image object
+	$featured_image = wp_get_attachment_image_src( $image_id , $settings['size'] );
+
+	// Get just the URL of the image
+	return esc_url( $featured_image[0] );
+
+}
+
+/**
+ * Get an image Alt text from an image based off of its ID
+ */
+function get_post_thumb_alt( $image_id ){
+
+	// Escape and Return Alt
+	return esc_html( get_post_meta( $image_id, '_wp_attachment_image_alt', true) );
+
+}
 
 /**
  * Get Img Meta data from an ACF Field
