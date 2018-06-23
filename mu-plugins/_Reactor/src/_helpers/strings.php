@@ -31,6 +31,6 @@ function replace_space_or_hyphen_with_underscore( $string ){
 
 function replace_space_or_underscore_with_hyphen( $string ){
 
-	return str_replace( array( ' ', '-' ), '_', $string );
+	return str_replace( array( ' ', '_' ), '-', $string );
 
 }

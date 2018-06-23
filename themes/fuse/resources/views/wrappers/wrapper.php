@@ -3,20 +3,24 @@ namespace Fuse;
 use Reactor\Helpers;
 
 // Get nae of the current post type
-$post_type = Helpers\post_type_name();
+$data = [
+
+	'current_post_type'		=> Helpers\post_type_name()
+
+];
 
 ?>
 
 
 <?php do_action( 'fuse_site_begin' ); ?>
 
-	<div class="o-page-wrapper">
+	<div id="site-wrapper" class="o-site-wrapper o-site-wrapper--<?= $data['current_post_type']; ?>">
 
 		<?php do_action( 'fuse_header' ); ?>
 
 		<?php do_action( 'fuse_before_content_div' ); ?>
 
-			<div id="site-content" class="o-content o-content--<?php esc_html_e( $post_type ); ?>">
+			<div id="site-content" class="o-content o-content--<?= $data['current_post_type']; ?>">
 								
 					<?php do_action( 'fuse_before_main_div' ); ?>
 

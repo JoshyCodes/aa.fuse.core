@@ -21,14 +21,13 @@ function inject_svg_sprite(){
 		// Create a new sanitizer instance
 		$sanitizer = new Sanitizer(); ?>
 
-		<!-- Begin SVG Sprite Definitions -->
+		<!-- SVG Sprite Definitions -->
 		<div class="fuse--sprite-defs" style="display:none;">
 			<?php 
 				// Return a sanitized SVG Sprite
 				$sanitizer->sanitize( include get_asset_from_manifest('sprite.svg', false) );
 			?>
 		</div>
-		<!-- End SVG Sprite Definitions -->
 
 <?php }
 

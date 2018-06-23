@@ -1,15 +1,18 @@
 <?php
 use Reactor\Helpers;
 
-// Get nae of the current post type
-$post_type = Helpers\post_type_name();
+$data = [
+	'current_post_type' => Helpers\post_type_name()
+];
 
 ?>
 
-<header id="site-header" class="o-header o-header--<?php esc_html_e( $post_type ); ?>">
+<header id="site-header" class="o-header o-header--<?= $data['current_post_type']; ?>">
 	
 	<div class="o-container --max --width">
-		Hello Header
+
+		<?php do_action( 'fuse_header_content' ); ?>
+
 	</div>
 
 </header>

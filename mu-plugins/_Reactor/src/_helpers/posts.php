@@ -10,7 +10,7 @@ namespace Reactor\Helpers;
  * 
  * @since  1.0.0
  */
-function post_type_name( $echo = false ){
+function post_type_name(){
 
 	// If we don't have access to our $post variable
 	if( ! isset( $post ) ){
@@ -20,27 +20,21 @@ function post_type_name( $echo = false ){
 
 	}
 
+	// Handle 404 pages
+	if( is_404() ){
+
+		return '404';
+
+	}
+	
+	// Let's gran the current post type and handle it!
 	$current_post_type = $post->post_type;
 
 	$replace = '_';
-
 	$with = '-';
 	
-	// Replace underscores with hyphens
-	$post_type_name = str_replace( $replace, $with, $current_post_type );
-
-	// sanitize
-	$post_type_name = $post_type_name;
-
-	if( $echo == true ){
-
-		echo $post_type_name;
-
-	} else {
-
-		return $post_type_name;
-
-	}
+	// Replace underscores with hyphens and return
+	return esc_html( str_replace( $replace, $with, $current_post_type ) );
 		
 }
 
@@ -52,27 +46,22 @@ function post_type_name( $echo = false ){
  * 
  * @since  1.0.0
  */
-function term_name( $echo = true ){
+function term_name(){
 
-	// useable outside of the loop
-	global $post;
+	// If we don't have access to our $post variable
+	if( ! isset( $post ) ){
+
+		// Set it (usable outside of the loop)
+		global $post;
+
+	}
 
 	$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
 
 	// Replace underscores with hyphens
 	$term = $term->slug;
 
-	// sanitize
-	$term = esc_attr( $term );
-
-	if( $echo == true ){
-
-		echo $term;
-
-	} else {
-
-		return $term;
-
-	}
+	// sanitize & return
+	return esc_html( $term );
 
 }
