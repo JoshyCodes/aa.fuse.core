@@ -2,61 +2,50 @@
 namespace Fuse\AssetHandler;
 use Fuse;
 
-add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_hashed_files', 1);
+/**
+ * Get cache-busting hashed filename from manifest.json.
+ *
+ * @param 	string $filename Original name of the file.
+ * @return	string Current cache-busting hashed name of the file.
+ * @ref 	https://www.alainschlesser.com/bust-cache-content-hash/
+ */
+function get_asset_from_manifest( $filename, $use_uri_for_returned_file = true ) {
 
-function enqueue_hashed_files( string $type ){
+    // Cache the decoded manifest so that we only read it in once.
+    $manifest = null;
 
-	$dist_uri = Fuse\fuse()->config( 'assets', 'prod_uri' );
-	$dist_dir_files = new \DirectoryIterator( Fuse\fuse()->config( 'assets', 'prod_path' ) );	
+    if ( null === $manifest ) {
 
-	foreach ($dist_dir_files as $file) {
+        $manifest_path = Fuse\fuse()->config( 'assets', 'manifest' );
 
-		$full_name 			= basename($file);
-		$basename			= get_file_basename( $full_name );
+        $manifest = file_exists( $manifest_path )
+            ? json_decode( file_get_contents( $manifest_path ), true )
+            : [];
 
-		$full_enqueue_src 	= $dist_uri . $full_name;
+    }
 
-		if ( pathinfo($file, PATHINFO_EXTENSION) === 'js') {
+    /**
+     * If the manifest contains the requested file,
+     * return the hashed name and full uri of the asset
+     */
 
-			$deps = get_file_dependencies( $basename );
+    if ( array_key_exists( $filename, $manifest ) ) {
 
-			wp_enqueue_script( $full_name, $full_enqueue_src, $deps, false, true );
+    	// Either use URI or PATH for the returned file.
+    	// Default is URI. Passing in false will result in returning the path
 
-		}
+    	$file_path = $use_uri_for_returned_file == true
 
+    		? Fuse\fuse()->config( 'assets', 'prod_uri' )
+    		: Fuse\fuse()->config( 'assets', 'prod_path' );
 
-	}
+        return  $file_path . $manifest[ $filename ];
 
-}
+    }
 
+    // Assume the file has not been hashed when it was not foun within the
+    // manifest.
 
-function get_file_basename( $full_name ){
-
-	$file_base = basename($full_name);
-
-	return substr( $file_base, 0, strpos( $file_base, '.') );
-
-}
-
-
-function get_file_dependencies( string $file_name ){
-	
-	switch($file_name) {
-
-	    case 'app':
-	        $deps = array();
-	        break;
-
-	    case 'posts':
-	        $deps = array('app');
-	        break;
-
-	    default:
-	        $deps = array();               
-	        break;
-
-	}
-
-	return $deps;
+    return $filename;
 
 }

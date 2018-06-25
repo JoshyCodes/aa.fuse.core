@@ -18,7 +18,7 @@ function maybe_load_jquery_from_google_cdn(){
 
 	// Set the site protocol for our final request
 	$protocol			= Helpers\get_url_protocol();
-	
+
 	// What version are we loading
 	$jquery_version 	= Fuse\fuse()->config('jquery', 'version');
 
@@ -41,13 +41,13 @@ function maybe_load_jquery_from_google_cdn(){
 	if(  Helpers\domain_exists( $jquery_test_url ) ){
 
 		// deregisters the default WordPress jQuery
-		wp_deregister_script( 'jquery' ); 
+		wp_deregister_script( 'jquery' );
 
 		 // register the external file
 		wp_register_script( 'jquery', $jquery_cdn_url );
 
 		// enqueue the external file
-		wp_enqueue_script('jquery'); 
+		wp_enqueue_script('jquery');
 
 
 	}

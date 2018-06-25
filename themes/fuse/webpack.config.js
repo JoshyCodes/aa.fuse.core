@@ -15,12 +15,13 @@ const BrowserSyncPlugin             = require('browser-sync-webpack-plugin');
 const CleanObsoleteChunks           = require('webpack-clean-obsolete-chunks');
 const CleanWebpackPlugin            = require('clean-webpack-plugin');
 const CopyWebpackPlugin             = require('copy-webpack-plugin');
+const ExtractCssChunks 				= require('extract-css-chunks-webpack-plugin')
 const FriendlyErrorsWebpackPlugin   = require('friendly-errors-webpack-plugin');
-const MiniCssExtractPlugin          = require('mini-css-extract-plugin');
 const SpriteLoaderPlugin            = require('svg-sprite-loader/plugin');
 const StyleLintPlugin               = require('stylelint-webpack-plugin');
 const WebpackAssetsManifest         = require('webpack-assets-manifest');
 const WebpackMd5Hash                = require('webpack-md5-hash');
+
 
 const devMode                       = process.env.NODE_ENV !== 'production';
 const path                          = require( 'path' );
@@ -30,18 +31,19 @@ const config = {
 	entry: {
 
 		app: 	'./resources/assets/js/app.js',
+		critical: 	'./resources/assets/js/critical.js',
 		posts: './resources/assets/js/posts.js',
 
 	},
 
-	devtool: devMode ? 'none' : 'source-map',
+	devtool: devMode ? 'none' : 'none',
 
 	output: {
 
 		path: path.resolve( __dirname, '_dist' ),
 
 		filename: devMode  ? 'js/[name].js' : 'js/[name].[chunkhash].bundle.js',
-		chunkFilename: devMode ? '[id].js' : '[id].[chunkhash].js',
+		chunkFilename: devMode ? 'js/[name].js' : 'js/[name].[chunkhash].js',
 		sourceMapFilename: '[file].map'
 
 	},
@@ -60,11 +62,6 @@ const config = {
              * @url     https://github.com/babel/babel-loader
              * @since   1.0.0
 			 */
-			{
-				test: /\.(js|jsx)$/,
-				exclude: /(node_modules|bower_components)/,
-				use: ['babel-loader']
-			},
             {
                 test:   /\.js$/,
                 exclude: /(node_modules|bower_components)/,
@@ -83,12 +80,10 @@ const config = {
 				test: /\.scss$/,
 	            use: [
 	                'style-loader',
-                	MiniCssExtractPlugin.loader,
-
+                	ExtractCssChunks.loader,
                 	{
                 		loader: 'css-loader', options: { sourceMap: true }
                 	},
-
                 	'postcss-loader',
 
                 	{
@@ -97,6 +92,23 @@ const config = {
 	            ],
 
 			},
+
+			/**
+			 * Font Loader
+			 */
+			{
+	            test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
+	            use: [
+	            	{
+	                	loader: 'file-loader',
+	                	options: {
+	                    	name: '[name].[ext]',
+	                    	outputPath: 'fonts/',
+	                    	publicPath: '../wp-content/themes/fuse/_dist/fonts/'
+	                	}
+	            	}
+	            ]
+	        },
 
             /**
              * SVG Sprite Loader.
@@ -116,7 +128,7 @@ const config = {
 
 					loader: 'svg-sprite-loader', options: {
 	                    extract: true,
-	                    spriteFilename: devMode ? 'sprites/sprite.svg' : 'sprites/sprite.svg',
+	                    spriteFilename: devMode ? 'sprite.svg' : 'sprite.svg',
 	                }
 
 	            },
@@ -153,10 +165,15 @@ const config = {
 		 * @url   https://github.com/webpack-contrib/mini-css-extract-plugin
          * @since 1.0.0
 		 *
-		 */
-  		new MiniCssExtractPlugin({
+		 // */
 
-            filename: devMode ? 'css/[name].css' : 'css/[name].[contenthash].bundle.css',
+        new ExtractCssChunks({
+
+			// Options similar to the same options in webpackOptions.output
+			// both options are optional
+			filename: devMode ? 'css/[name].css' : 'css/[name].[contenthash].bundle.css',
+			chunkFilename: devMode ? 'css/[id].css' : 'css/[id].[contenthash].bundle.css',
+			hot: true // optional is the plguin cannot automatically detect if you are using HOT, not for production use
 
         }),
 

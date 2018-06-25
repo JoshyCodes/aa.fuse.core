@@ -1,0 +1,15 @@
+
+/**
+ * Element • a, select, span
+ */
+
+
+a,
+select,
+span{
+
+	&:focus{
+		outline: none !important;
+	}
+
+}

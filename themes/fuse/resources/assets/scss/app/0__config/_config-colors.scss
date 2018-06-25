@@ -1,0 +1,164 @@
+/**
+ * Type     :   Config
+ * Group    :   Colors
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+
+// ----------------------------------------
+// The $colors map is where you define all
+// of your brand colors.
+// 
+// This should be the ONLY place color hex values are defined in your project
+// ----------------------------------------
+
+$colors : (
+    
+    // Primary
+    denim       : #6EB2C9,
+    cerise      : #DE0D61,
+    amethyst    : #8F669E,
+    zinc        : #5C789E,
+    pale-taupe  : #BDB0A8,
+    lava-stone  : #494E54
+    
+);
+
+// ----------------------------------------
+// Define the color scale map to use with our project.
+// 
+// Our color scale map is relative to the $colors defined above.
+// We do not decare arbitrary hex values, but rather, keep each
+// branded color relative to its base value, and either lighten(),
+// or darken() accordingly
+// ----------------------------------------
+
+$color_config: (
+
+    light-blue: (  
+
+        light20  :   lighten( map-get( $colors, denim ), 20% ),
+        light15  :   lighten( map-get( $colors, denim ), 15% ),
+        light10  :   lighten( map-get( $colors, denim ), 10% ),
+        light5   :   lighten( map-get( $colors, denim ), 5% ),
+
+        base    :   map-get( $colors, denim ),
+
+        dark5    :   darken( map-get( $colors, denim ), 5% ),
+        dark10   :   darken( map-get( $colors, denim ), 10% ),
+        dark15   :   darken( map-get( $colors, denim ), 15% ),
+        dark20   :   darken( map-get( $colors, denim ), 20% ),
+        
+    ),
+
+    pink: (  
+
+        light20  :   lighten( map-get( $colors, cerise ), 20% ),
+        light15  :   lighten( map-get( $colors, cerise ), 15% ),
+        light10  :   lighten( map-get( $colors, cerise ), 10% ),
+        light5   :   lighten( map-get( $colors, cerise ), 5% ),
+
+        base    :   map-get( $colors, cerise ),
+
+        dark5    :   darken( map-get( $colors, cerise ), 5% ),
+        dark10   :   darken( map-get( $colors, cerise ), 10% ),
+        dark15   :   darken( map-get( $colors, cerise ), 15% ),
+        dark20   :   darken( map-get( $colors, cerise ), 20% ),
+        
+    ),
+
+    purple: (  
+
+        light20  :   lighten( map-get( $colors, amethyst ), 20% ),
+        light15  :   lighten( map-get( $colors, amethyst ), 15% ),
+        light10  :   lighten( map-get( $colors, amethyst ), 10% ),
+        light5   :   lighten( map-get( $colors, amethyst ), 5% ),
+
+        base    :   map-get( $colors, amethyst ),
+
+        dark5    :   darken( map-get( $colors, amethyst ), 5% ),
+        dark10   :   darken( map-get( $colors, amethyst ), 10% ),
+        dark15   :   darken( map-get( $colors, amethyst ), 15% ),
+        dark20   :   darken( map-get( $colors, amethyst ), 20% ),
+        
+    ),
+
+    dark-blue: (
+
+        light20  :   lighten( map-get( $colors, zinc ), 20% ),
+        light15  :   lighten( map-get( $colors, zinc ), 15% ),
+        light10  :   lighten( map-get( $colors, zinc ), 10% ),
+        light5   :   lighten( map-get( $colors, zinc ), 5% ),
+
+        base    :   map-get( $colors, zinc ),
+
+        dark5    :   darken( map-get( $colors, zinc ), 5% ),
+        dark10   :   darken( map-get( $colors, zinc ), 10% ),
+        dark15   :   darken( map-get( $colors, zinc ), 15% ),
+        dark20   :   darken( map-get( $colors, zinc ), 20% ),
+        
+    ),
+
+    earth: (
+
+        light20  :   lighten( map-get( $colors, pale-taupe ), 20% ),
+        light15  :   lighten( map-get( $colors, pale-taupe ), 15% ),
+        light10  :   lighten( map-get( $colors, pale-taupe ), 10% ),
+        light5   :   lighten( map-get( $colors, pale-taupe ), 5% ),
+
+        base    :   map-get( $colors, pale-taupe ),
+
+        dark5    :   darken( map-get( $colors, pale-taupe ), 5% ),
+        dark10   :   darken( map-get( $colors, pale-taupe ), 10% ),
+        dark15   :   darken( map-get( $colors, pale-taupe ), 15% ),
+        dark20   :   darken( map-get( $colors, pale-taupe ), 20% ),
+        
+    ),
+
+    gray: (
+
+        light20  :   lighten( map-get( $colors, lava-stone ), 20% ),
+        light15  :   lighten( map-get( $colors, lava-stone ), 15% ),
+        light10  :   lighten( map-get( $colors, lava-stone ), 10% ),
+        light5   :   lighten( map-get( $colors, lava-stone ), 5% ),
+
+        base    :   map-get( $colors, lava-stone ),
+
+        dark5    :   darken( map-get( $colors, lava-stone ), 5% ),
+        dark10   :   darken( map-get( $colors, lava-stone ), 10% ),
+
+    ),
+
+    // ----------------------------------------
+    // A SASSY Grayscale courtesy of the awesome people at Sparkbox.
+    // Useful for any design system!
+    //
+    // https://seesparkbox.com/foundry/sassy_grayscale
+    // ----------------------------------------
+
+    grayscale: (
+
+        white   : #ffffff,
+        99      : #fcfcfc,
+        98      : #f3f3f3,
+        95      : #EDEDED,
+        90      : #E5E5E5, 
+        85      : #D9D9D9,
+        80      : #CCCCCC,
+        75      : #C0C0C0, 
+        70      : #B0B0B0,
+        60      : #999999,
+        50      : #808080,
+        45      : #727272,
+        40      : #696969, 
+        30      : #4D4D4D,
+        20      : #363636,
+        15      : #262626,
+        10      : #171717,
+        5       : #0a0a0a,
+        black   : #000000,
+
+    )
+);

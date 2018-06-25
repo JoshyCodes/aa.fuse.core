@@ -7,11 +7,11 @@ use Fuse;
 
 /**
 * Load a template part & pass in variables declared in caller scope. Optionally return as a string.
-* 
+*
 * @param string $path path to template file, minus .php (eg. `content-page`, `partial/folder/template-name`)
 * @param array $args map of variables to load into scope
 * @param bool $echo echo or return rendered template
-* 
+*
 * @return null or rendered template string
 *
 * @since  1.0.0
@@ -19,7 +19,7 @@ use Fuse;
 
 function render( $path, $args = [], $echo = true ) {
 
-    
+
 
 	// Set the partial root
 	$view_root	= Fuse\fuse()->config( 'paths', 'view_root' );
@@ -45,7 +45,7 @@ function render( $path, $args = [], $echo = true ) {
         return;
 
     }
-        
+
 
     // Return the partial
     ob_start();

@@ -1,6 +1,7 @@
 <?php
 namespace Fuse\Layout\SinglePost;
 use Fuse\Controllers;
+use Fuse\AssetHandler;
 
 
 // Fire our setup once we have all  Wordpress data
@@ -13,6 +14,8 @@ function setup(){
 
 		add_action( 'fuse_content', __NAMESPACE__ . '\load_summary', 5);
 		add_action( 'fuse_content', __NAMESPACE__ . '\load_content', 5);
+		add_action( 'wp_enqueue_scripts',	__NAMESPACE__ . '\load_posts_script', 1 );
+
 
 	}
 
@@ -27,5 +30,26 @@ function setup(){
 		Controllers\render( 'fragments/posts/post/single/content' );
 
 	}
-	
+
+
+	function load_posts_script(){
+
+		$script = [
+
+			'handle' 			=> 'posts-script',
+			'location'			=> AssetHandler\get_asset_from_manifest( 'posts.js' ),
+			'dependencies'		=> ['jquery', 'app-script'],
+			'version'			=> null,
+			'load_in_footer'	=> 'true',
+
+		];
+
+		wp_register_script( $script['handle'], $script['location'], $script['dependencies'], $script['version'], $script['load_in_footer'] );
+
+		wp_enqueue_script( $script['handle'] );
+
+	}
+
+
+
 }

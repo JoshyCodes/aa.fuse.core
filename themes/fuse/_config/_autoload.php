@@ -11,6 +11,14 @@ return [
         'admin',
         'filters',
 
+        // Enqueues
+        'asset-handlers/_helpers',
+        'asset-handlers/fonts',
+        'asset-handlers/images',
+        'asset-handlers/scripts',
+        'asset-handlers/styles',
+        'asset-handlers/svg',
+
         // Controllers
         'controllers/wrappers',
         'controllers/templates',
@@ -42,15 +50,7 @@ return [
 
         // Layout • Legacy Pages
         'templates/layout/legacy-splash',
-        'templates/layout/legacy-thanks',
-
-        // Enqueues
-        'asset-handlers/_helpers',
-        'asset-handlers/fonts',
-        'asset-handlers/images',
-        'asset-handlers/scripts',
-        'asset-handlers/styles',
-        'asset-handlers/svg'
+        'templates/layout/legacy-thanks'
         
    ]
 
