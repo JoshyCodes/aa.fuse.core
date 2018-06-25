@@ -9,7 +9,7 @@
 
 @each $width in $max-widths_config {
 
-    .u-max-width--#{$width} {
+    .u-max-w--#{$width} {
 
         max-width: #{$width}px;
 
