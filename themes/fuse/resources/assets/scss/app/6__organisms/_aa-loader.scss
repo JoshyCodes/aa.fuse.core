@@ -2,7 +2,7 @@
  * Name		: Loader
  * Desc		: Handles importing/loading of all partial files in the specified group.
  * Group	: Organisms
- * 
+ *
  * @since 1.0.0
  * @author CreativeFuse
  */
@@ -13,10 +13,11 @@
  * File Import List
  * ****************
  */
-	
+
 	//
 	// All files are imported in alphabetical order unless otherwise specified.
 	//
-	
+
 	@import '_o-footer';
+	@import '_o-group--cards';
 	@import '_o-nav';

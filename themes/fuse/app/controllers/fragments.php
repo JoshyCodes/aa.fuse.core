@@ -30,10 +30,10 @@ function render( $path, $args = [], $echo = true ) {
 	// Define the extension as .php for the partial file
 	$partial_file	= $_path . '.php';
 
-    // If we have args, let's get them;
+    // If we have args, let's get bring them into this context
     if ( ! empty( $args ) ){
 
-        extract($args);
+        $data = $args;
 
     }
 

@@ -43,7 +43,8 @@ strong {
   font-weight: 700
 }
 .fuse--fonts-loaded body {
-  font-family: merriweatherregular,serif
+  font-family: merriweatherregular,serif;
+  letter-spacing: .5px
 }
 .fuse--fonts-loaded strong {
   font-family: merriweatherbold,serif

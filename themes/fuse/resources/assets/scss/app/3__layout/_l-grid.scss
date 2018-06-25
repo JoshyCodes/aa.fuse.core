@@ -1,0 +1,65 @@
+/**
+ * Type	: Layout
+ * Name	: Grid
+ *
+ * @since 1.0.0
+ * @author CreativeFuse
+ */
+
+/**
+ * Our Grid is a modified version of Bootstrap's grid!
+ */
+
+/**
+ * ******************
+ * Class Definitions
+ * ******************
+ */
+
+.l-container{
+
+  margin-left: auto;
+  margin-right: auto;
+
+  &:not([class*="l-container--max"]){
+
+    max-width: 100%;
+
+  }
+
+}
+
+.l-container--max--l{
+
+  max-width: map_get( $grid_config, width--l );
+
+}
+
+.l-container--max--s{
+
+    max-width: map_get( $grid_config, width--s );
+
+}
+
+.l-container--max--xs{
+
+    max-width: map_get( $grid_config, width--xs );
+
+}
+
+.l-container--width{
+
+  width: map_get( $grid_config, container-width-mobile );
+
+  @include breakpoint( s ){
+
+  	width: map_get( $grid_config, container-width-desktop );
+
+  }
+
+}
+
+.l-container--fluid {
+  margin-right: auto;
+  margin-left: auto;
+}
