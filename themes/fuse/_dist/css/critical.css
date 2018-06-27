@@ -6,6 +6,13 @@
   font-display: swap
 }
 @font-face {
+  font-family: ProximaNova-Medium;
+  src: url(../wp-content/themes/fuse/_dist/fonts/proxima-nova-medium-webfont.woff2) format("woff2"),url(../wp-content/themes/fuse/_dist/fonts/proxima-nova-medium-webfont.woff) format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap
+}
+@font-face {
   font-family: ProximaNovaT-Thin;
   src: url(../wp-content/themes/fuse/_dist/fonts/proxima-nova-thin-webfont.woff2) format("woff2"),url(../wp-content/themes/fuse/_dist/fonts/proxima-nova-thin-webfont.woff) format("woff");
   font-weight: 700;
@@ -32,12 +39,14 @@ body {
 strong {
   font-weight: 700
 }
-.a-heading--bold,
-.a-heading--thin {
+[class*=a-heading--] {
   font-family: Arial,sans-serif
 }
 .a-heading--thin {
   font-weight: 100
+}
+.a-heading--medium {
+  font-weight: 500
 }
 .a-heading--bold {
   font-weight: 700
@@ -52,6 +61,10 @@ strong {
 .fuse--fonts-loaded .a-heading--thin {
   font-weight: 100;
   font-family: ProximaNovaT-Thin,Arial,sans-serif
+}
+.fuse--fonts-loaded .a-heading--medium {
+  font-weight: 500;
+  font-family: ProximaNova-Medium,Arial,sans-serif
 }
 .fuse--fonts-loaded .a-heading--bold {
   font-weight: 700;

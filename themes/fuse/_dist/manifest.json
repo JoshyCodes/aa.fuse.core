@@ -9,6 +9,8 @@
   "fonts/merriweather-regular-webfont.woff2": "fonts/merriweather-regular-webfont.woff2",
   "fonts/proxima-nova-bold-webfont.woff": "fonts/proxima-nova-bold-webfont.woff",
   "fonts/proxima-nova-bold-webfont.woff2": "fonts/proxima-nova-bold-webfont.woff2",
+  "fonts/proxima-nova-medium-webfont.woff": "fonts/proxima-nova-medium-webfont.woff",
+  "fonts/proxima-nova-medium-webfont.woff2": "fonts/proxima-nova-medium-webfont.woff2",
   "fonts/proxima-nova-thin-webfont.woff": "fonts/proxima-nova-thin-webfont.woff",
   "fonts/proxima-nova-thin-webfont.woff2": "fonts/proxima-nova-thin-webfont.woff2",
   "posts.js": "js/posts.js",

@@ -218,7 +218,7 @@ const config = {
          */
     	new BrowserSyncPlugin( {
 
-                injectChanges: true,
+                injectCss: true,
                 proxy: 'https://cf.dev',
 
                 files: [
@@ -228,6 +228,7 @@ const config = {
                     '_dist/*.jpg',
                     '_dist/*.png'
                 ],
+
                 open: false,
                 reloadDelay: 0
             }

@@ -10,7 +10,7 @@ const FontFaceObserver = require( 'fontfaceobserver' );
 			setFontsLoadedClass();
 
 			return;
-			
+
 		}
 
 		loadFonts();
@@ -28,7 +28,7 @@ const FontFaceObserver = require( 'fontfaceobserver' );
 function isFontDisplaySupported(){
 
 	const e = document.createElement("style");
-	
+
 	try {
 
 		e.textContent = "@font-face { font-display: swap; }";
@@ -40,7 +40,7 @@ function isFontDisplaySupported(){
 		e.remove();
 
 		return isFontDisplaySupported;
-		
+
 	  } catch (e) {}
 
 }
@@ -48,7 +48,7 @@ function isFontDisplaySupported(){
 function setFontCacheFlag(){
 
 	// Optimization for Repeat Views
-	sessionStorage.fontsLoaded = true; 
+	sessionStorage.fontsLoaded = true;
 
 }
 
@@ -59,7 +59,7 @@ function setFontsLoadedClass(){
 }
 
 function loadFonts(){
-	
+
 	const fontA = new FontFaceObserver('merriweatherregular', {
 			weight: 400
 		});
@@ -67,28 +67,31 @@ function loadFonts(){
 	const fontB = new FontFaceObserver('merriweatherbold', {
 			weight: 700
 		});
-		
+
 	const fontC = new FontFaceObserver('ProximaNova-Bold', {
 			weight: 700
 		});
 
-	const fontD = new FontFaceObserver('ProximaNovaT-Thin', {
+	const fontD = new FontFaceObserver('ProximaNova-Medium', {
+		weight: 500
+	});
+
+	const fontE = new FontFaceObserver('ProximaNovaT-Thin', {
 			weight: 100
 		});
-	
-		
+
+
 	Promise.all([
 
 		fontA.load(null, 10000),
 		fontB.load(null, 10000),
 		fontC.load(null, 10000),
-		fontD.load(null, 10000)
+		fontD.load(null, 10000),
+		fontE.load(null, 10000)
 
-	]).then(function () {
-
+	]).then(function() {
 		setFontsLoadedClass();
 		setFontCacheFlag();
-
 	});
 
 };

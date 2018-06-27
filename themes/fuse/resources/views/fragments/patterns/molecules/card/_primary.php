@@ -27,23 +27,23 @@ use ColorThief\ColorThief;
 ?>
 
 
-<div class="m-card__wrapper">
+<div class="tmp-m-card__wrapper">
 
-    <a class="m-card m-card--primary" href="<?= $data['link']; ?>">
+    <a class="tmp-m-card tmp-m-card--primary" href="<?= $data['link']; ?>">
 
-        <div class="m-card__header" style="background-image:url('<?= $data['bg']; ?>');">
+        <div class="tmp-m-card__header" style="background-image:url('<?= $data['bg']; ?>');">
         </div>
 
-        <div class="m-card__body">
+        <div class="tmp-m-card__body">
 
-            <div class="m-title-group">
-                <h2 class="m-title-group__headline"><strong><?= $data['title']; ?></strong></h2>
+            <div class="tmp-m-title-group">
+                <h2 class="tmp-m-title-group__headline a-heading--medium"><?= $data['title']; ?></h2>
 
-                <div class="m-title-group__sub">
+                <h3 class="tmp-m-title-group__sub a-heading--medium">
                 By <?= $data['author']; ?>
-                </div>
+                </h3>
 
-                <p class="m-title-group__copy"><?= $data['copy']; ?></p>
+                <p class="tmp-m-title-group__copy"><?= $data['copy']; ?></p>
             </div>
 
         </div>

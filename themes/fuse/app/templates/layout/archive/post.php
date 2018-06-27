@@ -30,7 +30,7 @@ function add_container(){
 
 function add_card_group(){
 
-	echo '<div class="o-group--cards">';
+	echo '<div class="tmp-o-group--cards">';
 
 }
 

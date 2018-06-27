@@ -698,12 +698,15 @@ function loadFonts() {
 		weight: 700
 	});
 
-	var fontD = new FontFaceObserver('ProximaNovaT-Thin', {
+	var fontD = new FontFaceObserver('ProximaNova-Medium', {
+		weight: 500
+	});
+
+	var fontE = new FontFaceObserver('ProximaNovaT-Thin', {
 		weight: 100
 	});
 
-	Promise.all([fontA.load(null, 10000), fontB.load(null, 10000), fontC.load(null, 10000), fontD.load(null, 10000)]).then(function () {
-
+	Promise.all([fontA.load(null, 10000), fontB.load(null, 10000), fontC.load(null, 10000), fontD.load(null, 10000), fontE.load(null, 10000)]).then(function () {
 		setFontsLoadedClass();
 		setFontCacheFlag();
 	});
