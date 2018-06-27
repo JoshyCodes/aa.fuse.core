@@ -642,6 +642,35 @@ span:focus {
 .u-z--front {
   z-index: 10
 }
+.tmp-o-hero {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-height: 350px;
+  position: relative
+}
+.tmp-o-hero:before {
+  content: '';
+  left: 0;
+  right: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute
+}
+.tmp-o-hero__title {
+  color: #fff;
+  position: relative;
+  z-index: 1
+}
 .tmp-m-card__wrapper {
   opacity: 0;
   -webkit-box-flex: 0;

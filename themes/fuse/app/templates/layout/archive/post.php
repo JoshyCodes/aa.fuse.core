@@ -12,13 +12,25 @@ function setup(){
 
 	// If we are on a normal page
 	if( is_home() ){
-
+		add_action( 'fuse_hero', __NAMESPACE__ . '\load_hero' );
 		add_action('fuse_before_loop', __NAMESPACE__ . '\add_container', 1);
 		add_action('fuse_before_loop', __NAMESPACE__ . '\add_card_group', 2);
 		add_action('fuse_content', __NAMESPACE__ . '\load_posts');
 
 	}
 
+
+}
+
+function load_hero(){
+
+	$data = [
+
+		'bg'		=> 'https://picsum.photos/1920/400',
+		'title'		=> 'An Awesome Title',
+	];
+
+	Controllers\render( 'fragments/zz-temp-blog/_tmp-o-hero--archive', $data );
 
 }
 
