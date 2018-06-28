@@ -16,14 +16,14 @@ function inject_svg_sprite(){
 
 	// Bail if it doesn't
 	if( ! $sprite )
-		return; 
-		
+		return;
+
 		// Create a new sanitizer instance
 		$sanitizer = new Sanitizer(); ?>
 
 		<!-- SVG Sprite Definitions -->
 		<div class="fuse--sprite-defs" style="display:none;">
-			<?php 
+			<?php
 				// Return a sanitized SVG Sprite
 				$sanitizer->sanitize( include get_asset_from_manifest('sprite.svg', false) );
 			?>
@@ -49,13 +49,13 @@ function get_svg( array $svg_request_settings ){
 	$settings = array_merge(
 
 		array(
-		
+
 			'type'   		=> 'sprite',
 			'name'  		=> '',
 			'class'  	    => '',
-            'title'			=> '',        
+            'title'			=> '',
             'location'      => \Fuse\fuse()->config( 'svg_dir' ),
-            
+
 		),
 
 		$svg_request_settings

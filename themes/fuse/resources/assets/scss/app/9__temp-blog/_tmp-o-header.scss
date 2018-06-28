@@ -1,0 +1,28 @@
+.tmp-o-header__content{
+
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+}
+
+.tmp-o-header__logo{
+    width: 65px;
+    flex: 1;
+
+    > img{
+
+        display: block;
+
+    }
+
+}
+
+.tmp-o-header__content .tmp-m-btn{
+
+
+    margin-left: auto;
+    margin-right: 0;
+
+}

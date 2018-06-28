@@ -4,8 +4,7 @@
     background-size: cover;
     background-position: center center;
     display: flex;
-    justify-content: center;
-    min-height: 350px;
+    min-height: 300px;
     position: relative;
 
     &:before{
@@ -25,7 +24,23 @@
 .tmp-o-hero__title{
 
     color: white;
+    font-size: 48px;
+    opacity: 0;
     position: relative;
     z-index: 1;
+
+}
+
+.tmp-o-hero__sub{
+    color: white;
+    font-size: 16px;
+    opacity: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.tmp-o-hero--archive{
+
+    background-color: c( gray );
 
 }

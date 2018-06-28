@@ -1,3 +1,3 @@
 import '../scss/app/app.scss';
-import '../js/app/icons.js';
-import '../js/app/_tmp-blog-intro-animation';
+import './app/icons.js';
+import animateTempCards from "./app/temp-blog/_tmp-blog-animation";

@@ -59,15 +59,12 @@ strong {
   font-family: merriweatherbold,serif
 }
 .fuse--fonts-loaded .a-heading--thin {
-  font-weight: 100;
   font-family: ProximaNovaT-Thin,Arial,sans-serif
 }
 .fuse--fonts-loaded .a-heading--medium {
-  font-weight: 500;
   font-family: ProximaNova-Medium,Arial,sans-serif
 }
 .fuse--fonts-loaded .a-heading--bold {
-  font-weight: 700;
   font-family: ProximaNova-Bold,sans-serif
 }
 html {

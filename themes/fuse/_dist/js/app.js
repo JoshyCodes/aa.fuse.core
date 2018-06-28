@@ -1362,39 +1362,13 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__(/*! ../scss/app/app.scss */ "./resources/assets/scss/app/app.scss");
 
-__webpack_require__(/*! ../js/app/icons.js */ "./resources/assets/js/app/icons.js");
+__webpack_require__(/*! ./app/icons.js */ "./resources/assets/js/app/icons.js");
 
-__webpack_require__(/*! ../js/app/_tmp-blog-intro-animation */ "./resources/assets/js/app/_tmp-blog-intro-animation.js");
+var _tmpBlogAnimation = __webpack_require__(/*! ./app/temp-blog/_tmp-blog-animation */ "./resources/assets/js/app/temp-blog/_tmp-blog-animation.js");
 
-/***/ }),
-
-/***/ "./resources/assets/js/app/_tmp-blog-intro-animation.js":
-/*!**************************************************************!*\
-  !*** ./resources/assets/js/app/_tmp-blog-intro-animation.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _animejs = __webpack_require__(/*! animejs */ "./node_modules/animejs/anime.min.js");
-
-var _animejs2 = _interopRequireDefault(_animejs);
+var _tmpBlogAnimation2 = _interopRequireDefault(_tmpBlogAnimation);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var animateCards = (0, _animejs2.default)({
-	targets: ".tmp-m-card__wrapper",
-	translateX: [-10, 0],
-	opacity: [0, 1],
-	duration: 700,
-	loop: false,
-	easing: "easeOutQuad",
-	delay: function delay(el, i, l) {
-		return i * 250;
-	}
-});
 
 /***/ }),
 
@@ -1410,6 +1384,53 @@ var animateCards = (0, _animejs2.default)({
 
 // Import all SVG Icons
 __webpack_require__("./resources/assets/icons/svg sync recursive \\.svg$");
+
+/***/ }),
+
+/***/ "./resources/assets/js/app/temp-blog/_tmp-blog-animation.js":
+/*!******************************************************************!*\
+  !*** ./resources/assets/js/app/temp-blog/_tmp-blog-animation.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _animejs = __webpack_require__(/*! animejs */ "./node_modules/animejs/anime.min.js");
+
+var _animejs2 = _interopRequireDefault(_animejs);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var blogArchiveAnimationTimeline = _animejs2.default.timeline({});
+var animationEasing = "easeOutQuad";
+var slideInX = [-10, 0];
+var opacityFade = [0, 1];
+
+blogArchiveAnimationTimeline.add({
+	// Handle Title Animation
+	targets: ".tmp-o-hero__title",
+	translateX: slideInX,
+	opacity: opacityFade,
+	easing: animationEasing,
+	delay: 200
+}).add({
+	// Handle Subtitle Animation
+	targets: ".tmp-o-hero__sub",
+	translateX: slideInX,
+	opacity: opacityFade,
+	easing: animationEasing,
+	offset: "-=600"
+}).add({
+	// Handle Card Group Animation
+	targets: ".tmp-o-group--cards",
+	translateY: [10, 0],
+	opacity: opacityFade,
+	duration: 600,
+	easing: animationEasing,
+	offset: "-=700"
+});
 
 /***/ }),
 

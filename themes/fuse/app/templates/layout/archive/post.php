@@ -10,15 +10,21 @@ add_action( 'wp', __NAMESPACE__ . '\setup');
 
 function setup(){
 
-	// If we are on a normal page
+	// If we are on our main blog archive page.
 	if( is_home() ){
+
+		add_action( 'fuse_header_content', __NAMESPACE__ . '\load_header' );
 		add_action( 'fuse_hero', __NAMESPACE__ . '\load_hero' );
 		add_action('fuse_before_loop', __NAMESPACE__ . '\add_container', 1);
 		add_action('fuse_before_loop', __NAMESPACE__ . '\add_card_group', 2);
 		add_action('fuse_content', __NAMESPACE__ . '\load_posts');
-
 	}
 
+
+}
+function load_header(){
+
+	Controllers\render( 'fragments/zz-temp-blog/_tmp-o-header__inner');
 
 }
 
@@ -28,6 +34,8 @@ function load_hero(){
 
 		'bg'		=> 'https://picsum.photos/1920/400',
 		'title'		=> 'An Awesome Title',
+		'sub'		=> 'And an even more awesome sub title',
+
 	];
 
 	Controllers\render( 'fragments/zz-temp-blog/_tmp-o-hero--archive', $data );

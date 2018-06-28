@@ -14,9 +14,7 @@
 
 		images.each( function(){
 
-
 			return loadImage( $(this) );
-	
 
 		});
 
@@ -30,7 +28,7 @@
 		// Get the actual elements that hold data we need to work with
 		var thumbnail 			= currentImage.find('.m-progressive-bg-image__thumb'),
 			fullImage 			= currentImage.find('.m-progressive-bg-image__full'),
-			
+
 			// Get the full image src path
 			fullImageSrc 				= thumbnail.attr( "data-src" );
 
@@ -66,10 +64,10 @@
 	 * Kick off our Init Function
 	 */
 	$(document).ready( function() {
-		
+
 		initProgressiveImageHandler();
 
 	});
-	
+
 
 })( jQuery, window, document );
