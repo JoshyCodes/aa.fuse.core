@@ -1,4 +1,4 @@
-<div class="tmp-o-hero tmp-o-hero--archive" style="background-image:url(  );">
+<div class="tmp-o-hero tmp-o-hero--archive" style="">
 
     <div class="l-container l-container--max--l l-container--width">
 

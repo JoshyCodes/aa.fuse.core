@@ -8,21 +8,43 @@
 }
 
 .tmp-o-header__logo{
-    width: 65px;
-    flex: 1;
+    flex: 0 0 45px;
+    transition: all .15s ease;
 
-    > img{
+    &:hover{
 
-        display: block;
+        @include opacity(.7);
+
+    }
+
+    > .c-svg-icon{
+
+        fill: c(pink);
+        width  : 45px;
+        height: 45px;
 
     }
 
 }
 
+
+.tmp-o-header__back{
+
+        margin-left: auto;
+        margin-right: 0;
+
+}
+
+.tmp-o-header__back__copy{
+
+    color: c(gray);
+
+}
+
 .tmp-o-header__content .tmp-m-btn{
 
+         margin-left: auto;
+        margin-right: 0;
 
-    margin-left: auto;
-    margin-right: 0;
 
 }

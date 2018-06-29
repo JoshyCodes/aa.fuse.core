@@ -18,10 +18,13 @@ function setup(){
 		add_action('fuse_before_loop', __NAMESPACE__ . '\add_container', 1);
 		add_action('fuse_before_loop', __NAMESPACE__ . '\add_card_group', 2);
 		add_action('fuse_content', __NAMESPACE__ . '\load_posts');
+		add_action('fuse_footer_content', __NAMESPACE__ . '\load_footer');
+
 	}
 
 
 }
+
 function load_header(){
 
 	Controllers\render( 'fragments/zz-temp-blog/_tmp-o-header__inner');
@@ -68,5 +71,11 @@ function load_posts(){
 	];
 
 	Controllers\render( 'fragments/patterns/molecules/card/_primary', $data );
+
+}
+
+function load_footer(){
+
+	Controllers\render( 'fragments/zz-temp-blog/_tmp-o-footer__inner' );
 
 }

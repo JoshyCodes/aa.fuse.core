@@ -674,37 +674,7 @@ module.exports = g;
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./arrow-l.svg": "./resources/assets/icons/svg/arrow-l.svg",
-	"./arrow-m.svg": "./resources/assets/icons/svg/arrow-m.svg",
-	"./caret-s.svg": "./resources/assets/icons/svg/caret-s.svg",
-	"./clock-s.svg": "./resources/assets/icons/svg/clock-s.svg",
-	"./clock-xs.svg": "./resources/assets/icons/svg/clock-xs.svg",
-	"./donate-s.svg": "./resources/assets/icons/svg/donate-s.svg",
-	"./donate-xs.svg": "./resources/assets/icons/svg/donate-xs.svg",
-	"./download-s.svg": "./resources/assets/icons/svg/download-s.svg",
-	"./email-s.svg": "./resources/assets/icons/svg/email-s.svg",
-	"./email-xs.svg": "./resources/assets/icons/svg/email-xs.svg",
-	"./facebook-s.svg": "./resources/assets/icons/svg/facebook-s.svg",
-	"./instagram-s.svg": "./resources/assets/icons/svg/instagram-s.svg",
-	"./like-s.svg": "./resources/assets/icons/svg/like-s.svg",
-	"./like-xs.svg": "./resources/assets/icons/svg/like-xs.svg",
-	"./menu-l.svg": "./resources/assets/icons/svg/menu-l.svg",
-	"./menu-m.svg": "./resources/assets/icons/svg/menu-m.svg",
-	"./notes-s.svg": "./resources/assets/icons/svg/notes-s.svg",
-	"./notes-xs.svg": "./resources/assets/icons/svg/notes-xs.svg",
-	"./phone-s.svg": "./resources/assets/icons/svg/phone-s.svg",
-	"./phone-xs.svg": "./resources/assets/icons/svg/phone-xs.svg",
-	"./play-l.svg": "./resources/assets/icons/svg/play-l.svg",
-	"./play-m.svg": "./resources/assets/icons/svg/play-m.svg",
-	"./search-s.svg": "./resources/assets/icons/svg/search-s.svg",
-	"./search-xs.svg": "./resources/assets/icons/svg/search-xs.svg",
-	"./share-s.svg": "./resources/assets/icons/svg/share-s.svg",
-	"./twitter-s.svg": "./resources/assets/icons/svg/twitter-s.svg",
-	"./user-s.svg": "./resources/assets/icons/svg/user-s.svg",
-	"./user-xs.svg": "./resources/assets/icons/svg/user-xs.svg",
-	"./view-s.svg": "./resources/assets/icons/svg/view-s.svg",
-	"./view-xs.svg": "./resources/assets/icons/svg/view-xs.svg",
-	"./youtube-s.svg": "./resources/assets/icons/svg/youtube-s.svg"
+	"./tmp-fuse-logo.svg": "./resources/assets/icons/svg/tmp-fuse-logo.svg"
 };
 
 
@@ -730,619 +700,19 @@ webpackContext.id = "./resources/assets/icons/svg sync recursive \\.svg$";
 
 /***/ }),
 
-/***/ "./resources/assets/icons/svg/arrow-l.svg":
-/*!************************************************!*\
-  !*** ./resources/assets/icons/svg/arrow-l.svg ***!
-  \************************************************/
+/***/ "./resources/assets/icons/svg/tmp-fuse-logo.svg":
+/*!******************************************************!*\
+  !*** ./resources/assets/icons/svg/tmp-fuse-logo.svg ***!
+  \******************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
-      id: "arrow-l-usage",
-      viewBox: "0 0 66 66",
-      url: __webpack_require__.p + "sprite.svg#arrow-l",
-      toString: function () {
-        return this.url;
-      }
-    });
-
-/***/ }),
-
-/***/ "./resources/assets/icons/svg/arrow-m.svg":
-/*!************************************************!*\
-  !*** ./resources/assets/icons/svg/arrow-m.svg ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-      id: "arrow-m-usage",
-      viewBox: "0 0 34 34",
-      url: __webpack_require__.p + "sprite.svg#arrow-m",
-      toString: function () {
-        return this.url;
-      }
-    });
-
-/***/ }),
-
-/***/ "./resources/assets/icons/svg/caret-s.svg":
-/*!************************************************!*\
-  !*** ./resources/assets/icons/svg/caret-s.svg ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-      id: "caret-s-usage",
-      viewBox: "0 0 22 22",
-      url: __webpack_require__.p + "sprite.svg#caret-s",
-      toString: function () {
-        return this.url;
-      }
-    });
-
-/***/ }),
-
-/***/ "./resources/assets/icons/svg/clock-s.svg":
-/*!************************************************!*\
-  !*** ./resources/assets/icons/svg/clock-s.svg ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-      id: "clock-s-usage",
-      viewBox: "0 0 22 22",
-      url: __webpack_require__.p + "sprite.svg#clock-s",
-      toString: function () {
-        return this.url;
-      }
-    });
-
-/***/ }),
-
-/***/ "./resources/assets/icons/svg/clock-xs.svg":
-/*!*************************************************!*\
-  !*** ./resources/assets/icons/svg/clock-xs.svg ***!
-  \*************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-      id: "clock-xs-usage",
-      viewBox: "0 0 14 14",
-      url: __webpack_require__.p + "sprite.svg#clock-xs",
-      toString: function () {
-        return this.url;
-      }
-    });
-
-/***/ }),
-
-/***/ "./resources/assets/icons/svg/donate-s.svg":
-/*!*************************************************!*\
-  !*** ./resources/assets/icons/svg/donate-s.svg ***!
-  \*************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-      id: "donate-s-usage",
-      viewBox: "0 0 22 22",
-      url: __webpack_require__.p + "sprite.svg#donate-s",
-      toString: function () {
-        return this.url;
-      }
-    });
-
-/***/ }),
-
-/***/ "./resources/assets/icons/svg/donate-xs.svg":
-/*!**************************************************!*\
-  !*** ./resources/assets/icons/svg/donate-xs.svg ***!
-  \**************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-      id: "donate-xs-usage",
-      viewBox: "0 0 14 14",
-      url: __webpack_require__.p + "sprite.svg#donate-xs",
-      toString: function () {
-        return this.url;
-      }
-    });
-
-/***/ }),
-
-/***/ "./resources/assets/icons/svg/download-s.svg":
-/*!***************************************************!*\
-  !*** ./resources/assets/icons/svg/download-s.svg ***!
-  \***************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-      id: "download-s-usage",
-      viewBox: "0 0 22 22",
-      url: __webpack_require__.p + "sprite.svg#download-s",
-      toString: function () {
-        return this.url;
-      }
-    });
-
-/***/ }),
-
-/***/ "./resources/assets/icons/svg/email-s.svg":
-/*!************************************************!*\
-  !*** ./resources/assets/icons/svg/email-s.svg ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-      id: "email-s-usage",
-      viewBox: "0 0 22 22",
-      url: __webpack_require__.p + "sprite.svg#email-s",
-      toString: function () {
-        return this.url;
-      }
-    });
-
-/***/ }),
-
-/***/ "./resources/assets/icons/svg/email-xs.svg":
-/*!*************************************************!*\
-  !*** ./resources/assets/icons/svg/email-xs.svg ***!
-  \*************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-      id: "email-xs-usage",
-      viewBox: "0 0 14 14",
-      url: __webpack_require__.p + "sprite.svg#email-xs",
-      toString: function () {
-        return this.url;
-      }
-    });
-
-/***/ }),
-
-/***/ "./resources/assets/icons/svg/facebook-s.svg":
-/*!***************************************************!*\
-  !*** ./resources/assets/icons/svg/facebook-s.svg ***!
-  \***************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-      id: "facebook-s-usage",
-      viewBox: "0 0 22 22",
-      url: __webpack_require__.p + "sprite.svg#facebook-s",
-      toString: function () {
-        return this.url;
-      }
-    });
-
-/***/ }),
-
-/***/ "./resources/assets/icons/svg/instagram-s.svg":
-/*!****************************************************!*\
-  !*** ./resources/assets/icons/svg/instagram-s.svg ***!
-  \****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-      id: "instagram-s-usage",
-      viewBox: "0 0 22 22",
-      url: __webpack_require__.p + "sprite.svg#instagram-s",
-      toString: function () {
-        return this.url;
-      }
-    });
-
-/***/ }),
-
-/***/ "./resources/assets/icons/svg/like-s.svg":
-/*!***********************************************!*\
-  !*** ./resources/assets/icons/svg/like-s.svg ***!
-  \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-      id: "like-s-usage",
-      viewBox: "0 0 22 22",
-      url: __webpack_require__.p + "sprite.svg#like-s",
-      toString: function () {
-        return this.url;
-      }
-    });
-
-/***/ }),
-
-/***/ "./resources/assets/icons/svg/like-xs.svg":
-/*!************************************************!*\
-  !*** ./resources/assets/icons/svg/like-xs.svg ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-      id: "like-xs-usage",
-      viewBox: "0 0 14 14",
-      url: __webpack_require__.p + "sprite.svg#like-xs",
-      toString: function () {
-        return this.url;
-      }
-    });
-
-/***/ }),
-
-/***/ "./resources/assets/icons/svg/menu-l.svg":
-/*!***********************************************!*\
-  !*** ./resources/assets/icons/svg/menu-l.svg ***!
-  \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-      id: "menu-l-usage",
-      viewBox: "0 0 66 66",
-      url: __webpack_require__.p + "sprite.svg#menu-l",
-      toString: function () {
-        return this.url;
-      }
-    });
-
-/***/ }),
-
-/***/ "./resources/assets/icons/svg/menu-m.svg":
-/*!***********************************************!*\
-  !*** ./resources/assets/icons/svg/menu-m.svg ***!
-  \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-      id: "menu-m-usage",
-      viewBox: "0 0 34 34",
-      url: __webpack_require__.p + "sprite.svg#menu-m",
-      toString: function () {
-        return this.url;
-      }
-    });
-
-/***/ }),
-
-/***/ "./resources/assets/icons/svg/notes-s.svg":
-/*!************************************************!*\
-  !*** ./resources/assets/icons/svg/notes-s.svg ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-      id: "notes-s-usage",
-      viewBox: "0 0 22 22",
-      url: __webpack_require__.p + "sprite.svg#notes-s",
-      toString: function () {
-        return this.url;
-      }
-    });
-
-/***/ }),
-
-/***/ "./resources/assets/icons/svg/notes-xs.svg":
-/*!*************************************************!*\
-  !*** ./resources/assets/icons/svg/notes-xs.svg ***!
-  \*************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-      id: "notes-xs-usage",
-      viewBox: "0 0 14 14",
-      url: __webpack_require__.p + "sprite.svg#notes-xs",
-      toString: function () {
-        return this.url;
-      }
-    });
-
-/***/ }),
-
-/***/ "./resources/assets/icons/svg/phone-s.svg":
-/*!************************************************!*\
-  !*** ./resources/assets/icons/svg/phone-s.svg ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-      id: "phone-s-usage",
-      viewBox: "0 0 22 22",
-      url: __webpack_require__.p + "sprite.svg#phone-s",
-      toString: function () {
-        return this.url;
-      }
-    });
-
-/***/ }),
-
-/***/ "./resources/assets/icons/svg/phone-xs.svg":
-/*!*************************************************!*\
-  !*** ./resources/assets/icons/svg/phone-xs.svg ***!
-  \*************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-      id: "phone-xs-usage",
-      viewBox: "0 0 14 14",
-      url: __webpack_require__.p + "sprite.svg#phone-xs",
-      toString: function () {
-        return this.url;
-      }
-    });
-
-/***/ }),
-
-/***/ "./resources/assets/icons/svg/play-l.svg":
-/*!***********************************************!*\
-  !*** ./resources/assets/icons/svg/play-l.svg ***!
-  \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-      id: "play-l-usage",
-      viewBox: "0 0 66 66",
-      url: __webpack_require__.p + "sprite.svg#play-l",
-      toString: function () {
-        return this.url;
-      }
-    });
-
-/***/ }),
-
-/***/ "./resources/assets/icons/svg/play-m.svg":
-/*!***********************************************!*\
-  !*** ./resources/assets/icons/svg/play-m.svg ***!
-  \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-      id: "play-m-usage",
-      viewBox: "0 0 34 34",
-      url: __webpack_require__.p + "sprite.svg#play-m",
-      toString: function () {
-        return this.url;
-      }
-    });
-
-/***/ }),
-
-/***/ "./resources/assets/icons/svg/search-s.svg":
-/*!*************************************************!*\
-  !*** ./resources/assets/icons/svg/search-s.svg ***!
-  \*************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-      id: "search-s-usage",
-      viewBox: "0 0 22 22",
-      url: __webpack_require__.p + "sprite.svg#search-s",
-      toString: function () {
-        return this.url;
-      }
-    });
-
-/***/ }),
-
-/***/ "./resources/assets/icons/svg/search-xs.svg":
-/*!**************************************************!*\
-  !*** ./resources/assets/icons/svg/search-xs.svg ***!
-  \**************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-      id: "search-xs-usage",
-      viewBox: "0 0 14 14",
-      url: __webpack_require__.p + "sprite.svg#search-xs",
-      toString: function () {
-        return this.url;
-      }
-    });
-
-/***/ }),
-
-/***/ "./resources/assets/icons/svg/share-s.svg":
-/*!************************************************!*\
-  !*** ./resources/assets/icons/svg/share-s.svg ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-      id: "share-s-usage",
-      viewBox: "0 0 22 22",
-      url: __webpack_require__.p + "sprite.svg#share-s",
-      toString: function () {
-        return this.url;
-      }
-    });
-
-/***/ }),
-
-/***/ "./resources/assets/icons/svg/twitter-s.svg":
-/*!**************************************************!*\
-  !*** ./resources/assets/icons/svg/twitter-s.svg ***!
-  \**************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-      id: "twitter-s-usage",
-      viewBox: "0 0 22 22",
-      url: __webpack_require__.p + "sprite.svg#twitter-s",
-      toString: function () {
-        return this.url;
-      }
-    });
-
-/***/ }),
-
-/***/ "./resources/assets/icons/svg/user-s.svg":
-/*!***********************************************!*\
-  !*** ./resources/assets/icons/svg/user-s.svg ***!
-  \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-      id: "user-s-usage",
-      viewBox: "0 0 22 22",
-      url: __webpack_require__.p + "sprite.svg#user-s",
-      toString: function () {
-        return this.url;
-      }
-    });
-
-/***/ }),
-
-/***/ "./resources/assets/icons/svg/user-xs.svg":
-/*!************************************************!*\
-  !*** ./resources/assets/icons/svg/user-xs.svg ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-      id: "user-xs-usage",
-      viewBox: "0 0 14 14",
-      url: __webpack_require__.p + "sprite.svg#user-xs",
-      toString: function () {
-        return this.url;
-      }
-    });
-
-/***/ }),
-
-/***/ "./resources/assets/icons/svg/view-s.svg":
-/*!***********************************************!*\
-  !*** ./resources/assets/icons/svg/view-s.svg ***!
-  \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-      id: "view-s-usage",
-      viewBox: "0 0 22 22",
-      url: __webpack_require__.p + "sprite.svg#view-s",
-      toString: function () {
-        return this.url;
-      }
-    });
-
-/***/ }),
-
-/***/ "./resources/assets/icons/svg/view-xs.svg":
-/*!************************************************!*\
-  !*** ./resources/assets/icons/svg/view-xs.svg ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-      id: "view-xs-usage",
-      viewBox: "0 0 14 14",
-      url: __webpack_require__.p + "sprite.svg#view-xs",
-      toString: function () {
-        return this.url;
-      }
-    });
-
-/***/ }),
-
-/***/ "./resources/assets/icons/svg/youtube-s.svg":
-/*!**************************************************!*\
-  !*** ./resources/assets/icons/svg/youtube-s.svg ***!
-  \**************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-      id: "youtube-s-usage",
-      viewBox: "0 0 22 22",
-      url: __webpack_require__.p + "sprite.svg#youtube-s",
+      id: "tmp-fuse-logo-usage",
+      viewBox: "0 0 65 65",
+      url: __webpack_require__.p + "sprite.svg#tmp-fuse-logo",
       toString: function () {
         return this.url;
       }
@@ -1403,33 +773,71 @@ var _animejs2 = _interopRequireDefault(_animejs);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var blogArchiveAnimationTimeline = _animejs2.default.timeline({});
 var animationEasing = "easeOutQuad";
 var slideInX = [-10, 0];
 var opacityFade = [0, 1];
 
-blogArchiveAnimationTimeline.add({
+var gradients = {
+
+	start: "#5C789E",
+	end: "#5C789E",
+	position: "50%"
+
+};
+
+var articleHero = document.querySelector('.tmp-o-hero--archive');
+
+if (articleHero) {
+
+	// const blogArchiveHeroAnimation = anime({
+
+	// 	targets: gradients,
+	// 	duration: 1500,
+	// 	start: "#DE0D61",
+	// 	end: gradients.end,
+	// 	position: "128.36%",
+	// 	easing: 'linear',
+	// 	round: 1,
+	// 	delay: 500,
+	// 	update: function(a){
+
+	// 		const gradientStartValue = a.animations[0].currentValue;
+	// 		const gradientEndValue = a.animations[1].currentValue;
+	// 		const gradientPositionValue = a.animations[2].currentValue;
+
+	// 		articleHero.style.backgroundImage = `linear-gradient(90deg, ${gradientStartValue} -4.25%, ${gradientEndValue} ${gradientPositionValue})`;
+
+	// 	}
+
+	// });
+
+}
+
+var blogSingleAnimationTimeline = _animejs2.default.timeline({});
+
+blogSingleAnimationTimeline.add({
 	// Handle Title Animation
-	targets: ".tmp-o-hero__title",
+	targets: ".tmp-o-hero--single .l-container",
 	translateX: slideInX,
 	opacity: opacityFade,
 	easing: animationEasing,
 	delay: 200
 }).add({
-	// Handle Subtitle Animation
-	targets: ".tmp-o-hero__sub",
-	translateX: slideInX,
-	opacity: opacityFade,
-	easing: animationEasing,
-	offset: "-=600"
-}).add({
 	// Handle Card Group Animation
-	targets: ".tmp-o-group--cards",
-	translateY: [10, 0],
+	targets: ".tmp-o-post__summary",
+	translateY: [-10, 0],
 	opacity: opacityFade,
 	duration: 600,
 	easing: animationEasing,
 	offset: "-=700"
+}).add({
+	// Handle Card Group Animation
+	targets: ".tmp-o-post__content",
+	translateY: [10, 0],
+	opacity: opacityFade,
+	duration: 600,
+	easing: animationEasing,
+	offset: "-=200"
 });
 
 /***/ }),

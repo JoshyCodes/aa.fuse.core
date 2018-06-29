@@ -34,7 +34,9 @@
   font-display: swap
 }
 body {
-  font-family: serif
+  font-family: serif;
+  font-weight: 400;
+  text-rendering: optimizeLegibility
 }
 strong {
   font-weight: 700

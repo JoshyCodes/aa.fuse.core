@@ -48,6 +48,10 @@ use ColorThief\ColorThief;
 
         </div>
 
+        <div class="tmp-m-card__footer">
+        <p class="tmp-m-estimated-read"><?= Helpers\get_estimated_reading_time( get_the_content() ); ?> read</p>
+        </div>
+
     </a>
 
 </div>
