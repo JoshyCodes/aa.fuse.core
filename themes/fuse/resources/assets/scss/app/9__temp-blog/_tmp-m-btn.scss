@@ -1,22 +1,18 @@
 .tmp-m-btn{
 
-    color: c(pink);
-    background-color: white;
-    border: 2px solid c( grayscale, 90 );
+    color:white;
+    background-color: c(light-blue);
     padding: 10px 32px;
     border-radius: 50px;
     transition: all .15s ease;
 
     &:hover{
 
-        background-color: c(grayscale, 90);
 
     }
 
     &:active{
 
-        background-color: c(grayscale, 85);
-        border-color: c( grayscale, 90 );
 
     }
 

@@ -850,20 +850,12 @@ span:focus {
   font-size: 14px
 }
 .tmp-m-btn {
-  color: #de0d61;
-  background-color: #fff;
-  border: 2px solid #e5e5e5;
+  color: #fff;
+  background-color: #6eb2c9;
   padding: 10px 32px;
   border-radius: 50px;
   -webkit-transition: all .15s ease;
   transition: all .15s ease
-}
-.tmp-m-btn:hover {
-  background-color: #e5e5e5
-}
-.tmp-m-btn:active {
-  background-color: #d9d9d9;
-  border-color: #e5e5e5
 }
 .tmp-m-btn--footer {
   display: inline-block
