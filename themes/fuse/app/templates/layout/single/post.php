@@ -60,6 +60,7 @@ function load_hero(){
 
 }
 
+
 function add_container(){
 
 	echo '<div class="l-container l-container--max--xs l-container--width">';
@@ -71,6 +72,16 @@ function add_container(){
 function load_content(){
 
 		Controllers\render( 'fragments/zz-temp-blog/_tmp-o-post' );
+
+
+		$data = [
+
+			'title' => 'This is an example Title',
+			'sub'	=> 'This is an example Sub Title',
+
+		];
+
+		Controllers\render( 'fragments/zz-temp-blog/_tmp-o-post__back-to-all', $data);
 
 }
 

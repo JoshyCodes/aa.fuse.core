@@ -27,8 +27,8 @@
   font-display: swap
 }
 @font-face {
-  font-family: merriweatherregular;
-  src: url(../wp-content/themes/fuse/_dist/fonts/merriweather-regular-webfont.woff2) format("woff2"),url(../wp-content/themes/fuse/_dist/fonts/merriweather-regular-webfont.woff) format("woff");
+  font-family: merriweatherlight;
+  src: url(../wp-content/themes/fuse/_dist/fonts/merriweather-light-webfont.woff2) format("woff2"),url(../wp-content/themes/fuse/_dist/fonts/merriweather-light-webfont.woff) format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap
@@ -54,7 +54,7 @@ strong {
   font-weight: 700
 }
 .fuse--fonts-loaded body {
-  font-family: merriweatherregular,serif;
+  font-family: merriweatherlight,serif;
   letter-spacing: .5px
 }
 .fuse--fonts-loaded strong {

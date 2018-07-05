@@ -1,5 +1,6 @@
 <?php
 use Fuse\Controllers;
+use Reactor\Helpers;
 ?>
 
 <div class="tmp-o-hero tmp-o-hero--single">
@@ -13,9 +14,13 @@ use Fuse\Controllers;
             </h1>
 
             <div class="tmp-o-hero__meta">
-                <h2 class="tmp-o-hero__meta__item a-heading--thin"><?= $data['date']; ?></h2>
+                <h2 class="tmp-o-hero__meta__item a-heading--thin">By <?= $data['author']; ?></h2>
                 <span class="tmp-o-hero__meta__sep">•</span>
-                <h2 class="tmp-o-hero__meta__item a-heading--thin"><?= $data['author']; ?></h2>
+                <h2 class="tmp-o-hero__meta__item a-heading--thin"><?= $data['date']; ?></h2>
+            </div>
+
+             <div class="tmp-o-hero__reading-time">
+                <p class="tmp-m-estimated-read">~ <?= Helpers\get_estimated_reading_time( get_the_content() ); ?> read</p>
             </div>
 
         </div>

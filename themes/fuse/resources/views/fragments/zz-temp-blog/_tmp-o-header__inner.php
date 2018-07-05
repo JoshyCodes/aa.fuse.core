@@ -14,7 +14,7 @@ use Reactor\Helpers;
 
         <a href="<?= esc_url( get_post_type_archive_link( 'post' ) ); ?>" class="tmp-o-header__back">
             <div class="tmp-o-header__back__icon"></div>
-            <p class="tmp-o-header__back__copy">Back to All Blogs</p>
+            <p class="tmp-o-header__back__copy">See All Blogs</p>
         </a>
 
 

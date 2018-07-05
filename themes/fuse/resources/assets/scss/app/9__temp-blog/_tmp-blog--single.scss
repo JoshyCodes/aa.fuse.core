@@ -1,7 +1,7 @@
 .tmp-o-post__content{
 
     color: c( gray );
-    padding: 120px 0;
+    padding: 120px 0 84px 0;
     font-size: 18px;
     line-height: 1.9;
     opacity: 0;
@@ -20,7 +20,7 @@
 
 .tmp-o-post__summary{
 
-    color: c(earth);
+    color: c(gray, light20 );
     background: white;
     border-radius: 10px;
     max-width: 800px;
@@ -40,5 +40,31 @@
     display: block;
     width: 100%;
     margin-bottom: 110px;
+
+}
+
+.tmp-o-post__back-to-all{
+    border-top: 1px solid c(grayscale, 95);
+    margin-bottom: 120px;
+    padding-top: 84px;
+    text-align: center;
+}
+
+.tmp-o-post__back-to-all .tmp-m-title-group__title{
+
+    color: c(gray);
+    font-size: 36px;
+    margin-bottom: 8px;
+
+}
+
+.tmp-o-post__back-to-all .tmp-m-title-group__sub{
+    color: c(gray);
+    margin-bottom: 32px;
+
+}
+
+
+.tmp-o-post__back-to-all .tmp-m-btn--footer{
 
 }

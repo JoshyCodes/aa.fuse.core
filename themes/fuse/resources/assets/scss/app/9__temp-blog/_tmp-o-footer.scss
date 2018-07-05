@@ -1,6 +1,6 @@
 
 .tmp-o-footer__content{
-    background-color: c( grayscale, 95 );
+    background-color: c( gray );
     font-size: 14px;
     padding: 24px 0;
 
@@ -16,14 +16,14 @@
 
 .tmp-o-footer__copyright{
 
-    color: c(grayscale, 60);
+    color: c(grayscale, 85);
 
 }
 
 
 .tmp-o-footer__item{
 
-    color: c(gray);
+    color: c(grayscale, 85);
     margin-left: auto;
     margin-right: 0;
 
@@ -35,7 +35,7 @@
 
     > .c-svg-icon{
 
-        fill: c(gray);
+        fill: c(grayscale, black);
         width  : 40px;
         height: 40px;
 

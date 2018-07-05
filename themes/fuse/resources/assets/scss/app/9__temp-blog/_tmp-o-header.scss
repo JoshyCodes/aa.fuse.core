@@ -8,7 +8,7 @@
 }
 
 .tmp-o-header__logo{
-    flex: 0 0 45px;
+    flex: 0 0 200px;
     transition: all .15s ease;
 
     &:hover{
@@ -43,8 +43,10 @@
 
 .tmp-o-header__content .tmp-m-btn{
 
-         margin-left: auto;
+        flex: 0 0 200px;
+        margin-left: auto;
         margin-right: 0;
+        text-align: center;
 
 
 }

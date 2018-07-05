@@ -35,7 +35,7 @@
 }
 
 .tmp-o-hero--archive{
-
+    background-color: c(pink); //fallback
     background: linear-gradient(90deg, c(pink) -4.25%, c(dark-blue) 128.36%);
 
 }
@@ -43,9 +43,10 @@
 .tmp-o-hero--single{
 
     align-items: flex-start;
-    background-color: c( dark-blue );
+    background-color: c( dark-blue ); // Fallback
+    background: linear-gradient(82.11deg, c(light-blue) 1.07%, c(purple) 99.08%);
     justify-content: center;
-    min-height: 450px;
+    min-height: 275px;
     text-align: center;
 
     > .l-container{
@@ -59,7 +60,9 @@
 
 .tmp-o-hero--single__title-group{
 
-    margin-top: 120px;
+    margin-top: 83px; // Perfectly center title group in hero
+    margin-bottom: 160px; // Space title group to bottom of div so 2 line text forced div down
+
 
 }
 
@@ -69,6 +72,7 @@
     display: flex;
     color: white;
     justify-content: center;
+    margin-top: 16px;
 
     > * {
 
@@ -87,4 +91,9 @@
 
 .tmp-o-hero__meta__item{
     font-size: 16px;
+}
+
+.tmp-o-hero__reading-time .tmp-m-estimated-read{
+    color: white;
+    font-size: 14px;
 }
