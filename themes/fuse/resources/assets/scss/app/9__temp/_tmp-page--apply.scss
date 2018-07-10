@@ -112,3 +112,20 @@
 
     margin-bottom: 48px;
 }
+
+
+.gform_wrapper .tmp-apply .gform_button.button{
+
+    color: white;
+    display: inline-block;
+    background-color: c(light-blue);
+    padding: 10px 32px;
+    border-radius: 50px;
+    width: 200px;
+    transition: all .15s ease;
+
+    &:hover{
+        background-color: c(light-blue, dark10);
+    }
+
+}
