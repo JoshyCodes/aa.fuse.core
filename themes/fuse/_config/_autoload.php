@@ -23,7 +23,7 @@ return [
         'controllers/wrappers',
         'controllers/templates',
         'controllers/fragments',
-        
+
         /**
          * Template Files
          */
@@ -34,6 +34,7 @@ return [
         // Layout • Page
         'templates/layout/page/page',
         'templates/layout/page/front-page',
+        'templates/layout/page/apply-page',
 
         // Layout • Archive
         'templates/layout/archive/post',
@@ -51,7 +52,7 @@ return [
         // Layout • Legacy Pages
         'templates/layout/legacy-splash',
         'templates/layout/legacy-thanks'
-        
+
    ]
 
 ];

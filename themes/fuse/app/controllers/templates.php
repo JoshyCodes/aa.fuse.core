@@ -21,8 +21,6 @@ function load_template( $template ){
 
 	// Build the full template path
 	$final_template = $template_root . $template . '.php';
-	
-		d( $final_template );
 
 		// include the final template file
 		include( locate_template( $final_template ) );

@@ -1,0 +1,105 @@
+.tmp-o-post__apply{
+
+    color: c( gray );
+    padding: 120px 0 84px 0;
+
+    line-height: 1.9;
+
+}
+
+.tmp-o-post__apply-intro{
+    font-size: 18px;
+    margin-bottom: 56px;
+}
+
+
+.tmp-o-post__apply h2{
+
+    font-size: 32px;
+    margin-bottom: 24px;
+    margin-top: 32px;
+
+}
+
+.tmp-o-post__apply h4{
+
+    color: c(pink);
+    font-size: 20px;
+    margin-bottom: 8px;
+
+}
+
+.tmp-o-post__apply ul{
+
+    margin-bottom: 48px;
+    margin-left: 24px;
+    list-style: circle;
+    max-width: 700px;
+
+}
+
+.tmp-o-post__apply li{
+
+    margin-bottom: 16px;
+
+}
+
+.tmp-o-post__apply p{
+
+    margin-bottom: 48px;
+
+}
+
+
+.tmp-o-post__apply a{
+
+
+}
+
+// Temp Application Form
+
+.tmp-o-post__application{
+
+    background: c(grayscale, 90);
+    margin: 0 auto;
+    padding: 24px;
+    text-align: center;
+    margin-top: 64px;
+
+}
+
+.tmp-o-post__application h2{
+
+    margin-bottom: 0px;
+
+}
+
+.gform_wrapper .tmp-apply{
+
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 48px;
+
+}
+
+.gform_wrapper .tmp-apply input,
+.gform_wrapper .tmp-apply textarea{
+
+    border: none;
+    border-bottom: 3px solid transparent;
+    padding: 12px !important;
+    transition: all .15s ease;
+
+    &:focus{
+        outline: none;
+        background-color: c(grayscale, 99);
+        border-color: c(purple);
+    }
+
+}
+
+.gform_wrapper .tmp-apply .gfield{
+
+    margin-bottom: 48px;
+}

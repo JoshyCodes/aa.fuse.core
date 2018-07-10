@@ -34,7 +34,8 @@
     z-index: 1;
 }
 
-.tmp-o-hero--archive{
+.tmp-o-hero--archive,
+.tmp-o-hero--apply{
     background-color: c(pink); //fallback
     background: linear-gradient(90deg, c(pink) -4.25%, c(dark-blue) 128.36%);
 

@@ -798,6 +798,7 @@ span:focus {
   position: relative;
   z-index: 1
 }
+.tmp-o-hero--apply,
 .tmp-o-hero--archive {
   background-color: #de0d61;
   background: -webkit-gradient(linear,left top,right top,color-stop(-4.25%,#de0d61),color-stop(128.36%,#5c789e));
@@ -925,6 +926,69 @@ span:focus {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding: 120px 0
+}
+.tmp-o-post__apply {
+  color: #494e54;
+  padding: 120px 0 84px;
+  line-height: 1.9
+}
+.tmp-o-post__apply-intro {
+  font-size: 18px;
+  margin-bottom: 56px
+}
+.tmp-o-post__apply h2 {
+  font-size: 32px;
+  margin-bottom: 24px;
+  margin-top: 32px
+}
+.tmp-o-post__apply h4 {
+  color: #de0d61;
+  font-size: 20px;
+  margin-bottom: 8px
+}
+.tmp-o-post__apply ul {
+  margin-bottom: 48px;
+  margin-left: 24px;
+  list-style: circle;
+  max-width: 700px
+}
+.tmp-o-post__apply li {
+  margin-bottom: 16px
+}
+.tmp-o-post__apply p {
+  margin-bottom: 48px
+}
+.tmp-o-post__application {
+  background: #e5e5e5;
+  padding: 24px;
+  text-align: center;
+  margin: 64px auto 0
+}
+.tmp-o-post__application h2 {
+  margin-bottom: 0
+}
+.gform_wrapper .tmp-apply {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 48px
+}
+.gform_wrapper .tmp-apply input,
+.gform_wrapper .tmp-apply textarea {
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding: 12px!important;
+  -webkit-transition: all .15s ease;
+  transition: all .15s ease
+}
+.gform_wrapper .tmp-apply input:focus,
+.gform_wrapper .tmp-apply textarea:focus {
+  outline: 0;
+  background-color: #fcfcfc;
+  border-color: #8f669e
+}
+.gform_wrapper .tmp-apply .gfield {
+  margin-bottom: 48px
 }
 @media (min-width:768px) {
   .l-container--width {
