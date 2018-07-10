@@ -30,7 +30,7 @@ function load_hero(){
 	$data = [
 
 		'title'		=> 'Mid-level Frontend Developer',
-		'sub'		=> 'We are a Small Company with Big Heart.',
+		'sub'		=> 'Build Beautiful Things at a Small Company with Big Heart.',
 
 	];
 
