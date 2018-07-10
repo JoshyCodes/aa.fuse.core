@@ -29,8 +29,8 @@ function load_hero(){
 
 	$data = [
 
-		'title'		=> 'Frontend Developer Position',
-		'sub'		=> 'Build beautiful things with and for beautiful people.',
+		'title'		=> 'Mid-level Frontend Developer',
+		'sub'		=> 'Build beautiful things in Dayton, Ohio.',
 
 	];
 
