@@ -12,7 +12,7 @@ add_action( 'wp', __NAMESPACE__ . '\setup');
 function setup(){
 
 	// If we are on a normal page
-	if( is_page( 'frontend-developer' ) ){
+	if( is_page( 'lead-frontend-developer' ) ){
 
 		add_action( 'fuse_hero', __NAMESPACE__ . '\load_hero' );
 		add_action('fuse_before_loop', __NAMESPACE__ . '\add_container', 1);
