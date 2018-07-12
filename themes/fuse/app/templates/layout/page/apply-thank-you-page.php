@@ -14,7 +14,7 @@ function setup(){
     global $post;
 
 	// If we are on a normal page
-	if( is_page('thank-you') && $post->post_parent === 58 ){
+	if( is_page('thank-you') && $post->post_parent === 28 ){
 
         add_action('fuse_hero', __NAMESPACE__ . '\load_hero');
         add_action('fuse_content', __NAMESPACE__ . '\add_container');
