@@ -123,6 +123,7 @@
     border-radius: 50px;
     width: 200px;
     transition: all .15s ease;
+    -webkit-appearance: none;
 
     &:hover{
         background-color: c(light-blue, dark10);
