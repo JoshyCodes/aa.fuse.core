@@ -35,6 +35,7 @@ return [
         'templates/layout/page/page',
         'templates/layout/page/front-page',
         'templates/layout/page/apply-page',
+        'templates/layout/page/apply-thank-you-page',
 
         // Layout • Archive
         'templates/layout/archive/post',
