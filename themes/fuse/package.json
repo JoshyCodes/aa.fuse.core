@@ -54,6 +54,7 @@
   },
   "dependencies": {
     "animejs": "^2.2.0",
+    "basiclightbox": "^4.0.3",
     "js-cookie": "^2.2.0"
   },
   "scripts": {

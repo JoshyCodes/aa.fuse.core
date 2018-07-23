@@ -17,7 +17,8 @@ function setup(){
 		add_action('fuse_content', __NAMESPACE__ . '\add_container', 1);
 		add_action( 'fuse_content', __NAMESPACE__ . '\load_content', 5);
 		add_action('fuse_footer_content', __NAMESPACE__ . '\load_footer');
-		add_action( 'wp_enqueue_scripts',	__NAMESPACE__ . '\load_posts_script', 1 );
+		add_action( 'wp_enqueue_scripts',	__NAMESPACE__ . '\load_hubspot_script', 1 );
+		add_action( 'wp_enqueue_scripts',	__NAMESPACE__ . '\load_temp_script', 2 );
 
 
 	}
@@ -91,14 +92,32 @@ function load_footer(){
 
 }
 
-
-function load_posts_script(){
+function load_hubspot_script(){
 
 	$script = [
 
-		'handle' 			=> 'posts-script',
-		'location'			=> AssetHandler\get_asset_from_manifest( 'posts.js' ),
-		'dependencies'		=> ['jquery', 'app-script'],
+		'handle' 			=> 'hubspot-script',
+		'location'			=> '//js.hsforms.net/forms/shell.js',
+		'dependencies'		=> array(),
+		'version'			=> null,
+		'load_in_footer'	=> 'true',
+
+	];
+
+	wp_register_script( $script['handle'], $script['location'], $script['dependencies'], $script['version'], $script['load_in_footer'] );
+
+	wp_enqueue_script( $script['handle'] );
+
+}
+
+
+function load_temp_script(){
+
+	$script = [
+
+		'handle' 			=> 'temp-script',
+		'location'			=> AssetHandler\get_asset_from_manifest( 'temp.js' ),
+		'dependencies'		=> array(),
 		'version'			=> null,
 		'load_in_footer'	=> 'true',
 

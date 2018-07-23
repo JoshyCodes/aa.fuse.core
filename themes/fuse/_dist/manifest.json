@@ -1,8 +1,8 @@
 {
-  "app.css": "css/app.2d4fb966211a8ce83033.bundle.css",
-  "app.js": "js/app.8f645141c1b8da0d247a.bundle.js",
-  "critical.css": "css/critical.b3d204c8058b6e6dc7c3.bundle.css",
-  "critical.js": "js/critical.9a7cdaefc533a641a066.bundle.js",
+  "app.css": "css/app.css",
+  "app.js": "js/app.js",
+  "critical.css": "css/critical.css",
+  "critical.js": "js/critical.js",
   "fonts/merriweather-bold-webfont.woff": "fonts/merriweather-bold-webfont.woff",
   "fonts/merriweather-bold-webfont.woff2": "fonts/merriweather-bold-webfont.woff2",
   "fonts/merriweather-light-webfont.woff": "fonts/merriweather-light-webfont.woff",
@@ -13,6 +13,7 @@
   "fonts/proxima-nova-medium-webfont.woff2": "fonts/proxima-nova-medium-webfont.woff2",
   "fonts/proxima-nova-thin-webfont.woff": "fonts/proxima-nova-thin-webfont.woff",
   "fonts/proxima-nova-thin-webfont.woff2": "fonts/proxima-nova-thin-webfont.woff2",
-  "posts.js": "js/posts.8971778a9cc0ad74eeea.bundle.js",
-  "sprite.svg": "sprite.svg"
+  "posts.js": "js/posts.js",
+  "sprite.svg": "sprite.svg",
+  "temp.js": "js/temp.js"
 }

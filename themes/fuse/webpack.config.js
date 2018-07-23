@@ -30,7 +30,8 @@ const config = {
 	entry: {
 		app: "./resources/assets/js/app.js",
 		critical: "./resources/assets/js/critical.js",
-		posts: "./resources/assets/js/posts.js"
+		posts: "./resources/assets/js/posts.js",
+		temp: "./resources/assets/js/temp.js"
 	},
 
 	devtool: devMode ? "none" : "none",

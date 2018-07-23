@@ -20,7 +20,7 @@ use Reactor\Helpers;
 
     <?php } ?>
 
-    <a href="<?= esc_url( home_url() ); ?>" class="tmp-m-btn">
+    <a href="" class="tmp-m-btn js-contact-lightbox">
         Let's Chat
     </a>
 
