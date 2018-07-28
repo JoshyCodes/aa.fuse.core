@@ -2,7 +2,7 @@
 namespace Fuse;
 use Reactor\Helpers;
 
-// Get nae of the current post type
+// Get name of the current post type
 $data = [
 
 	'current_post_type'		=> Helpers\post_type_name()
